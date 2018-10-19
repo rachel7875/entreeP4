@@ -11,36 +11,38 @@
 
         {% block stylesheets %}
             {# Boostrap loading #}
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+            {# Upload of Font Awesome icons#}
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
             {#IE10 viewport hack for Surface/desktop Windows 8 bug #}
-            <link href="public/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+            <link href="web/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
             {#Custom styles for this template #}
-            <link href="public/css/style.css" rel="stylesheet">
+            <link href="web/css/style.css.twig" rel="stylesheet">
         {% endblock %}
 
     </head>
 
     <body>
-        <div class="container">
 
+        {{ include("OCCoreBundle::header.html.twig") }}
 
+        <div class="main_content">
+            {% block body %}
+            {% endblock %}
+        </div>
 
-            <footer>
-            <p>The sky's the limit © {{ 'now'|date('Y') }} and beyond.</p>
-
+        <footer>
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <p><a href="index.php?action=mentionsLegales">Mentions légales   </a>   |   © Jean Forteroche - 2018 </p>
-                    <p><a href="index.php?action=adminLoginForm">Administration du site</a> </p>
-                    <p>Sité réalisé par Rachel Mabire dans le cadre <br />
-                    de la formation "Chef de projet - Développement" </p>
+                    <p><a href="#"Conditions générales de vente    </a> </p>
+                    <p><a href="#"Mentions légales</a></p>
                 </div>
             </div>
-            
-            </footer>
-        </div>
+        </footer>
+
 
         {% block javascripts %}
             {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
@@ -49,5 +51,6 @@
         {% endblock %}
 
     </body>
+
 </html>
 

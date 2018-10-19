@@ -1,18 +1,140 @@
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Bienvenue sur ma première page avec OpenClassrooms !</title>
-  </head>
-  <body>
-    <h1>Hello World !</h1>
+{% extends "::layout.html.twig" %}
 
-    <p>
-      Le Hello World est un grand classique en programmation.
-      Il signifie énormément, car cela veut dire que vous avez
-      réussi à exécuter le programme pour accomplir une tâche simple :
-      afficher ce hello world !
-    </p>
-  </body>
-</html>
+
+
+{% block title %}
+  Accueil de la - {{ parent() }}
+{% endblock %}
+
+{% block description %}Page d'accueil de la Billetterie du Musée du Louvre{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  {#Custom styles for this template #}
+  <link href="welcome.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<p>Acheter vos billets électroniques<br />
+<br />
+<br />
+<br />
+<br />
+  et éviter les longues files d'attente !</p>
+
+
+  <section class="container-fluid text-center" >
+    <div class="row">
+      <div class="col-sm-12 " >
+        <h1>Bienvenue sur la Billetterie en ligne du Musée du Louvre</h1>
+
+        <p>Acheter vos billets électroniques<br />
+        et éviter les longues files d'attente !</p>
+
+        <button type="button" class="btn btn-default">VOS BILLETS</button>
+
+        <p><i class="fa fa-mobile fa-lg" aria-hidden="true"></i>
+        M-billet : Présentez vos billets à l'entrée directement sur votre téléphone !</p>
+      </div>
+
+      <div class="col-sm-10 offset-sm-1" >
+        <div class="row">
+          <div class="col-sm-6 offset-sm-1 " >
+            <h2> <i class="fa fa-ticket "></i>  Billets et tarifs</h2>
+
+            <div class="card-deck">
+              <div class="card">
+                <h5 class="card-header">Billet gratuit</h5>
+                <div class="card-body">
+                  <p class="card-text">Enfants de moins <br />
+                  de 4 ans</p>
+                  <p class="card-text"><br />0 €</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <h5  class="card-header">Billet enfant</h5>
+                <div class="card-body">
+                  <p class="card-text">Enfants de <br />
+                  4 à 11 ans</p>
+                  <p class="card-text"><br />8 € <br />
+                  la journée</p>
+                  <p class="card-text">4 € <br />
+                  la demi-journée</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <h5  class="card-header">Billet normal</h5>
+                <div class="card-body">
+                  <p class="card-text">De <br />
+                  12 à 59 ans</p>
+                  <p class="card-text"><br />16 € <br />
+                  la journée</p>
+                  <p class="card-text">8 € <br />
+                  la demi-journée</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <h5  class="card-header">Billet senior</h5>
+                <div class="card-body">
+                  <p class="card-text">A partir de <br />
+                  60 ans</p>
+                  <p class="card-text"><br />12 € <br />
+                  la journée</p>
+                  <p class="card-text">6 € <br />
+                  la demi-journée</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <h5  class="card-header">Billet réduit</h5>
+                <div class="card-body">
+                  <p class="card-text">Sous conditions<br />
+                  (étudiant, militaire...*)</p>
+                  <p class="card-text"><br />10 € <br />
+                  la journée</p>
+                  <p class="card-text">5 € <br />
+                  la demi-journée</p>
+                </div>
+              </div>
+            </div>
+
+            <p>Pour bénéficier d'un tarif groupe, veuillez nous contacter 
+            <button class="btn btn-warning btn-xs"><i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></button> </p>
+
+            <p>*Pour les étudiants, les militaires, les employés du musée ou d'un service du Ministère de la Culture 
+            (justificatif demandé à l'entrée)</p>
+
+          </div>
+
+          <div class="col-sm-3 offset-sm-1" >
+            <h2> <i class="fa fa-clock-o" aria-hidden="true"></i>  Horaires d'ouverture</h2>
+            <p>Lundi : 9 h - 18 h</p>
+            <p>Mardi : Fermé</p>
+            <p>Mercredi : 9 h - 21h45</p>
+            <p>Jeudi : 9 h - 18 h</p>
+            <p>Vendredi : 9 h - 21h45</p>
+            <p>Samedi : 9 h - 18 h</p>
+            <p>Dimanche : Fermé</p>
+            <p><br />Fermé le 1er mai, le 1er novembre et <br />
+            le 25 décembre</p>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div> 
+
+  </section>
+
+     
+
+{% endblock %}
+
+
 
