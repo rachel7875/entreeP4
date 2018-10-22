@@ -43,10 +43,10 @@ class Booking
     private $email;
 
     /**
-     * @var \stdClass
-     *
-     * @ORM\Column(name="duration", type="object")
+     * @ORM\ManyToOne(targetEntity="OC\CoreBundle\Entity\Duration")
+     * @ORM\JoinColumn(nullable=false)
      */
+
     private $duration;
 
     /**
@@ -218,4 +218,3 @@ class Booking
         return $this;
     }
 }
-
