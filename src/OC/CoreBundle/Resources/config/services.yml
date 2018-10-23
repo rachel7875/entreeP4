@@ -2,3 +2,9 @@ services:
 #    oc_core.example:
 #        class: OC\CoreBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    OC\CoreBundle\DataFixtures\ORM\LoadRate:
+            tags: [doctrine.fixture.orm]
+
+    OC\CoreBundle\DataFixtures\ORM\LoadDuration:
+            tags: [doctrine.fixture.orm]

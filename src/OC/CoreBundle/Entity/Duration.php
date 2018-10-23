@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="duration")
  * @ORM\Entity(repositoryClass="OC\CoreBundle\Repository\DurationRepository")
  */
-class duration 
+class Duration 
 
 {
     /**
@@ -24,7 +24,7 @@ class duration
     private $durationName;
 
     /**
-     * @ORM\Column(name="durationValue", type="decimal")
+     * @ORM\Column(name="durationValue", type="float")
      */
     private $durationValue;
 

@@ -10,4 +10,5 @@ namespace OC\CoreBundle\Repository;
  */
 class RateRepository extends \Doctrine\ORM\EntityRepository
 {
+
 }
