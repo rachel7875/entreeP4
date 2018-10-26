@@ -3,6 +3,8 @@
 namespace OC\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints\Date;
 
 /**
  * Booking
@@ -22,9 +24,15 @@ class Booking
     private $id;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
-     * @ORM\Column(name="visitDay", type="datetime")
+     * @ORM\Column(name="visitDay", type="date")
+     * @Assert\NotBlank()
+     * @Assert\Date( message = "'{{ value }}' n'est pas une date valide.",)
+     * @Assert\Range(
+     *      min = "now",
+     *      minMessage = "Il n'est pas possible de réserver à une date antérieure à aujourd'hui.",
+     * )
      */
     private $visitDay;
 
@@ -32,6 +40,7 @@ class Booking
      * @var int
      *
      * @ORM\Column(name="ticketsNumber", type="integer")
+     * @Assert\Choice(choices={1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, strict="true")
      */
     private $ticketsNumber;
 
@@ -39,6 +48,12 @@ class Booking
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      max = 255)
+     * @Assert\Email(
+     *      message = "'{{ value }}' n'est pas un email valide.",
+     *      checkMX = true)
      */
     private $email;
 
@@ -46,22 +61,28 @@ class Booking
      * @ORM\ManyToOne(targetEntity="OC\CoreBundle\Entity\Duration")
      * @ORM\JoinColumn(nullable=false)
      */
-
     private $duration;
 
     /**
      * @var \stdClass
      *
-     * @ORM\Column(name="tickets", type="object")
+     * @ORM\Column(name="tickets", type="object", nullable=true)
      */
     private $tickets;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="bookingCode", type="string", length=255, unique=true)
+     * @ORM\Column(name="bookingCode", type="string", length=255, unique=true, nullable=true)
      */
     private $bookingCode;
+
+
+    public function __construct()
+    {
+        // By default, the visitDay is the date of today
+        $this->visitDay = new \Datetime();
+    }
 
 
     /**

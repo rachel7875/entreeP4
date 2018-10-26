@@ -8,3 +8,6 @@ services:
 
     OC\CoreBundle\DataFixtures\ORM\LoadDuration:
             tags: [doctrine.fixture.orm]
+
+    OC\CoreBundle\DataFixtures\ORM\LoadClosingdays:
+            tags: [doctrine.fixture.orm]

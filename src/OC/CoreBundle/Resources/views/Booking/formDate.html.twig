@@ -1,0 +1,100 @@
+{# src/OC/CoreBundle/Resources/views/Booking/formDate.html.twig #}
+
+
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {# The general errors of the form#}
+  {{ form_errors(form) }}
+
+  {# Field email #}
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-2">
+        {{ form_label(form.email, "Email", {'label_attr': {'class': 'control-label'}}) }}
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.email) }}
+      </div>
+      <div class="col-sm-6">
+        <p>Vos billets seront envoyés à cette adresse email.</p>
+      </div>
+    </div>
+  </div> 
+
+  {# Field Date de la visite #}
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-2"
+        {{ form_label(form.visitDay, "Date de la visite", {'label_attr': {'class': 'control-label'}}) }}
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.visitDay, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.visitDay) }}
+      </div>
+      <div class="col-sm-6">
+        <p>Certains jours ne peuvent être sélectionnés (jours complets au niveau des réservations 
+        et jours de fermeture).</p>
+        <p>Le musée est ouvert selon les horaires suivants :<br />
+        Lundi : 9 h - 18 h<br />
+        Mardi : Fermé<br />
+        Mercredi : 9 h - 21h45<br />
+        Jeudi : 9 h - 18 h<br />
+        Vendredi : 9 h - 21h45<br />
+        Samedi : 9 h - 18 h<br />
+        Dimanche : Fermé</p>
+        Fermé le 1er mai, le 1er novembre et le 25 décembre</p>
+      </div>
+    </div>
+  </div>
+
+  {# Field Durée #}
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-2">
+        {{ form_label(form.duration, "Durée", {'label_attr': {'class': 'control-label'}}) }}
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.duration, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.duration) }}
+      </div>
+      <div class="col-sm-6">
+        <p>Demi-journée à partir de 14h</p>
+      </div>
+    </div>
+  </div>
+
+  {# Field Nombre de billets #}
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-2 ">
+        {{ form_label(form.ticketsNumber, "Nombre de billets", {'label_attr': {'class': 'control-label'}}) }}
+      </div>
+      <div class="col-sm-4">
+        {{ form_widget(form.ticketsNumber, {'attr': {'class': 'form-control'}}) }}
+        {{ form_errors(form.ticketsNumber) }}
+      </div>
+      <div class="col-sm-6">
+        <p>Merci d'inclure les billets gratuits (enfants de moins de 4 ans)<br />
+          Pour plus de 10 billets, veuillez nous contacter 
+          <a  href="#"><i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a>
+        </p>
+      </div>
+  </div>
+
+  {# Génération automatique des champs pas encore écrits.
+     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+     et tous les champs cachés (type « hidden »). #}
+  {{ form_rest(form) }}
+
+  <button type="button" class="btn btn-default">Annuler la commande</button>
+  <input type="submit" value="Suivant" class="pull-right" />
+
+  {# Fermeture de la balise <form> du formulaire HTML #}
+  {{ form_end(form) }}
+
+
+
+</div>

@@ -2,4 +2,6 @@ oc_core_homepage:
     path:     /
     defaults: { _controller: OCCoreBundle:Welcome:index }
 
-
+oc_core_add:
+    path:     /add
+    defaults: { _controller: OCCoreBundle:Booking:add }
