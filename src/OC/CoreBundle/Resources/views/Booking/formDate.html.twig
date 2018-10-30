@@ -84,15 +84,13 @@
       </div>
   </div>
 
-  {# Génération automatique des champs pas encore écrits.
-     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
-     et tous les champs cachés (type « hidden »). #}
   {{ form_rest(form) }}
 
+  {# Buttons at the end  #}
   <button type="button" class="btn btn-default">Annuler la commande</button>
   <input type="submit" value="Suivant" class="pull-right" />
 
-  {# Fermeture de la balise <form> du formulaire HTML #}
+
   {{ form_end(form) }}
 
 

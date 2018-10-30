@@ -11,3 +11,9 @@ services:
 
     OC\CoreBundle\DataFixtures\ORM\LoadClosingdays:
             tags: [doctrine.fixture.orm]
+
+    oc_core.validator.AntiClosingDays:                             
+        class: OC\CoreBundle\Validator\AntiClosingDaysValidator     
+        arguments: ["@doctrine.orm.entity_manager"] 
+        tags:
+            - { name: validator.constraint_validator, alias: oc_core_AntiClosingDays }  

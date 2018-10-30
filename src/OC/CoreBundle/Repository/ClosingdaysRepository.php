@@ -10,4 +10,19 @@ namespace OC\CoreBundle\Repository;
  */
 class ClosingdaysRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function testVisitDay($value) 
+    {
+        $qb = $this->createQueryBuilder('c');
+        
+        $qb
+          ->where('c.closingDay = :closingDay')
+          ->setParameter('closingDay', $value)
+        ;
+
+        return $qb
+        ->getQuery()
+        ->getResult()
+        ;
+    
+    }
 }

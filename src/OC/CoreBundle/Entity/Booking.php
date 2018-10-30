@@ -4,7 +4,7 @@ namespace OC\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Validator\Constraints\Date;
+use OC\CoreBundle\Validator\AntiClosingDays;
 
 /**
  * Booking
@@ -30,10 +30,11 @@ class Booking
      * @Assert\NotBlank()
      * @Assert\Date( message = "'{{ value }}' n'est pas une date valide.",)
      * @Assert\Range(
-     *      min = "now",
+     *      min = "today",
      *      minMessage = "Il n'est pas possible de réserver à une date antérieure à aujourd'hui.",
      * )
-     */
+     * @AntiClosingDays()
+    */
     private $visitDay;
 
     /**
