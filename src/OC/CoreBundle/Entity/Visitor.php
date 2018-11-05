@@ -3,6 +3,7 @@
 namespace OC\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Table(name="visitor")
@@ -20,24 +21,36 @@ class Visitor
 
     /**
      * @ORM\Column(name="visitorName", type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2)
      */
     private $visitorName;
 
     /**
      * @ORM\Column(name="visitorFirstName", type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2)
      */
     private $visitorFirstName;
    
     /**
      * @ORM\ManyToOne(targetEntity="OC\CoreBundle\Entity\Nationality")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $nationality;
+
+    /**
+     * @ORM\Column(name="country", type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2)
+     */
+    private $country;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="birthday", type="datetime")
+     * @Assert\DateTime()
      */
     private $birthday;
 
@@ -138,5 +151,25 @@ class Visitor
     public function getNationality()
     {
         return $this->nationality;
+    }
+
+    /**
+     * Get the value of country
+     */ 
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set the value of country
+     *
+     * @return  self
+     */ 
+    public function setCountry($country)
+    {
+        $this->country = $country;
+
+        return $this;
     }
 }

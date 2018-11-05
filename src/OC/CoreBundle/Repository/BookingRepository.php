@@ -10,4 +10,6 @@ namespace OC\CoreBundle\Repository;
  */
 class BookingRepository extends \Doctrine\ORM\EntityRepository
 {
+
+
 }

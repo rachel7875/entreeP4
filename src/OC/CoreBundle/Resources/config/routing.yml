@@ -5,3 +5,7 @@ oc_core_homepage:
 oc_core_add:
     path:     /add
     defaults: { _controller: OCCoreBundle:Booking:add }
+
+oc_core_visitors:
+        path:     /visitors
+        defaults: { _controller: OCCoreBundle:Booking:visitors }

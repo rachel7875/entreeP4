@@ -53,9 +53,9 @@
                 <div class="card-body">
                   <p class="card-text">Enfants de <br />
                   4 à 11 ans</p>
-                  <p class="card-text"><br /> {{ rateEnfant.rateValue }} € <br />
+                  <p class="card-text"><br /> {{ rateEnfant.rateValue | number_format(0, ',', ' ') }} € <br />
                   la journée</p>
-                  <p class="card-text"> {{ rateEnfant.rateValue * durationforDemiJournee.durationValue  }} € <br />
+                  <p class="card-text"> {{ (rateEnfant.rateValue * durationforDemiJournee.durationValue) | number_format(0, ',', ' ')  }} € <br />
                   la demi-journée</p>
                 </div>
               </div>
@@ -65,9 +65,9 @@
                 <div class="card-body">
                   <p class="card-text">De <br />
                   12 à 59 ans</p>
-                  <p class="card-text"><br />{{ rateNormal.rateValue }} € <br />
+                  <p class="card-text"><br />{{ rateNormal.rateValue  | number_format(0, ',', ' ')}} € <br />
                   la journée</p>
-                  <p class="card-text">{{ rateNormal.rateValue * durationforDemiJournee.durationValue  }} € <br />
+                  <p class="card-text">{{ (rateNormal.rateValue * durationforDemiJournee.durationValue)   | number_format(0, ',', ' ')  }} € <br />
                   la demi-journée</p>
                 </div>
               </div>
@@ -77,9 +77,9 @@
                 <div class="card-body">
                   <p class="card-text">A partir de <br />
                   60 ans</p>
-                  <p class="card-text"><br />{{ rateSenior.rateValue }} € <br />
+                  <p class="card-text"><br />{{ rateSenior.rateValue | number_format(0, ',', ' ')}} € <br />
                   la journée</p>
-                  <p class="card-text">{{ rateSenior.rateValue * durationforDemiJournee.durationValue }} € <br />
+                  <p class="card-text">{{ (rateSenior.rateValue * durationforDemiJournee.durationValue) | number_format(0, ',', ' ') }} € <br />
                   la demi-journée</p>
                 </div>
               </div>
@@ -89,9 +89,9 @@
                 <div class="card-body">
                   <p class="card-text">Sous conditions<br />
                   (étudiant, militaire...*)</p>
-                  <p class="card-text"><br />{{ rateReduit.rateValue }} € <br />
+                  <p class="card-text"><br />{{ rateReduit.rateValue | number_format(0, ',', ' ') }} € <br />
                   la journée</p>
-                  <p class="card-text">{{ rateReduit.rateValue * durationforDemiJournee.durationValue }} € <br />
+                  <p class="card-text">{{ (rateReduit.rateValue * durationforDemiJournee.durationValue) | number_format(0, ',', ' ') }} € <br />
                   la demi-journée</p>
                 </div>
               </div>

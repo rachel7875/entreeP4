@@ -1,7 +1,7 @@
 {% extends "::layout.html.twig" %}
 
 {% block title %}
-  Achat de billets - {{ parent() }}
+  NORMALEMENT PAS REFERENCE CAR 2E ETAPE - {{ parent() }}
 {% endblock %}
 
 {% block body %}
@@ -16,7 +16,7 @@
         <div class="row">
           <div class="col-md-12 " >
             <div class="tunnel">
-              <div class="step first   active  classic hidden-xs"
+              <div class="step first   complete hidden-xs"
                   style="width: 20%;">
                     <div class="row">
                       <div class="col-md-2 ">
@@ -28,7 +28,7 @@
                       </div>
                     </div>
 		          </div>
-              <div class="step   classic hidden-xs "
+              <div class="step   active  classic hidden-xs "
                  style="width: 20%;">
                     <div class="row">
                       <div class="col-md-2 ">
@@ -81,7 +81,7 @@
 
           <div class="col-md-12 " >
 
-            {{ include("OCCoreBundle:Booking:formDate.html.twig") }}
+            {{ include("OCCoreBundle:Booking:formVisitors.html.twig") }}
 
           </div>
 

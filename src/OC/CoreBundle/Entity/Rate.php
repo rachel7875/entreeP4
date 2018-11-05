@@ -24,7 +24,7 @@ class Rate
     private $rateName;
 
     /**
-     * @ORM\Column(name="rateValue", type="decimal")
+     * @ORM\Column(name="rateValue", type="decimal", precision=4, scale=2)
      */
     private $rateValue;
 

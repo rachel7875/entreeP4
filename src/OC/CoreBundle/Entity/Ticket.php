@@ -3,6 +3,7 @@
 namespace OC\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Ticket
@@ -23,7 +24,7 @@ class Ticket
 
       /**
      * @ORM\ManyToOne(targetEntity="OC\CoreBundle\Entity\Rate")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $rate;
 
@@ -33,13 +34,23 @@ class Ticket
     */
     private $booking;
 
+
     /**
-     * @ORM\ManyToOne(targetEntity="OC\CoreBundle\Entity\Visitor")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\OneToOne(targetEntity="OC\CoreBundle\Entity\Visitor", cascade={"persist"})
+     * @Assert\Valid
      */
     private $visitor;
 
 
+    /**
+     * @ORM\Column(name="reducedRate", type="binary")
+     */
+    private $reducedRate;
+
+    /**
+     * @ORM\Column(name="price", type="decimal", precision=5, scale=2, nullable=false)
+     */
+    private $price;
 
 
 
@@ -123,6 +134,46 @@ class Ticket
     public function getVisitor()
     {
         return $this->visitor;
+    }
+
+    /**
+     * Get the value of price
+     */ 
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set the value of price
+     *
+     * @return  self
+     */ 
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of reducedRate
+     */ 
+    public function getReducedRate()
+    {
+        return $this->reducedRate;
+    }
+
+    /**
+     * Set the value of reducedRate
+     *
+     * @return  self
+     */ 
+    public function setReducedRate($reducedRate)
+    {
+        $this->reducedRate = $reducedRate;
+
+        return $this;
     }
 }
 

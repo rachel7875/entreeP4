@@ -1,0 +1,51 @@
+{# src/OC/CoreBundle/Resources/views/Booking/formVisitors.html.twig #}
+
+
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {# The general errors of the form#}
+  {{ form_errors(form) }}
+
+  {# Form for a visitor#}
+  <div class="ticketForm">
+    <h2>Visiteur n°</h2>
+
+    <div class="row">
+        <div class="col-sm-9">
+          {{ form_row(form.visitor) }}
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group">
+            {{ form_label(form.reducedRate, "Tarif réduit", {'label_attr': {'class': 'control-label'}}) }}
+            {{ form_widget(form.reducedRate, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.reducedRate) }}
+            <p>*Pour les étudiants, les militaires, les employés du musée ou d'un 
+            service du Ministère de la Culture (justificatif demandé à l'entrée).</p>
+          </div>
+        </div>
+    </div> 
+  </div>
+
+  {# Automatic generation of fields not yet written #}
+  <div >
+    {{ form_rest(form) }}
+  </div>
+  
+
+  {#Warning  for the tickets required for children under 4 #}
+  <p>Chaque visiteur doit être muni de son billet nominatif, y compris les enfants de moins de 4 ans (billet gratuit).</p>
+
+
+  {# Buttons at the end  #}
+  <button type="button" class="btn btn-default">Annuler la commande</button>
+  <button type="button" class="btn btn-default">Précédent</button>
+  <input type="submit" value="Suivant" class="pull-right" />
+
+
+  {{ form_end(form) }}
+
+
+
+</div>
