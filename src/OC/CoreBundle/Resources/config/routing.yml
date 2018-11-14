@@ -9,3 +9,7 @@ oc_core_add:
 oc_core_visitors:
         path:     /visitors
         defaults: { _controller: OCCoreBundle:Booking:visitors }
+
+oc_core_recap:
+        path:     /recap
+        defaults: { _controller: OCCoreBundle:Booking:recap }

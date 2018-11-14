@@ -8,31 +8,17 @@
   {# The general errors of the form#}
   {{ form_errors(form) }}
 
-  {# Form for a visitor#}
-  <div class="ticketForm">
-    <h2>Visiteur n°</h2>
+  {{ form_row(form.tickets) }}
+  
 
-    <div class="row">
-        <div class="col-sm-9">
-          {{ form_row(form.visitor) }}
-        </div>
-        <div class="col-sm-3">
-          <div class="form-group">
-            {{ form_label(form.reducedRate, "Tarif réduit", {'label_attr': {'class': 'control-label'}}) }}
-            {{ form_widget(form.reducedRate, {'attr': {'class': 'form-control'}}) }}
-            {{ form_errors(form.reducedRate) }}
-            <p>*Pour les étudiants, les militaires, les employés du musée ou d'un 
-            service du Ministère de la Culture (justificatif demandé à l'entrée).</p>
-          </div>
-        </div>
-    </div> 
-  </div>
+  <button type="button" class="btn btn-default" id="add_ticket">Ajouter un ticket</button>
 
-  {# Automatic generation of fields not yet written #}
   <div >
     {{ form_rest(form) }}
   </div>
   
+  <p>*Pour les étudiants, les militaires, les employés du musée ou d'un 
+  service du Ministère de la Culture (justificatif demandé à l'entrée).</p>
 
   {#Warning  for the tickets required for children under 4 #}
   <p>Chaque visiteur doit être muni de son billet nominatif, y compris les enfants de moins de 4 ans (billet gratuit).</p>

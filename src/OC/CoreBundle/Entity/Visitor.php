@@ -42,7 +42,7 @@ class Visitor
     /**
      * @ORM\Column(name="country", type="string", length=255)
      * @Assert\NotBlank()
-     * @Assert\Length(min=2)
+     * @Assert\Country()
      */
     private $country;
 

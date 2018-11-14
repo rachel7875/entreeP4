@@ -5,6 +5,7 @@ namespace OC\CoreBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use OC\CoreBundle\Validator\AntiClosingDays;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Booking
@@ -65,9 +66,8 @@ class Booking
     private $duration;
 
     /**
-     * @var \stdClass
-     *
-     * @ORM\Column(name="tickets", type="object", nullable=true)
+     *  @ORM\OneToMany(targetEntity="OC\CoreBundle\Entity\Ticket", mappedBy="booking", cascade={"persist"})
+     * @Assert\Valid()
      */
     private $tickets;
 
@@ -83,6 +83,7 @@ class Booking
     {
         // By default, the visitDay is the date of today
         $this->visitDay = new \Datetime();
+        $this->tickets = new ArrayCollection();
     }
 
 
@@ -216,27 +217,29 @@ class Booking
         return $this->bookingCode;
     }
 
+
+
+    public function addTicket(Ticket $ticket)
+    {
+      $this->tickets[] = $ticket;
+      $ticket->setBooking($this);
+  
+      return $this;
+    }
+
+    public function removeTicket(Ticket $ticket)
+    {
+      $this->tickets->removeElement($ticket);
+    }
+  
+
     /**
      * Get the value of tickets
-     *
-     * @return  \stdClass
      */ 
     public function getTickets()
     {
         return $this->tickets;
     }
 
-    /**
-     * Set the value of tickets
-     *
-     * @param  \stdClass  $tickets
-     *
-     * @return  self
-     */ 
-    public function setTickets(\stdClass $tickets)
-    {
-        $this->tickets = $tickets;
 
-        return $this;
-    }
 }

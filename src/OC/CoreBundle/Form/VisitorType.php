@@ -17,14 +17,18 @@ class VisitorType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('visitorName',        TextType::class)
-        ->add('visitorFirstName',   TextType::class)
+        ->add('visitorName',        TextType::class, array('label' => 'Nom'))
+        ->add('visitorFirstName',   TextType::class, array('label' => 'Prénom'))
         ->add('birthday',           BirthdayType::class, array(
             'widget' => 'choice',
+            'label' => "Date d'anniversaire",
             'format' => 'dd-MM-yyyy',
         ))
-        ->add('country',        CountryType::class);
+        ->add('country',        CountryType::class, array('label' => 'Pays'));
     }
+    
+
+
     
     /**
      * {@inheritdoc}

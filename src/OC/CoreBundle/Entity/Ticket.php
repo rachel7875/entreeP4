@@ -29,14 +29,17 @@ class Ticket
     private $rate;
 
     /**
-     * @ORM\OneToOne(targetEntity="OC\CoreBundle\Entity\Booking")
+     * @var Booking
+     * @ORM\ManyToOne(targetEntity="OC\CoreBundle\Entity\Booking",  inversedBy="tickets")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\Valid()
     */
     private $booking;
 
 
     /**
-     * @ORM\OneToOne(targetEntity="OC\CoreBundle\Entity\Visitor", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="OC\CoreBundle\Entity\Visitor", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
      * @Assert\Valid
      */
     private $visitor;
@@ -48,7 +51,7 @@ class Ticket
     private $reducedRate;
 
     /**
-     * @ORM\Column(name="price", type="decimal", precision=5, scale=2, nullable=false)
+     * @ORM\Column(name="price", type="decimal", precision=5, scale=2, nullable=true)
      */
     private $price;
 
@@ -66,12 +69,8 @@ class Ticket
 
     /**
      * Set rate
-     *
-     * @param \stdClass $rate
-     *
-     * @return Ticket
      */
-    public function setRate($rate)
+    public function setRate(Rate $rate)
     {
         $this->rate = $rate;
 
@@ -80,8 +79,6 @@ class Ticket
 
     /**
      * Get rate
-     *
-     * @return \stdClass
      */
     public function getRate()
     {
@@ -90,22 +87,16 @@ class Ticket
 
     /**
      * Set booking
-     *
-     * @param \stdClass $booking
-     *
-     * @return Ticket
      */
-    public function setBooking($booking)
+    public function setBooking(Booking $booking)
     {
         $this->booking = $booking;
-
+       
         return $this;
     }
 
     /**
      * Get booking
-     *
-     * @return \stdClass
      */
     public function getBooking()
     {
@@ -114,12 +105,8 @@ class Ticket
 
     /**
      * Set visitor
-     *
-     * @param \stdClass $visitor
-     *
-     * @return Ticket
      */
-    public function setVisitor($visitor)
+    public function setVisitor(Visitor $visitor)
     {
         $this->visitor = $visitor;
 
@@ -128,8 +115,6 @@ class Ticket
 
     /**
      * Get visitor
-     *
-     * @return \stdClass
      */
     public function getVisitor()
     {

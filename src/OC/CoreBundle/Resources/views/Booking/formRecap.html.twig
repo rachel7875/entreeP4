@@ -1,0 +1,32 @@
+{# src/OC/CoreBundle/Resources/views/Booking/formRecap.html.twig #}
+
+
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {# The general errors of the form#}
+  {{ form_errors(form) }}
+
+  {# The generalTermsAcceptance field#}
+  <div class="form-group">
+    {{ form_widget(form.generalTermsAcceptance, {'attr': {'class': 'form-control'}}) }}
+    <p>{{ form_label(form.generalTermsAcceptance, "J'accepte les conditions générales de vente", {'label_attr': {'class': 'control-label'}}) }} 
+     <a href="https://www.ticketlouvre.fr/louvre/b2c/index.cfm/CGV">Voir les CGV</a> </p> 
+    {{ form_errors(form.generalTermsAcceptance) }}
+ </div>
+
+  <div >
+    {{ form_rest(form) }}
+  </div>
+  
+  {# Buttons at the end  #}
+  <button type="button" class="btn btn-default">Annuler la commande</button>
+  <button type="button" class="btn btn-default">Précédent</button>
+  <input type="submit" value="Suivant" class="pull-right" />
+
+
+  {{ form_end(form) }}
+</div>
+        
+

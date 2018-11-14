@@ -39,6 +39,7 @@ class BookingType extends AbstractType
                 '9' => 9,
                 '10' => 10,
             ), 
+        
         ))    
         ;
     }
