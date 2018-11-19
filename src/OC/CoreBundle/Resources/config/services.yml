@@ -17,3 +17,7 @@ services:
         arguments: ["@doctrine.orm.entity_manager"] 
         tags:
             - { name: validator.constraint_validator, alias: oc_core_AntiClosingDays }  
+
+    oc_core.servstripe:
+        class: OC\CoreBundle\ServStripe\OCServStripe
+

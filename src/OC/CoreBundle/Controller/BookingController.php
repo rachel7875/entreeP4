@@ -12,7 +12,7 @@ use OC\CoreBundle\Form\TicketType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use OC\CoreBundle\ServStripe;
 
 class BookingController extends Controller
 {
@@ -182,22 +182,16 @@ class BookingController extends Controller
     $email = $booking->getEmail();
 
     if ($request->isMethod('POST')) {
-      // Token is created using Checkout 
-      $token = $request->request->get('stripeToken');
+      // Creating a charge to complete the payment
+        //Obtaining the service ServStripe 
+        $servStripe = $this->container->get('oc_core.servstripe');
 
-      //Stripe API key
-        // Set your secret key: remember to change this to your live secret key in production
-        $secretStripeKey=$this->container->getParameter('stripe_secretKey');
-        \Stripe\Stripe::setApiKey($secretStripeKey);
+        //Implementation of the service ServStripe 
+          // Set your secret key: remember to change this to your live secret key in production
+          $secretStripeKey=$this->container->getParameter('stripe_secretKey');
+          $servStripe->chargeCreation($request, $totalPrice, $bookingId, $secretStripeKey);
 
-      // Get the payment token ID submitted by the form:
-        $charge = \Stripe\Charge::create([
-          'amount' => $totalPrice,
-          'currency' => 'eur',
-          'description' => 'Billet(s) Musée du Louvre',
-          'source' => $token,
-          "metadata" => ["bookingId" => $bookingId]
-      ]);
+      // Redirection  
       return $this->redirectToRoute('oc_core_confirmation'); 
     }
 
