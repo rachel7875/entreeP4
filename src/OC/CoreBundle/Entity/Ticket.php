@@ -24,7 +24,7 @@ class Ticket
 
       /**
      * @ORM\ManyToOne(targetEntity="OC\CoreBundle\Entity\Rate")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $rate;
 
@@ -51,7 +51,7 @@ class Ticket
     private $reducedRate;
 
     /**
-     * @ORM\Column(name="price", type="decimal", precision=5, scale=2, nullable=true)
+     * @ORM\Column(name="price", type="decimal", precision=5, scale=2, nullable=false)
      */
     private $price;
 

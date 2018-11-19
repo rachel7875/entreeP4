@@ -69,7 +69,7 @@ class BookingController extends Controller
      //Creation of the general form
      $form = $this->createForm(BookingBisType::class, $booking);
 
-     //Creation of the general form
+     //XXX
       if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) 
       {
 
@@ -114,11 +114,9 @@ class BookingController extends Controller
           $price=$rateValue*$durationValue;
           $ticket->setPrice($price);
 
-          $em->persist($ticket);
-          $em->persist($booking);
-          $em->flush();
         }
-          
+        $em->persist($booking);
+        $em->flush();
        return $this->redirectToRoute('oc_core_recap'); 
     }
 
@@ -150,7 +148,7 @@ class BookingController extends Controller
     //Management after the validation by the internet user
     if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) 
     {
-      return new Response("<body>Je suis une page de test, je n'ai rien à dire</body>");
+     return $this->redirectToRoute('oc_core_payment'); 
     }
 
     //View
@@ -162,4 +160,62 @@ class BookingController extends Controller
     ));
   }
   
+  public function paymentAction(Request $request)
+  {
+    $em = $this->getDoctrine()->getManager();
+
+    //Collection of the booking
+    $session = $request->getSession();
+    $bookingId=$session->get('bookingId');
+    $booking=$em->getRepository('OCCoreBundle:Booking')->find($bookingId);
+
+
+    //Obtaining total cost
+    $tickets = $booking->getTickets();
+    $somme = 0;
+    foreach ($tickets as $ticket)
+    {
+      $price=$ticket->getPrice();
+      $somme += $price;
+    }
+    $totalPrice =$somme *100;
+    $email = $booking->getEmail();
+
+    if ($request->isMethod('POST')) {
+      // Token is created using Checkout 
+      $token = $request->request->get('stripeToken');
+
+      //Stripe API key
+        // Set your secret key: remember to change this to your live secret key in production
+        $secretStripeKey=$this->container->getParameter('stripe_secretKey');
+        \Stripe\Stripe::setApiKey($secretStripeKey);
+
+      // Get the payment token ID submitted by the form:
+        $charge = \Stripe\Charge::create([
+          'amount' => $totalPrice,
+          'currency' => 'eur',
+          'description' => 'Billet(s) Musée du Louvre',
+          'source' => $token,
+          "metadata" => ["bookingId" => $bookingId]
+      ]);
+      return $this->redirectToRoute('oc_core_confirmation'); 
+    }
+
+      //View
+      $publicStripeKey=$this->container->getParameter('stripe_publicKey');
+
+      return $this->render('OCCoreBundle:Booking:payment.html.twig', array(
+        'booking' => $booking,
+        'totalPrice' => $totalPrice,
+        'publicStripeKey' => $publicStripeKey,
+      ));
+ 
+  }
+
+  public function confirmationAction(Request $request)
+  {
+
+      return new Response("<body>Je suis une page de test, je n'ai rien à dire</body>");
+  }
+
 }

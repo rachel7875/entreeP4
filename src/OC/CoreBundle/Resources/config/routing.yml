@@ -13,3 +13,11 @@ oc_core_visitors:
 oc_core_recap:
         path:     /recap
         defaults: { _controller: OCCoreBundle:Booking:recap }
+
+oc_core_payment:
+        path:     /payment
+        defaults: { _controller: OCCoreBundle:Booking:payment }
+
+oc_core_confirmation :
+        path:     /confirmation
+        defaults: { _controller: OCCoreBundle:Booking:confirmation }
