@@ -80,7 +80,7 @@
           </div>
 
           <div class="col-md-12">
-            <div class="row" >
+            
               <p>Veuillez donner les informations nécessaires pour effectuer le paiement</p>
               
               <form action=""  method="POST">
@@ -93,11 +93,15 @@
                   data-email="{{ booking.email }}"
                   data-locale="auto"
                   data-currency="eur"
+                  data-zip-code="true"
                   data-label="Paiement par carte bancaire">
                 </script>
               </form>
-
-            </div>
+              <div>
+                {% for message in app.session.flashbag.get('info') %}
+                  <p>Erreur lors du paiement en ligne : {{ message }}</p>
+                {% endfor %}
+              </div>
           </div>    
     </div>
   </section>

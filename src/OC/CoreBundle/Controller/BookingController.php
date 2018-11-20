@@ -69,7 +69,7 @@ class BookingController extends Controller
      //Creation of the general form
      $form = $this->createForm(BookingBisType::class, $booking);
 
-     //XXX
+     //Management of the data
       if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) 
       {
 
@@ -190,9 +190,25 @@ class BookingController extends Controller
           // Set your secret key: remember to change this to your live secret key in production
           $secretStripeKey=$this->container->getParameter('stripe_secretKey');
           $servStripe->chargeCreation($request, $totalPrice, $bookingId, $secretStripeKey);
+        
+        //In case of error for the payment
+        $stripeErrorMsg=$session->get('stripeErrorMsg');
+          if (!empty($stripeErrorMsg)) {
+            $session->getFlashBag()->add('info', $stripeErrorMsg);
+          } 
+          //In case of no error for the payment
+          else {
+            // Creating a unique reference and recording of data
+            $bookingCode=uniqid();
+            $booking->setBookingCode($bookingCode);
+            $em->persist($booking);
+            $em->flush();
 
-      // Redirection  
-      return $this->redirectToRoute('oc_core_confirmation'); 
+            // Redirection  
+            return $this->redirectToRoute('oc_core_confirmation'); 
+          }
+      
+
     }
 
       //View
