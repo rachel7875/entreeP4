@@ -13,6 +13,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use OC\CoreBundle\ServStripe;
+//use OC\CoreBundle\ServEmail;
+use SendGrid;
 
 class BookingController extends Controller
 {
@@ -204,6 +206,8 @@ class BookingController extends Controller
             $em->persist($booking);
             $em->flush();
 
+
+            
             // Redirection  
             return $this->redirectToRoute('oc_core_confirmation'); 
           }
@@ -224,8 +228,56 @@ class BookingController extends Controller
 
   public function confirmationAction(Request $request)
   {
+    
+    $em = $this->getDoctrine()->getManager();
 
-      return new Response("<body>Je suis une page de test, je n'ai rien à dire</body>");
+    //Collection of the booking
+    $session = $request->getSession();
+    $bookingId=$session->get('bookingId');
+    $booking=$em->getRepository('OCCoreBundle:Booking')->find($bookingId);
+
+    
+    //Sending a confirmation email with the tickets
+   // $mailer = $this->container->get('mailer')
+    //$emailServ = $this->container->get('oc_core.servemail');
+    $sendgridKey=$this->container->getParameter('sendgrid_Key');
+  //  $emailServ -> sendNewConfirmationEmail($booking, $sendgridKey);
+   // $message = (new \Swift_Message('Confirmation & Billet(s) pour le Musée du Louvre'))
+     // ->setTo($booking->getEmail()) 
+      //->setFrom('rachelmabire778@gmail.com')
+      //->setBody(
+     //   $this->renderView(
+      //    'OCCoreBundle:Booking:email.html.twig',
+    //      array('booking'=>$booking)
+    //    ),
+     //   'text/html'
+   // );
+
+    //$this->get('mailer')->send($message)
+
+    $email = new \SendGrid\Mail\Mail();
+    $email->setFrom("rachelmabire778@gmail.com");
+    $email->setSubject("Sending with SendGrid is Fun");
+    $email->addTo($booking->getEmail());
+    $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+    $sendgrid  = new \SendGrid($sendgridKey);
+    
+
+    try {
+      $response = $sendgrid->send($email);
+      print $response->statusCode() . "\n";
+      print_r($response->headers());
+      print $response->body() . "\n";
+    } 
+    catch (Exception $e) {
+        echo 'Caught exception: '. $e->getMessage() ."\n";
+    }
+
+    //View
+    return $this->render('OCCoreBundle:Booking:confirmation.html.twig', array(
+        'booking' => $booking,
+    ));
+    //  return new Response("<body>Je suis une page de test, je n'ai rien à dire</body>");
   }
 
 }

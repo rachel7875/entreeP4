@@ -1,5 +1,5 @@
 <?php
-// src/OC/CoreBundle/StripeServ/OCServStripe.php
+// src/OC/CoreBundle/ServStripe/OCServStripe.php
 
 namespace OC\CoreBundle\ServStripe;
 

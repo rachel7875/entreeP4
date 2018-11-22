@@ -70,6 +70,8 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+    port : “%mailer_port%”
+    encryption: ~
 
 sensio_framework_extra:
    router:

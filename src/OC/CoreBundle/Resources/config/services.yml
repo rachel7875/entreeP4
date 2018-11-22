@@ -21,3 +21,8 @@ services:
     oc_core.servstripe:
         class: OC\CoreBundle\ServStripe\OCServStripe
 
+    oc_core.servemail:
+        class: OC\CoreBundle\ServEmail\OCServEmail
+        arguments:
+            - "@mailer"
+
