@@ -73,6 +73,9 @@ swiftmailer:
     port : “%mailer_port%”
     encryption: ~
 
+
+
+
 sensio_framework_extra:
    router:
         annotations: false

@@ -23,11 +23,13 @@
         "sensio/distribution-bundle": "^5.0.19",
         "sensio/framework-extra-bundle": "^5.0.0",
         "stripe/stripe-php": "^6.21",
+        "swiftmailer/swiftmailer": "~6.0.0",
         "symfony/monolog-bundle": "^3.1.0",
         "symfony/polyfill-apcu": "^1.0",
-        "symfony/swiftmailer-bundle": "^2.6.4",
+        "symfony/swiftmailer-bundle": "~3.2.4",
         "symfony/symfony": "3.4.*",
-        "twig/twig": "^1.0||^2.0"
+        "twig/twig": "^1.0||^2.0",
+        "wilczynski/sendgrid-swiftmailer": "^1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
@@ -51,7 +53,7 @@
     },
     "config": {
         "platform": {
-            "php": "5.6"
+            "php": "7.2.9"
         },
         "sort-packages": true
     },

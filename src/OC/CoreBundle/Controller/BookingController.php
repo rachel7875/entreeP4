@@ -15,6 +15,9 @@ use Symfony\Component\HttpFoundation\Response;
 use OC\CoreBundle\ServStripe;
 //use OC\CoreBundle\ServEmail;
 use SendGrid;
+use Swift_Mailer;
+use Swift_Message;
+use Wilczynski\Mailer\SendGridTransport;
 
 class BookingController extends Controller
 {
@@ -231,10 +234,11 @@ class BookingController extends Controller
     
     $em = $this->getDoctrine()->getManager();
 
-    //Collection of the booking
+    //Collection of the booking and the tickets
     $session = $request->getSession();
     $bookingId=$session->get('bookingId');
     $booking=$em->getRepository('OCCoreBundle:Booking')->find($bookingId);
+    $tickets = $booking->getTickets();
 
     
     //Sending a confirmation email with the tickets
@@ -255,23 +259,27 @@ class BookingController extends Controller
 
     //$this->get('mailer')->send($message)
 
-    $email = new \SendGrid\Mail\Mail();
-    $email->setFrom("rachelmabire778@gmail.com");
-    $email->setSubject("Sending with SendGrid is Fun");
-    $email->addTo($booking->getEmail());
-    $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
-    $sendgrid  = new \SendGrid($sendgridKey);
+    // Create the Transport
+    $transport = SendGridTransport::create($sendgridKey);
+    // Create the Mailer using SendGrid Transport
+    $mailer = new Swift_Mailer($transport);
+    // Create a Swift Message
+    $message = (new Swift_Message())
+        ->setSubject('Confirmation & Billet(s) pour le Musée du Louvre')
+        ->setFrom(['rachelmabire778@gmail.com' => 'Billetterie du Musée du Louvre'])
+        ->setTo($to = $booking->getEmail() )
+        ->setContentType('text/html')
+        ->setBody(
+          $this->renderView(
+            'OCCoreBundle:Booking:email.html.twig',
+            array(
+              'booking'=>$booking, 
+              'tickets' => $tickets,)
+            )
+        );
+    // Send the message
+    $result = $mailer->send($message);
     
-
-    try {
-      $response = $sendgrid->send($email);
-      print $response->statusCode() . "\n";
-      print_r($response->headers());
-      print $response->body() . "\n";
-    } 
-    catch (Exception $e) {
-        echo 'Caught exception: '. $e->getMessage() ."\n";
-    }
 
     //View
     return $this->render('OCCoreBundle:Booking:confirmation.html.twig', array(
