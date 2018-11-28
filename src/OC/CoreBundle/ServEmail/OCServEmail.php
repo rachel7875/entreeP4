@@ -4,30 +4,51 @@
 namespace OC\CoreBundle\ServEmail;
 
 use OC\CoreBundle\Entity\Booking;
- 
-class OCServEmail
-{
-  /**
-   * @var \Swift_Mailer
-   */
-  private $mailer;
+use SendGrid;
+use Swift_Mailer;
+use Swift_Message;
+use Wilczynski\Mailer\SendGridTransport;
+use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 
-  public function __construct(\Swift_Mailer $mailer)
+ 
+class OCServEmail 
+{
+  private $templating;
+
+  public function __construct(EngineInterface $templating)
   {
-    $this->mailer = $mailer;
+      $this->templating = $templating;
   }
 
   public function sendNewConfirmationEmail(Booking $booking, $sendgridKey)
   {
-    $message = (new \Swift_Message(
-      'Confirmation & Billet(s) pour le Musée du Louvre'));
+    // Create the Transport
+    $transport = SendGridTransport::create($sendgridKey);
+    // Create the Mailer using SendGrid Transport
+    $mailer = new Swift_Mailer($transport); 
 
-    $message
-      ->setTo($booking->getEmail()) 
-      ->setFrom('rachelmabire778@gmail.com')
-    ;
+    //Collection of the tickets
+    $tickets = $booking->getTickets();
 
-    return $this->mailer->send($message);
+
+    // Create a Swift Message
+    $message = (new Swift_Message())
+        ->setSubject('Confirmation & Billet(s) pour le Musée du Louvre')
+        ->setFrom(['rachelmabire778@gmail.com' => 'Billetterie du Musée du Louvre'])
+        ->setTo($to = $booking->getEmail() )
+        ->setContentType('text/html')
+        ->setBody(
+          $this->templating -> render(
+            'OCCoreBundle:Booking:email.html.twig',
+            array(
+              'booking'=>$booking, 
+              'tickets' => $tickets,)
+            )
+        );
+
+    // Send the message
+    $result = $mailer->send($message);
+
   }
 }
 

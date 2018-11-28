@@ -13,11 +13,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use OC\CoreBundle\ServStripe;
-//use OC\CoreBundle\ServEmail;
-use SendGrid;
-use Swift_Mailer;
-use Swift_Message;
-use Wilczynski\Mailer\SendGridTransport;
+use OC\CoreBundle\ServEmail;
+
 
 class BookingController extends Controller
 {
@@ -234,18 +231,18 @@ class BookingController extends Controller
     
     $em = $this->getDoctrine()->getManager();
 
-    //Collection of the booking and the tickets
+    //Collection of the booking 
     $session = $request->getSession();
     $bookingId=$session->get('bookingId');
     $booking=$em->getRepository('OCCoreBundle:Booking')->find($bookingId);
-    $tickets = $booking->getTickets();
+    
 
     
     //Sending a confirmation email with the tickets
    // $mailer = $this->container->get('mailer')
-    //$emailServ = $this->container->get('oc_core.servemail');
+    $emailServ = $this->container->get('oc_core.servemail');
     $sendgridKey=$this->container->getParameter('sendgrid_Key');
-  //  $emailServ -> sendNewConfirmationEmail($booking, $sendgridKey);
+    $emailServ -> sendNewConfirmationEmail($booking, $sendgridKey);
    // $message = (new \Swift_Message('Confirmation & Billet(s) pour le Musée du Louvre'))
      // ->setTo($booking->getEmail()) 
       //->setFrom('rachelmabire778@gmail.com')
@@ -259,26 +256,8 @@ class BookingController extends Controller
 
     //$this->get('mailer')->send($message)
 
-    // Create the Transport
-    $transport = SendGridTransport::create($sendgridKey);
-    // Create the Mailer using SendGrid Transport
-    $mailer = new Swift_Mailer($transport);
-    // Create a Swift Message
-    $message = (new Swift_Message())
-        ->setSubject('Confirmation & Billet(s) pour le Musée du Louvre')
-        ->setFrom(['rachelmabire778@gmail.com' => 'Billetterie du Musée du Louvre'])
-        ->setTo($to = $booking->getEmail() )
-        ->setContentType('text/html')
-        ->setBody(
-          $this->renderView(
-            'OCCoreBundle:Booking:email.html.twig',
-            array(
-              'booking'=>$booking, 
-              'tickets' => $tickets,)
-            )
-        );
-    // Send the message
-    $result = $mailer->send($message);
+ 
+
     
 
     //View
