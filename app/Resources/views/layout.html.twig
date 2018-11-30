@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/png" href={{ absolute_url(asset('images/jocondebis.png')) }}>
-        <title>{% block title %}Billetterie du musée du Louvre{% endblock %}</title>
+        <title>{% block title %} {{'layout.title'|trans({}, 'messages')  }}{% endblock %}</title>
         <meta name="description" content="{% block description %}{% endblock %}" />
 
         {% block stylesheets %}

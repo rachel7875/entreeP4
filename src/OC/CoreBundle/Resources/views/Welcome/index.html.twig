@@ -4,10 +4,10 @@
 
 
 {% block title %}
-  Accueil de la - {{ parent() }}
+  {{ 'welcome.title'|trans }} {{ parent() }}
 {% endblock %}
 
-{% block description %}Page d'accueil de la Billetterie du Musée du Louvre{% endblock %}
+{% block description %}{{ 'welcome.description'|trans }}{% endblock %}
 
 {% block stylesheets %}
   {{ parent() }}
@@ -22,100 +22,99 @@
   <section class="container-fluid text-center" >
     <div class="row">
       <div class="col-sm-12 " >
-        <h1>Bienvenue sur la Billetterie en ligne du Musée du Louvre</h1>
+        <h1>{{ 'welcome.h1'|trans }}</h1>
 
-        <p>Acheter vos billets électroniques<br />
-        et éviter les longues files d'attente !</p>
+        <p>{{ 'welcome.pAchat1'|trans }}<br />
+        {{ 'welcome.pAchat2'|trans }}</p>
 
-        <a class="btn btn-secondary" href="{{ path('oc_core_add') }}" role="button">VOS BILLETS</a>
+        <a class="btn btn-secondary" href="{{ path('oc_core_add') }}" role="button">{{ 'button.tickets'|trans }}</a>
 
         <p><i class="fa fa-mobile fa-lg" aria-hidden="true"></i>
-        M-billet : Présentez vos billets à l'entrée directement sur votre téléphone !</p>
+        {{ 'welcome.pMticket'|trans }}</p>
       </div>
 
       <div class="col-sm-10 offset-sm-1" >
         <div class="row">
           <div class="col-sm-6 offset-sm-1 " >
-            <h2> <i class="fa fa-ticket "></i>  Billets et tarifs</h2>
+            <h2> <i class="fa fa-ticket "></i> {{ 'welcome.tickets&ratesh2'|trans }}</h2>
 
             <div class="card-deck">
               <div class="card">
-                <h5 class="card-header">Billet gratuit</h5>
+                <h5 class="card-header">{{ 'welcome.freeTicketh5'|trans }}</h5>
                 <div class="card-body">
-                  <p class="card-text">Enfants de moins <br />
-                  de 4 ans</p>
+                  <p class="card-text">{{ 'welcome.childUnderp'|trans }} <br />
+                  {{ 'welcome.under4p'|trans }}</p>
                   <p class="card-text"><br />0 €</p>
                 </div>
               </div>
 
               <div class="card">
-                <h5  class="card-header">Billet enfant</h5>
+                <h5  class="card-header">{{ 'welcome.childTicketh5'|trans }}</h5>
                 <div class="card-body">
-                  <p class="card-text">Enfants de <br />
-                  4 à 11 ans</p>
+                  <p class="card-text">{{ 'welcome.childp'|trans }}<br />
+                  {{ 'welcome.betweenp'|trans }}</p>
                   <p class="card-text"><br /> {{ rateEnfant.rateValue | number_format(0, ',', ' ') }} € <br />
-                  la journée</p>
+                  {{ 'welcome.dayp'|trans }}</p>
                   <p class="card-text"> {{ (rateEnfant.rateValue * durationforDemiJournee.durationValue) | number_format(0, ',', ' ')  }} € <br />
-                  la demi-journée</p>
+                  {{ 'welcome.halfDayp'|trans }}</p>
                 </div>
               </div>
 
               <div class="card">
-                <h5  class="card-header">Billet normal</h5>
+                <h5  class="card-header">{{ 'welcome.normalTicketh5'|trans }}</h5>
                 <div class="card-body">
-                  <p class="card-text">De <br />
-                  12 à 59 ans</p>
+                  <p class="card-text">{{ 'welcome.agedp'|trans }}<br />
+                  {{ 'welcome.12to59p1'|trans }}</p>
                   <p class="card-text"><br />{{ rateNormal.rateValue  | number_format(0, ',', ' ')}} € <br />
-                  la journée</p>
+                  {{ 'welcome.dayp'|trans }}</p>
                   <p class="card-text">{{ (rateNormal.rateValue * durationforDemiJournee.durationValue)   | number_format(0, ',', ' ')  }} € <br />
-                  la demi-journée</p>
+                  {{ 'welcome.halfDayp'|trans }}</p>
                 </div>
               </div>
 
               <div class="card">
-                <h5  class="card-header">Billet senior</h5>
+                <h5  class="card-header">{{ 'welcome.seniorTicketh5'|trans }}</h5>
                 <div class="card-body">
-                  <p class="card-text">A partir de <br />
-                  60 ans</p>
+                  <p class="card-text">{{ 'welcome.fromp'|trans }}<br />
+                  {{ 'welcome.60age'|trans }}</p>
                   <p class="card-text"><br />{{ rateSenior.rateValue | number_format(0, ',', ' ')}} € <br />
-                  la journée</p>
+                  {{ 'welcome.dayp'|trans }}</p>
                   <p class="card-text">{{ (rateSenior.rateValue * durationforDemiJournee.durationValue) | number_format(0, ',', ' ') }} € <br />
-                  la demi-journée</p>
+                  {{ 'welcome.halfDayp'|trans }}</p>
                 </div>
               </div>
 
               <div class="card">
-                <h5  class="card-header">Billet réduit</h5>
+                <h5  class="card-header">{{ 'welcome.reducedTicketh5'|trans }}</h5>
                 <div class="card-body">
-                  <p class="card-text">Sous conditions<br />
-                  (étudiant, militaire...*)</p>
+                  <p class="card-text">{{ 'welcome.underConditionp1'|trans }}<br />
+                  {{ 'welcome.underConditionp2'|trans }}</p>
                   <p class="card-text"><br />{{ rateReduit.rateValue | number_format(0, ',', ' ') }} € <br />
-                  la journée</p>
+                  {{ 'welcome.dayp'|trans }}</p>
                   <p class="card-text">{{ (rateReduit.rateValue * durationforDemiJournee.durationValue) | number_format(0, ',', ' ') }} € <br />
-                  la demi-journée</p>
+                  {{ 'welcome.halfDayp'|trans }}</p>
                 </div>
               </div>
             </div>
 
-            <p>Pour bénéficier d'un tarif groupe, veuillez nous contacter 
+            <p>{{ 'welcome.groupRatep'|trans }} 
             <a  href="#"><i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a> </p>
 
-            <p>*Pour les étudiants, les militaires, les employés du musée ou d'un service du Ministère de la Culture 
-            (justificatif demandé à l'entrée)</p>
+            <p>{{ 'welcome.reducedRateConditionp'|trans }}</p>
 
           </div>
 
           <div class="col-sm-3 offset-sm-1" >
-            <h2> <i class="fa fa-clock-o" aria-hidden="true"></i>  Horaires d'ouverture</h2>
-            <p>Lundi : 9 h - 18 h</p>
-            <p>Mardi : Fermé</p>
-            <p>Mercredi : 9 h - 21h45</p>
-            <p>Jeudi : 9 h - 18 h</p>
-            <p>Vendredi : 9 h - 21h45</p>
-            <p>Samedi : 9 h - 18 h</p>
-            <p>Dimanche : Fermé</p>
-            <p><br />Fermé le 1er mai, le 1er novembre et <br />
-            le 25 décembre</p>
+            <h2> <i class="fa fa-clock-o" aria-hidden="true"></i> {{ 'welcome.openingHoursh2'|trans }}</h2>
+            <p>{{ 'welcome.openingHoursMonday'|trans }}</p>
+            <p>{{ 'welcome.openingHoursTuesday'|trans }}</p>
+            <p>{{ 'welcome.openingHoursWednesday'|trans }}</p>
+            <p>{{ 'welcome.openingHoursThursday'|trans }}</p>
+            <p>{{ 'welcome.openingHoursFriday'|trans }}</p>
+            <p>{{ 'welcome.openingHoursSaturday'|trans }}</p>
+            <p>{{ 'welcome.openingHoursSunday'|trans }}</p>
+            <p><br />{{ 'welcome.publicHolidaysp1'|trans }} <br />
+            {{ 'welcome.publicHolidaysp2'|trans }}</p>
           </div>
 
 

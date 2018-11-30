@@ -1,0 +1,38 @@
+layout.title: 'Billetterie du musée du Louvre'
+welcome.title: 'Accueil de la'
+welcome.description: 'Page d''accueil de la Billetterie du Musée du Louvre'
+welcome.h1: 'Bienvenue sur la Billetterie en ligne du Musée du Louvre'
+welcome.pAchat1: __welcome.pAchat1
+welcome.pAchat2: __welcome.pAchat2
+button.tickets: __button.tickets
+welcome.pMticket: __welcome.pMticket
+'welcome.tickets&ratesh2': '__welcome.tickets&ratesh2'
+welcome.freeTicketh5: __welcome.freeTicketh5
+welcome.childUnderp: __welcome.childUnderp
+welcome.under4p: __welcome.under4p
+welcome.childTicketh5: __welcome.childTicketh5
+welcome.childp: __welcome.childp
+welcome.betweenp: __welcome.betweenp
+welcome.dayp: __welcome.dayp
+welcome.halfDayp: __welcome.halfDayp
+welcome.normalTicketh5: __welcome.normalTicketh5
+welcome.agedp: __welcome.agedp
+welcome.12to59p1: __welcome.12to59p1
+welcome.seniorTicketh5: __welcome.seniorTicketh5
+welcome.fromp: __welcome.fromp
+welcome.60age: __welcome.60age
+welcome.reducedTicketh5: __welcome.reducedTicketh5
+welcome.underConditionp1: __welcome.underConditionp1
+welcome.underConditionp2: __welcome.underConditionp2
+welcome.groupRatep: __welcome.groupRatep
+welcome.reducedRateConditionp: __welcome.reducedRateConditionp
+welcome.openingHoursh2: __welcome.openingHoursh2
+welcome.openingHoursMonday: __welcome.openingHoursMonday
+welcome.openingHoursTuesday: __welcome.openingHoursTuesday
+welcome.openingHoursWednesday: __welcome.openingHoursWednesday
+welcome.openingHoursThursday: __welcome.openingHoursThursday
+welcome.openingHoursFriday: __welcome.openingHoursFriday
+welcome.openingHoursSaturday: __welcome.openingHoursSaturday
+welcome.openingHoursSunday: __welcome.openingHoursSunday
+welcome.publicHolidaysp1: __welcome.publicHolidaysp1
+welcome.publicHolidaysp2: __welcome.publicHolidaysp2
