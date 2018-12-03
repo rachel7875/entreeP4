@@ -1,38 +1,38 @@
-layout.title: 'Billetterie du musée du Louvre'
-welcome.title: 'Accueil de la'
-welcome.description: 'Page d''accueil de la Billetterie du Musée du Louvre'
-welcome.h1: 'Bienvenue sur la Billetterie en ligne du Musée du Louvre'
-welcome.pAchat1: __welcome.pAchat1
-welcome.pAchat2: __welcome.pAchat2
-button.tickets: __button.tickets
-welcome.pMticket: __welcome.pMticket
-'welcome.tickets&ratesh2': '__welcome.tickets&ratesh2'
-welcome.freeTicketh5: __welcome.freeTicketh5
-welcome.childUnderp: __welcome.childUnderp
-welcome.under4p: __welcome.under4p
-welcome.childTicketh5: __welcome.childTicketh5
-welcome.childp: __welcome.childp
-welcome.betweenp: __welcome.betweenp
-welcome.dayp: __welcome.dayp
-welcome.halfDayp: __welcome.halfDayp
-welcome.normalTicketh5: __welcome.normalTicketh5
-welcome.agedp: __welcome.agedp
-welcome.12to59p1: __welcome.12to59p1
-welcome.seniorTicketh5: __welcome.seniorTicketh5
-welcome.fromp: __welcome.fromp
-welcome.60age: __welcome.60age
-welcome.reducedTicketh5: __welcome.reducedTicketh5
-welcome.underConditionp1: __welcome.underConditionp1
-welcome.underConditionp2: __welcome.underConditionp2
-welcome.groupRatep: __welcome.groupRatep
-welcome.reducedRateConditionp: __welcome.reducedRateConditionp
-welcome.openingHoursh2: __welcome.openingHoursh2
-welcome.openingHoursMonday: __welcome.openingHoursMonday
-welcome.openingHoursTuesday: __welcome.openingHoursTuesday
-welcome.openingHoursWednesday: __welcome.openingHoursWednesday
-welcome.openingHoursThursday: __welcome.openingHoursThursday
-welcome.openingHoursFriday: __welcome.openingHoursFriday
-welcome.openingHoursSaturday: __welcome.openingHoursSaturday
-welcome.openingHoursSunday: __welcome.openingHoursSunday
-welcome.publicHolidaysp1: __welcome.publicHolidaysp1
-welcome.publicHolidaysp2: __welcome.publicHolidaysp2
+layout.title: Billetterie du musée du Louvre
+welcome.title: Accueil de la
+welcome.description: Page d'accueil de la Billetterie du Musée du Louvre
+welcome.h1: Bienvenue sur la Billetterie en ligne du Musée du Louvre
+welcome.pAchat1: Acheter vos billets électroniques
+welcome.pAchat2: et éviter les longues files d'attente !
+button.tickets: VOS BILLETS
+welcome.pMticket: "M-billet : Présentez vos billets à l'entrée directement sur votre téléphone !"
+welcome.tickets&ratesh2: Billets et tarifs
+welcome.freeTicketh5: Billet gratuit
+welcome.childUnderp: Enfants de moins 
+welcome.under4p: de 4 ans
+welcome.childTicketh5: Billet enfant
+welcome.childp: Enfants de
+welcome.betweenp: 4 à 11 ans
+welcome.dayp: la journée
+welcome.halfDayp: la demi-journée
+welcome.normalTicketh5: Billet normal
+welcome.agedp: De 
+welcome.12to59p1: 12 à 59 ans
+welcome.seniorTicketh5: Billet senior
+welcome.fromp: A partir de 
+welcome.60age: 60 ans
+welcome.reducedTicketh5: Billet réduit
+welcome.underConditionp1: Sous conditions
+welcome.underConditionp2: (étudiant, militaire...*)
+welcome.groupRatep: Pour bénéficier d'un tarif groupe, veuillez nous contacter 
+welcome.reducedRateConditionp: "*Pour les étudiants, les militaires, les employés du musée ou d'un service du Ministère de la Culture (justificatif demandé à l'entrée)"
+welcome.openingHoursh2: Horaires d'ouverture
+welcome.openingHoursMonday: "Lundi : 9 h - 18 h"
+welcome.openingHoursTuesday: "Mardi : Fermé"
+welcome.openingHoursWednesday: "Mercredi : 9 h - 21h45"
+welcome.openingHoursThursday: "Jeudi : 9 h - 18 h"
+welcome.openingHoursFriday: "Vendredi : 9 h - 21h45"
+welcome.openingHoursSaturday: "Samedi : 9 h - 18 h"
+welcome.openingHoursSunday: "Dimanche : Fermé"
+welcome.publicHolidaysp1: Fermé le 1er mai, le 1er novembre et
+welcome.publicHolidaysp2: le 25 décembre

@@ -2,8 +2,8 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-text " id="logo" href="{{path('oc_core_homepage') }}">
-    <img src={{ absolute_url(asset('images/jocondebis.png')) }} alt="logo de la billetterie du Musée du Louvre" /></a>
-    <a class="navbar-brand" id="brand"  href="{{path('oc_core_homepage') }}">Billetterie du Musée du Louvre </a>
+    <img src={{ absolute_url(asset('images/jocondebis.png')) }} alt={{ 'navbar.logoAlt'|trans }}/></a>
+    <a class="navbar-brand" id="brand"  href="{{path('oc_core_homepage') }}">{{ 'navbar.brand'|trans }}  </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -12,40 +12,51 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="{{path('oc_core_homepage') }}">Accueil Billetterie <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{{path('oc_core_homepage') }}"> {{ 'navbar.home'|trans }} <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('oc_core_add') }}">Vos Billets</a>
+          <a class="nav-link" href="{{ path('oc_core_add') }}"> {{ 'navbar.tickets'|trans }} </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#"> {{ 'navbar.contact'|trans }} </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.louvre.fr/accueil">Accès site du Musée</a>
+          <a class="nav-link" href="https://www.louvre.fr/accueil"> {{ 'navbar.accessMuseumSite'|trans }} </a>
         </li>
       </ul>
     </div>
     
-      <form class="form-inline my-2 my-lg-0">
-        <a class="btn btn-danger btn-xs navbar-btn" href="https://www.louvre.fr/accueil">Accès site du Musée</a>
-        <select id="select">
-          <option>Français</option>
-          <option>English</option>
-        </select>
 
-      </form>
+
+      <div class="nav navbar-nav my-2 my-lg-0">
+        <a class="btn btn-danger btn-xs navbar-btn" href="https://www.louvre.fr/accueil"> {{ 'navbar.accessMuseumSite'|trans }} </a>
+         {% if (app.request.getLocale()) == 'fr' %}
+          <div class="dropdown">
+            <button type="button" class="btn btn-outline-secondary  dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" 
+            aria-expanded="false">{{ 'navbar.language'|trans }} <span class="caret"></span></button>
+            <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item active" href="#">Français</a>
+              <a class="dropdown-item" href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">
+              English</a>
+            </div>
+          </div>
+        {% endif %}
+        {% if (app.request.getLocale()) == 'en' %}
+          <div class="dropdown">
+            <button type="button" class="btn btn-outline-secondary  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+            aria-expanded="false">{{ 'navbar.language'|trans }} <span class="caret"></span></button>
+            <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item " href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'fr'})) }}">
+              Français</a>
+              <a class="dropdown-item active" href="#">English</a>
+            </div>
+          </div>
+        {% endif %}
+      </div>
 
   </nav>
   
 
-           
-
-
-        </div>
-
-      </div>
-
-    </nav>
 
 
 </header>

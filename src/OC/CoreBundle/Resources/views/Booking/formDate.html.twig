@@ -19,7 +19,7 @@
         {{ form_errors(form.email) }}
       </div>
       <div class="col-sm-6">
-        <p>Vos billets seront envoyés à cette adresse email.</p>
+        <p>{{ 'formdate.destinationEmail'|trans }}Vos billets seront envoyés à cette adresse email.</p>
       </div>
     </div>
   </div> 
@@ -28,7 +28,7 @@
   <div class="form-group">
     <div class="row">
       <div class="col-sm-2"
-        {{ form_label(form.visitDay, "Date de la visite", {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_label(form.visitDay, {{ 'formdate.visitDay'|trans }}"Date de la visite", {'label_attr': {'class': 'control-label'}}) }}
       </div>
       <div class="col-sm-4">
         {{ form_widget(form.visitDay, {'attr': {'class': 'form-control'}}) }}
@@ -54,7 +54,7 @@
   <div class="form-group">
     <div class="row">
       <div class="col-sm-2">
-        {{ form_label(form.duration, "Durée", {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_label(form.duration, {{ 'formdate.duration'|trans }}"Durée", {'label_attr': {'class': 'control-label'}}) }}
       </div>
       <div class="col-sm-4">
         {{ form_widget(form.duration, {'attr': {'class': 'form-control'}}) }}

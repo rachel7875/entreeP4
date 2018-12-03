@@ -36,3 +36,13 @@ welcome.openingHoursSaturday: "Saturday : 9 h - 18 h"
 welcome.openingHoursSunday: "Sunday : Closed"
 welcome.publicHolidaysp1: Closed on May 1st, on November 1st and
 welcome.publicHolidaysp2: on December 25
+
+
+navbar.logoAlt: logo of the Louvre Museum Online ticketing
+navbar.brand: Louvre Museum Online ticketing
+navbar.home: Ticketing Home
+navbar.tickets: Your tickets
+navbar.contact: Contact
+navbar.accessMuseumSite: Museum site access
+navbar.language: Language
+navbar.choose: Choose language

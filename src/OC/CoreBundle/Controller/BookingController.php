@@ -238,28 +238,12 @@ class BookingController extends Controller
     
 
     
-    //Sending a confirmation email with the tickets
-   // $mailer = $this->container->get('mailer')
+    //Sending a confirmation email with the tickets  
     $emailServ = $this->container->get('oc_core.servemail');
     $sendgridKey=$this->container->getParameter('sendgrid_Key');
     $emailServ -> sendNewConfirmationEmail($booking, $sendgridKey);
-   // $message = (new \Swift_Message('Confirmation & Billet(s) pour le Musée du Louvre'))
-     // ->setTo($booking->getEmail()) 
-      //->setFrom('rachelmabire778@gmail.com')
-      //->setBody(
-     //   $this->renderView(
-      //    'OCCoreBundle:Booking:email.html.twig',
-    //      array('booking'=>$booking)
-    //    ),
-     //   'text/html'
-   // );
-
-    //$this->get('mailer')->send($message)
-
- 
 
     
-
     //View
     return $this->render('OCCoreBundle:Booking:confirmation.html.twig', array(
         'booking' => $booking,
