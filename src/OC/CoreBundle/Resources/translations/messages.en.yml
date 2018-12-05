@@ -1,4 +1,5 @@
 layout.title: Online ticketing of the Louvre Museum
+
 welcome.title: Home for
 welcome.description: Homepage of the Louvre Museum Online ticketing
 welcome.h1: Welcome to the Online ticketing of the Louvre Museum
@@ -27,13 +28,13 @@ welcome.underConditionp2: (student, military ... *)
 welcome.groupRatep: To benefit from a group rate, please contact us
 welcome.reducedRateConditionp: "* For students, military, museum employees or employees of a department of the Ministry of Culture (proof requested at the entrance)"
 welcome.openingHoursh2: Opening hours
-welcome.openingHoursMonday: "Monday : 9 h - 18 h"
-welcome.openingHoursTuesday: "Tuesday : Closed"
-welcome.openingHoursWednesday: "Wednesday : 9 h - 21h45"
-welcome.openingHoursThursday: "Thursday : 9 h - 18 h"
-welcome.openingHoursFriday: "Friday : 9 h - 21h45"
-welcome.openingHoursSaturday: "Saturday : 9 h - 18 h"
-welcome.openingHoursSunday: "Sunday : Closed"
+welcome.openingHoursMonday: "Monday: 9 a.m.-6 p.m."
+welcome.openingHoursTuesday: "Tuesday: Closed"
+welcome.openingHoursWednesday: "Wednesday: 9 a.m.–9:45 p.m."
+welcome.openingHoursThursday: "Thursday: 9 a.m.–6 p.m."
+welcome.openingHoursFriday: "Friday: 9 a.m.–9:45 p.m."
+welcome.openingHoursSaturday: "Saturday: 9 a.m.–6 p.m."
+welcome.openingHoursSunday: "Sunday: Closed"
 welcome.publicHolidaysp1: Closed on May 1st, on November 1st and
 welcome.publicHolidaysp2: on December 25
 
@@ -45,4 +46,54 @@ navbar.tickets: Your tickets
 navbar.contact: Contact
 navbar.accessMuseumSite: Museum site access
 navbar.language: Language
-navbar.choose: Choose language
+
+date.title: 'Home for'
+date.h1: Your tickets
+
+buyingProcess.step1: Step 1
+buyingProcess.mark1: Date
+buyingProcess.step2: Step 2
+buyingProcess.mark2: Visitors
+buyingProcess.step3: Step 3
+buyingProcess.mark3: Summary
+buyingProcess.step4: Step 4
+buyingProcess.mark4: Payment
+buyingProcess.step5: Step 5
+buyingProcess.mark5: Confirmation
+
+formdate.destinationEmail: Your tickets will be sent to this email address.
+formdate.noSelectionDays: Some days can not be selected (full days regarding the bookings and close days).
+formdate.openingHoursIntro: 'The museum is open according to the following hours:'
+
+
+label.email: 'Email'
+label.visitDay: Date of the visit
+label.duration: Duration
+label.ticketsNumber: Number of tickets
+
+general.openingHours:
+        # les éléments de liste sont précédés d'un tiret en YAML
+        - |
+            Monday: 9 a.m.-6 p.m.
+        - |
+            Tuesday: Closed
+        - |
+            Wednesday: 9 a.m.–9:45 p.m.
+        - |
+            Thursday: 9 a.m.–6 p.m.  
+        - |
+            Friday: 9 a.m.–9:45 p.m.
+        - |
+            Saturday: 9 a.m.–6 p.m.
+        - |
+            Sunday: Closed
+        - |
+            Closed on May 1st, on November 1st and on December 25                
+
+formdate.hoursForHalfday: Half-day from 2 p.m. 
+formdate.freetickets: Please include free tickets (children under 4 years old)
+formdate.more10Tickets: For more than 10 tickets, please contact us
+
+button.cancel: Cancel the order
+button.next: Next
+

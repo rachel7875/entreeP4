@@ -12,14 +12,15 @@
   <div class="form-group">
     <div class="row">
       <div class="col-sm-2">
-        {{ form_label(form.email, "Email", {'label_attr': {'class': 'control-label'}}) }}
+        <label for="">{{ 'label.email'|trans }}</label>
+        {# {{ form_label(form.email, {'label_attr': {'class': 'control-label'}}) }}#}
       </div>
       <div class="col-sm-4">
         {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
         {{ form_errors(form.email) }}
       </div>
       <div class="col-sm-6">
-        <p>{{ 'formdate.destinationEmail'|trans }}Vos billets seront envoyés à cette adresse email.</p>
+        <p>{{ 'formdate.destinationEmail'|trans }}</p>
       </div>
     </div>
   </div> 
@@ -27,25 +28,19 @@
   {# Field Date de la visite #}
   <div class="form-group">
     <div class="row">
-      <div class="col-sm-2"
-        {{ form_label(form.visitDay, {{ 'formdate.visitDay'|trans }}"Date de la visite", {'label_attr': {'class': 'control-label'}}) }}
+      <div class="col-sm-2">
+        <label for="">{{ 'label.visitDay'|trans }}</label>
       </div>
       <div class="col-sm-4">
         {{ form_widget(form.visitDay, {'attr': {'class': 'form-control'}}) }}
         {{ form_errors(form.visitDay) }}
       </div>
       <div class="col-sm-6">
-        <p>Certains jours ne peuvent être sélectionnés (jours complets au niveau des réservations 
-        et jours de fermeture).</p>
-        <p>Le musée est ouvert selon les horaires suivants :<br />
-        Lundi : 9 h - 18 h<br />
-        Mardi : Fermé<br />
-        Mercredi : 9 h - 21h45<br />
-        Jeudi : 9 h - 18 h<br />
-        Vendredi : 9 h - 21h45<br />
-        Samedi : 9 h - 18 h<br />
-        Dimanche : Fermé</p>
-        Fermé le 1er mai, le 1er novembre et le 25 décembre</p>
+        <p>{{ 'formdate.noSelectionDays'|trans }}</p>
+        <p>{{ 'formdate.openingHoursIntro'|trans }}</p>
+        {% for i in 0..7 %}
+          <p>{{ ('general.openingHours.' ~ i )|trans }}</p>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -54,14 +49,14 @@
   <div class="form-group">
     <div class="row">
       <div class="col-sm-2">
-        {{ form_label(form.duration, {{ 'formdate.duration'|trans }}"Durée", {'label_attr': {'class': 'control-label'}}) }}
+        <label for="">{{ 'label.duration'|trans }}</label>
       </div>
       <div class="col-sm-4">
         {{ form_widget(form.duration, {'attr': {'class': 'form-control'}}) }}
         {{ form_errors(form.duration) }}
       </div>
       <div class="col-sm-6">
-        <p>Demi-journée à partir de 14h</p>
+        <p>{{ 'formdate.hoursForHalfday'|trans }}</p>
       </div>
     </div>
   </div>
@@ -70,16 +65,15 @@
   <div class="form-group">
     <div class="row">
       <div class="col-sm-2 ">
-        {{ form_label(form.ticketsNumber, "Nombre de billets", {'label_attr': {'class': 'control-label'}}) }}
+        <label for="">{{ 'label.ticketsNumber'|trans }}</label>
       </div>
       <div class="col-sm-4">
         {{ form_widget(form.ticketsNumber, {'attr': {'class': 'form-control'}}) }}
         {{ form_errors(form.ticketsNumber) }}
       </div>
       <div class="col-sm-6">
-        <p>Merci d'inclure les billets gratuits (enfants de moins de 4 ans)<br />
-          Pour plus de 10 billets, veuillez nous contacter 
-          <a  href="#"><i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a>
+        <p>{{ 'formdate.freetickets'|trans }} <br />
+          {{ 'formdate.more10Tickets'|trans }}<a  href="#"><i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a>
         </p>
       </div>
   </div>
@@ -87,8 +81,8 @@
   {{ form_rest(form) }}
 
   {# Buttons at the end  #}
-  <button type="button" class="btn btn-default">Annuler la commande</button>
-  <input type="submit" value="Suivant" class="pull-right" />
+  <button type="button" class="btn btn-default">{{ 'button.cancel'|trans }}</button>
+  <input type="submit" value={{ 'button.next'|trans }} class="pull-right" />
 
 
   {{ form_end(form) }}

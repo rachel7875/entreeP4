@@ -50,7 +50,7 @@ class BookingType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'OC\CoreBundle\Entity\Booking'
+            'data_class' => 'OC\CoreBundle\Entity\Booking',
         ));
     }
 

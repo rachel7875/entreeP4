@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/png" href={{ absolute_url(asset('images/jocondebis.png')) }}>
-        <title>{% block title %} {{'layout.title'|trans({}, 'messages')  }}{% endblock %}</title>
+        <title>{% block title %} {{'layout.title'|trans({}, 'messages')  }} {% endblock %}</title>
         <meta name="description" content="{% block description %}{% endblock %}" />
 
         {% block stylesheets %}
@@ -37,8 +37,8 @@
         <footer>
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <p><a href="https://www.ticketlouvre.fr/louvre/b2c/index.cfm/CGV"Conditions générales de vente    </a> </p>
-                    <p><a href="#"Mentions légales</a></p>
+                    <p><a href="https://www.ticketlouvre.fr/louvre/b2c/index.cfm/CGV" {{'footer.cgv'|trans({}, 'messages')  }} Conditions générales de vente    </a> </p>
+                    <p><a href="#" {{'footer.legalNotices'|trans({}, 'messages')  }} Mentions légales </a></p>
                 </div>
             </div>
         </footer>

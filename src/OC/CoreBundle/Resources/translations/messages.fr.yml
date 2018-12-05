@@ -1,4 +1,5 @@
 layout.title: 'Billetterie du musée du Louvre'
+
 welcome.title: 'Accueil de la'
 welcome.description: 'Page d''accueil de la Billetterie du Musée du Louvre'
 welcome.h1: 'Bienvenue sur la Billetterie en ligne du Musée du Louvre'
@@ -38,13 +39,60 @@ welcome.publicHolidaysp1: 'Fermé le 1er mai, le 1er novembre et'
 welcome.publicHolidaysp2: 'le 25 décembre'
 
 
-navbar.logoAlt: logo de la billetterie du Musée du Louvre
-navbar.brand: Billetterie du Musée du Louvre
-navbar.home: Accueil Billetterie
-navbar.tickets: Vos Billets
+navbar.logoAlt: 'logo de la billetterie du Musée du Louvre'
+navbar.brand: 'Billetterie du Musée du Louvre'
+navbar.home: 'Accueil Billetterie'
+navbar.tickets: 'Vos Billets'
 navbar.contact: Contact
-navbar.accessMuseumSite: Accès site du Musée
+navbar.accessMuseumSite: 'Accès site du Musée'
 navbar.language: Langue
-navbar.choose: Choix de la langue
 
-   
+date.title: 'Accueil de la'
+date.h1: Vos Billets
+
+buyingProcess.step1: Etape 1
+buyingProcess.mark1: Date
+buyingProcess.step2: Etape 2
+buyingProcess.mark2: Visiteurs
+buyingProcess.step3: Etape 3
+buyingProcess.mark3: Récapitulatif
+buyingProcess.step4: Etape 4
+buyingProcess.mark4: Paiement
+buyingProcess.step5: Etape 5
+buyingProcess.mark5: Confirmation
+
+formdate.destinationEmail: Vos billets seront envoyés à cette adresse email.
+formdate.noSelectionDays: Certains jours ne peuvent être sélectionnés (jours complets au niveau des réservations et jours de fermeture).
+formdate.openingHoursIntro: 'Le musée est ouvert selon les horaires suivants :'
+
+
+label.email: 'Email'
+label.visitDay: Date de la visite
+label.duration: Durée
+label.ticketsNumber: Nombre de billets
+
+general.openingHours:
+        # les éléments de liste sont précédés d'un tiret en YAML
+        - |
+            Lundi : 9 h - 18 h
+        - |
+            Mardi : Fermé
+        - |
+            Mercredi : 9 h - 21h45
+        - |
+            Jeudi : 9 h - 18 h
+        - |
+            Vendredi : 9 h - 21h45
+        - |
+            Samedi : 9 h - 18 h
+        - |
+            Dimanche : Fermé
+        - |
+            Fermé le 1er mai, le 1er novembre et le 25 décembre
+
+formdate.hoursForHalfday: Demi-journée à partir de 14h
+formdate.freetickets: Merci d'inclure les billets gratuits (enfants de moins de 4 ans)
+formdate.more10Tickets: Pour plus de 10 billets, veuillez nous contacter
+
+button.cancel: Annuler la commande
+button.next: Suivant
