@@ -26,7 +26,7 @@ welcome.reducedTicketh5: Reduced ticket
 welcome.underConditionp1: Under conditions
 welcome.underConditionp2: (student, military ... *)
 welcome.groupRatep: To benefit from a group rate, please contact us
-welcome.reducedRateConditionp: "* For students, military, museum employees or employees of a department of the Ministry of Culture (proof requested at the entrance)"
+
 welcome.openingHoursh2: Opening hours
 welcome.openingHoursMonday: "Monday: 9 a.m.-6 p.m."
 welcome.openingHoursTuesday: "Tuesday: Closed"
@@ -48,7 +48,7 @@ navbar.accessMuseumSite: Museum site access
 navbar.language: Language
 
 date.title: 'Home for'
-date.h1: Your tickets
+steps.h1: Your tickets
 
 buyingProcess.step1: Step 1
 buyingProcess.mark1: Date
@@ -70,7 +70,14 @@ label.email: 'Email'
 label.visitDay: Date of the visit
 label.duration: Duration
 label.ticketsNumber: Number of tickets
+label.visitor: Visitor
+label.reducedRate: Reduced rate
+label.visitorName: Name
+label.visitorFirstName: First name
+label.birthdayDate: Birthday date
+label.country: Country
 
+general.reducedRateConditionp: "* For students, military, museum employees or employees of a department of the Ministry of Culture (proof requested at the entrance)"
 general.openingHours:
         # les éléments de liste sont précédés d'un tiret en YAML
         - |
@@ -96,4 +103,8 @@ formdate.more10Tickets: For more than 10 tickets, please contact us
 
 button.cancel: Cancel the order
 button.next: Next
+button.previous: Previous
+button.delete: Delete
+button.addTicket: Add a ticket
 
+formvisitors.ticketsForUnder4: Each visitor must have a nominative ticket, including children under 4 years (free ticket)

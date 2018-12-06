@@ -26,7 +26,7 @@ welcome.reducedTicketh5: 'Billet réduit'
 welcome.underConditionp1: 'Sous conditions'
 welcome.underConditionp2: '(étudiant, militaire...*)'
 welcome.groupRatep: 'Pour bénéficier d''un tarif groupe, veuillez nous contacter'
-welcome.reducedRateConditionp: '*Pour les étudiants, les militaires, les employés du musée ou d''un service du Ministère de la Culture (justificatif demandé à l''entrée)'
+
 welcome.openingHoursh2: 'Horaires d''ouverture'
 welcome.openingHoursMonday: 'Lundi : 9 h - 18 h'
 welcome.openingHoursTuesday: 'Mardi : Fermé'
@@ -48,7 +48,7 @@ navbar.accessMuseumSite: 'Accès site du Musée'
 navbar.language: Langue
 
 date.title: 'Accueil de la'
-date.h1: Vos Billets
+steps.h1: Vos Billets
 
 buyingProcess.step1: Etape 1
 buyingProcess.mark1: Date
@@ -70,7 +70,14 @@ label.email: 'Email'
 label.visitDay: Date de la visite
 label.duration: Durée
 label.ticketsNumber: Nombre de billets
+label.visitor: Visiteur
+label.reducedRate: Tarif réduit
+label.visitorName: Nom
+label.visitorFirstName: Prénom
+label.birthdayDate: Date d'anniversaire
+label.country: Pays
 
+general.reducedRateConditionp: '*Pour les étudiants, les militaires, les employés du musée ou d''un service du Ministère de la Culture (justificatif demandé à l''entrée)'
 general.openingHours:
         # les éléments de liste sont précédés d'un tiret en YAML
         - |
@@ -96,3 +103,8 @@ formdate.more10Tickets: Pour plus de 10 billets, veuillez nous contacter
 
 button.cancel: Annuler la commande
 button.next: Suivant
+button.previous: Précédent
+button.delete: Supprimer
+button.addTicket: Ajouter un billet
+
+formvisitors.ticketsForUnder4: Chaque visiteur doit être muni de son billet nominatif, y compris les enfants de moins de 4 ans (billet gratuit)

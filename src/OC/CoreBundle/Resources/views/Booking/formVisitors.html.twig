@@ -11,23 +11,22 @@
   {{ form_row(form.tickets) }}
   
 
-  <button type="button" class="btn btn-default" id="add_ticket">Ajouter un ticket</button>
+  <button type="button" class="btn btn-default" id="add_ticket">{{ 'button.addTicket'|trans }}</button>
 
   <div >
     {{ form_rest(form) }}
   </div>
   
-  <p>*Pour les étudiants, les militaires, les employés du musée ou d'un 
-  service du Ministère de la Culture (justificatif demandé à l'entrée).</p>
+  <p> {{ 'general.reducedRateConditionp'|trans }}</p>
 
   {#Warning  for the tickets required for children under 4 #}
-  <p>Chaque visiteur doit être muni de son billet nominatif, y compris les enfants de moins de 4 ans (billet gratuit).</p>
+  <p>{{ 'formvisitors.ticketsForUnder4'|trans }} (billet gratuit).</p>
 
 
   {# Buttons at the end  #}
-  <button type="button" class="btn btn-default">Annuler la commande</button>
-  <button type="button" class="btn btn-default">Précédent</button>
-  <input type="submit" value="Suivant" class="pull-right" />
+  <button type="button" class="btn btn-default">{{ 'button.cancel'|trans }}</button>
+  <button type="button" class="btn btn-default">{{ 'button.previous'|trans }}</button>
+  <input type="submit" value={{ 'button.next'|trans }} class="pull-right" />
 
 
   {{ form_end(form) }}
