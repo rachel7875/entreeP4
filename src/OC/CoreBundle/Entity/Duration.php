@@ -3,12 +3,16 @@
 namespace OC\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Translatable\Translatable;
+
+
 
 /**
  * @ORM\Table(name="duration")
  * @ORM\Entity(repositoryClass="OC\CoreBundle\Repository\DurationRepository")
  */
-class Duration 
+class Duration implements Translatable
 
 {
     /**
@@ -19,6 +23,7 @@ class Duration
     private $id;
 
     /**
+     * @Gedmo\Translatable
      * @ORM\Column(name="durationName", type="string", length=255)
      */
     private $durationName;
@@ -28,6 +33,13 @@ class Duration
      */
     private $durationValue;
 
+   /**
+     * @Gedmo\Locale
+     * Used locale to override Translation listener`s locale
+     * this is not a mapped field of entity metadata, just a simple property
+     * and it is not necessary because globally locale can be set in listener
+     */
+    private $locale;
 
     public function getId()
     {
@@ -58,5 +70,9 @@ class Duration
         return $this->durationValue;
     }
 
+    public function setTranslatableLocale($locale)
+    {
+        $this->locale = $locale;
+    }
 
 }
