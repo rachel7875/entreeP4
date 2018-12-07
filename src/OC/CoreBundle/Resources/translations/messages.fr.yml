@@ -6,7 +6,7 @@ welcome.h1: 'Bienvenue sur la Billetterie en ligne du Musée du Louvre'
 welcome.pAchat1: 'Acheter vos billets électroniques'
 welcome.pAchat2: 'et éviter les longues files d''attente !'
 button.tickets: 'VOS BILLETS'
-welcome.pMticket: 'M-billet : Présentez vos billets à l''entrée directement sur votre téléphone !'
+
 'welcome.tickets&ratesh2': 'Billets et tarifs'
 welcome.freeTicketh5: 'Billet gratuit'
 welcome.childUnderp: 'Enfants de moins'
@@ -77,6 +77,9 @@ label.visitorFirstName: Prénom
 label.birthdayDate: Date d'anniversaire
 label.country: Pays
 
+label.generalTermsAcceptance: "J'accepte les conditions générales de vente"
+
+general.pMticket: 'M-billet : Présentez vos billets à l''entrée directement sur votre téléphone !'
 general.reducedRateConditionp: '*Pour les étudiants, les militaires, les employés du musée ou d''un service du Ministère de la Culture (justificatif demandé à l''entrée)'
 general.openingHours:
         # les éléments de liste sont précédés d'un tiret en YAML
@@ -96,6 +99,7 @@ general.openingHours:
             Dimanche : Fermé
         - |
             Fermé le 1er mai, le 1er novembre et le 25 décembre
+general.ticketsForUnder4: ' Chaque visiteur doit être muni de son billet nominatif, y compris les enfants de moins de 4 ans (billet gratuit)'
 
 formdate.hoursForHalfday: Demi-journée à partir de 14h
 formdate.freetickets: Merci d'inclure les billets gratuits (enfants de moins de 4 ans)
@@ -106,5 +110,33 @@ button.next: Suivant
 button.previous: Précédent
 button.delete: Supprimer
 button.addTicket: Ajouter un billet
+button.info: Informations Pratiques
+button.visitsActivities: Visites & Activités
+button.expoActu: Expositions & Actualités
+button.oeuvresPalace: Oeuvres & Palais
+button.artsEdu: Arts & Education
 
-formvisitors.ticketsForUnder4: Chaque visiteur doit être muni de son billet nominatif, y compris les enfants de moins de 4 ans (billet gratuit)
+recap.check: Avant de procéder au paiement, veuillez vérifier le détail de votre commande (date, durée, email pour la réception des billets, 
+                  visiteurs)
+recap.visitDay: 'Date de la visite : '
+recap.duration: 'Durée de la visite : '
+recap.email: "email pour la réception des billets : "
+recap.tickets: Billets
+recap.price: Prix
+recap.visitor: 'Visiteur : '
+recap.rate: 'Tarif : '
+recap.total: Total
+
+formrecap.generalTermsAcceptance: Voir les CGV
+
+payment.infoToGive: Veuillez donner les informations nécessaires pour effectuer le paiement
+payment.checkoutDescription: "Billetterie"
+payment.error: 'Erreur lors du paiement en ligne : '
+
+confirmation.validatedOrder: Votre commande a été validée sous le code de réservation
+confirmation.emailToCome: Vous allez recevoir un email de confirmation à l'adresse
+confirmation.emailDescription: 'Dans cet email, vous trouverez également le code de réservation et les billets à présenter pour entrer 
+dans le musée.'
+confirmation.seeYouSoon: A bientôt !
+confirmation.infoh3: Pour tout savoir afin de préparer sa visite et se renseigner !
+

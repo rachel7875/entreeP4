@@ -9,7 +9,7 @@
   <section class="container-fluid" >
     <div class="row">
       <div class="col-sm-12 " >
-        <h1>Vos Billets</h1>
+        <h1>{{ 'steps.h1'|trans }}</h1>
       </div>
 
       <div class="col-sm-10 offset-sm-1" >
@@ -23,8 +23,8 @@
                         <ion-icon  name="calendar"></ion-icon>
                       </div>
                       <div class="col-md-10 ">
-                        <p> Etape 1 <br />
-                        <mark>Date</mark> </p>
+                        <p> {{ 'buyingProcess.step1'|trans }} <br />
+                        <mark>{{ 'buyingProcess.mark1'|trans }}</mark> </p>
                       </div>
                     </div>
 		          </div>
@@ -35,8 +35,8 @@
                         <i class="fa fa-user-plus"  aria-hidden="true"></i>
                       </div>
                       <div class="col-md-10 ">
-                        <p> Etape 2 <br />
-                          <mark>Visiteurs</mark> </p>
+                        <p> {{ 'buyingProcess.step2'|trans }}<br />
+                          <mark>{{ 'buyingProcess.mark2'|trans }}</mark> </p>
                       </div>
                     </div>
               </div>
@@ -47,8 +47,8 @@
                         <i class="fa fa-file-text-o" aria-hidden="true"></i>
                       </div>
                       <div class="col-md-10 ">
-                        <p> Etape 3 <br />
-                        <mark>Récapitulatif</mark> </p>
+                        <p> {{ 'buyingProcess.step3'|trans }}<br />
+                        <mark>{{ 'buyingProcess.mark3'|trans }}</mark> </p>
                       </div>
                     </div>  
               </div>
@@ -59,8 +59,8 @@
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
                       </div>
                       <div class="col-md-10 ">
-                        <p> Etape 4 <br />
-                          <mark>Paiement</mark> </p>
+                        <p> {{ 'buyingProcess.step4'|trans }}<br />
+                          <mark>{{ 'buyingProcess.mark4'|trans }}</mark> </p>
                       </div>
                     </div> 
               </div>
@@ -71,8 +71,8 @@
                         <i class="fa fa-check" aria-hidden="true"></i>
                       </div>
                       <div class="col-md-10 ">
-                        <p> Etape 5 <br />
-                          <mark>Confirmation</mark> </p>
+                        <p> {{ 'buyingProcess.step5'|trans }}<br />
+                          <mark>{{ 'buyingProcess.mark5'|trans }}</mark> </p>
                       </div>
                     </div> 
               </div>
@@ -82,25 +82,23 @@
           <div class="col-md-12">
             <div class="row" >
               <div class="col-md-12 text-center" >
-                  <p>Avant de procéder au paiement, veuillez vérifier le détail de votre commande (date, durée, email pour la réception des billets, 
-                  visiteurs)</p>
-                  <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Chaque visiteur doit être muni de son billet nominatif, 
-                  y compris les enfants de moins de 4 ans (billet gratuit) !</p>
+                  <p>{{ 'recap.check'|trans }}</p>
+                  <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>{{ 'general.ticketsForUnder4'|trans }}</p>
               </div>
 
               <div class="col-md-4 offset-sm-5" >
-                  <p><ion-icon  name="calendar"></ion-icon> Date de la visite : {{ booking.visitDay | date('d/m/Y') }}</p>
-                  <p><i class="fa fa-clock-o" aria-hidden="true"></i> Durée de la visite : {{ durationName}}</p>
-                  <p><i class="fa fa-envelope-o" aria-hidden="true"></i> email pour l'envoi des billets : {{ booking.email }} </p> 
+                  <p><ion-icon  name="calendar"></ion-icon> {{ 'recap.visitDay'|trans }}{{ booking.visitDay | date('d/m/Y') }}</p>
+                  <p><i class="fa fa-clock-o" aria-hidden="true"></i> {{ 'recap.duration'|trans }}{{ durationName}}</p>
+                  <p><i class="fa fa-envelope-o" aria-hidden="true"></i> {{ 'recap.email'|trans }} {{ booking.email }} </p> 
               </div>
 
               <div class="col-md-12" >
                 <div class="row" >
                   <div class="col-md-6 ">
-                    <p>Billets</p>
+                    <p>{{ 'recap.tickets'|trans }}</p>
                   </div>
                   <div class="col-md-2 offset-sm-3 ">
-                    <p>Prix</p>
+                    <p>{{ 'recap.price'|trans }}</p>
                   </div>
                   <div class="col-md-12 ">
                     <hr>
@@ -115,8 +113,8 @@
                           <i class="fa fa-ticket "></i>
                         </div>
                          <div class="col-md-11">
-                          <p> Visiteur : {{ ticket.visitor.visitorFirstName|capitalize }} {{ ticket.visitor.visitorName |upper  }}  </p>
-                          <p>Tarif: {{ ticket.rate.rateName }}  </p>
+                          <p> {{ 'recap.visitor'|trans }}{{ ticket.visitor.visitorFirstName|capitalize }} {{ ticket.visitor.visitorName |upper  }}  </p>
+                          <p>{{ 'recap.rate'|trans }}{{ ticket.rate.rateName }}  </p>
                         </div>
                       </div>
                     </div>
@@ -132,7 +130,7 @@
                         <p>{{somme | number_format(2, ',', ' ')}} €</p>
                     </div>
                     <div class="col-md-1">
-                        <p>Total</p>
+                        <p>{{ 'recap.total'|trans }}</p>
                     </div>
                     <div class="col-md-12">
                       {{ include("OCCoreBundle:Booking:formRecap.html.twig") }}

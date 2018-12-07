@@ -6,7 +6,7 @@ welcome.h1: Welcome to the Online ticketing of the Louvre Museum
 welcome.pAchat1: Buy your e-tickets
 welcome.pAchat2: and avoid long queues!
 button.tickets: YOUR TICKETS
-welcome.pMticket: "M-ticket: Present your tickets at the entrance directly on your phone!"
+
 welcome.tickets&ratesh2: Tickets and rates
 welcome.freeTicketh5: Free ticket
 welcome.childUnderp: Children under
@@ -77,6 +77,9 @@ label.visitorFirstName: First name
 label.birthdayDate: Birthday date
 label.country: Country
 
+label.generalTermsAcceptance: "I accept the general sales conditions"
+
+general.pMticket: "M-ticket: Present your tickets at the entrance directly on your phone!"
 general.reducedRateConditionp: "* For students, military, museum employees or employees of a department of the Ministry of Culture (proof requested at the entrance)"
 general.openingHours:
         # les éléments de liste sont précédés d'un tiret en YAML
@@ -96,6 +99,7 @@ general.openingHours:
             Sunday: Closed
         - |
             Closed on May 1st, on November 1st and on December 25                
+general.ticketsForUnder4: ' Each visitor must have a nominative ticket, including children under 4 years (free ticket)'
 
 formdate.hoursForHalfday: Half-day from 2 p.m. 
 formdate.freetickets: Please include free tickets (children under 4 years old)
@@ -106,5 +110,33 @@ button.next: Next
 button.previous: Previous
 button.delete: Delete
 button.addTicket: Add a ticket
+button.info: Useful information
+button.visitsActivities: Visits & Activities
+button.expoActu: Exhibitions & News
+button.oeuvresPalace: Collection & Louvre Palace
+button.artsEdu: Arts & Education
 
-formvisitors.ticketsForUnder4: Each visitor must have a nominative ticket, including children under 4 years (free ticket)
+recap.check: 'Before making the payment, please check the details of your order (date, duration, email for receipt of tickets,
+visitors)'
+recap.visitDay: 'Date of the visit: '
+recap.duration: 'Duration of the visit: '
+recap.email: "email for receipt of tickets: "
+recap.tickets: Tickets
+recap.price: Price
+recap.visitor: 'Visitor: '
+recap.rate: 'Rate: '
+recap.total: Total
+
+formrecap.generalTermsAcceptance: See the General Terms and Conditions of Sale
+
+payment.infoToGive: Please provide the necessary information to make the payment
+payment.checkoutDescription: "Ticketing"
+payment.error: 'Error when paying online:'
+
+confirmation.validatedOrder: Your order has been validated under the booking code
+confirmation.emailToCome: You will receive a confirmation email at the address 
+confirmation.emailDescription: 'In this email you will also find the booking code and the tickets to be presented to enter
+in the museum.'
+confirmation.seeYouSoon: See you soon!
+confirmation.infoh3: To know everything in order to prepare your visit and learn!
+
