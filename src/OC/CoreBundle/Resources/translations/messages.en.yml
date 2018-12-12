@@ -76,10 +76,9 @@ label.visitorName: Name
 label.visitorFirstName: First name
 label.birthdayDate: Birthday date
 label.country: Country
-
 label.generalTermsAcceptance: "I accept the general sales conditions"
 
-general.pMticket: "M-ticket: Present your tickets at the entrance directly on your phone!"
+general.pMticket: "M-tickets: Present your tickets at the entrance directly on your phone!"
 general.reducedRateConditionp: "* For students, military, museum employees or employees of a department of the Ministry of Culture (proof requested at the entrance)"
 general.openingHours:
         # les éléments de liste sont précédés d'un tiret en YAML
@@ -135,8 +134,14 @@ payment.error: 'Error when paying online:'
 
 confirmation.validatedOrder: Your order has been validated under the booking code
 confirmation.emailToCome: You will receive a confirmation email at the address 
-confirmation.emailDescription: 'In this email you will also find the booking code and the tickets to be presented to enter
+confirmation.emailDescription: 'In this email you will also find the booking code and the ticket to be presented to enter
+in the museum.| In this email you will also find the booking code and the tickets to be presented to enter
 in the museum.'
 confirmation.seeYouSoon: See you soon!
-confirmation.infoh3: To know everything in order to prepare your visit and learn!
+confirmation.infoh3: To know everything in order to prepare your visit and inquire!
 
+email.subject: "Ticket for Louvre Museum |Tickets for Louvre Museum"
+email.sender: 'Louvre Museum Online ticketing'
+email.h3: 'Your ticket is available! | Your tickets are available!'
+email.yourticket: 'your ticket | your tickets'
+email.Mticket : "This is an M-ticket: present your ticket | These are M-tickets: present your tickets "

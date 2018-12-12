@@ -231,24 +231,32 @@ class BookingController extends Controller
     
     $em = $this->getDoctrine()->getManager();
 
-    //Collection of the booking 
+    //Collection of the booking, the number of tickets & the locale
     $session = $request->getSession();
     $bookingId=$session->get('bookingId');
     $booking=$em->getRepository('OCCoreBundle:Booking')->find($bookingId);
+    $tickets = $booking->getTickets();
+    $ticketsNb = 0;
+    foreach ($tickets as $ticket)
+    {
+      $ticketsNb += 1;
+    }
+    $locale = $request->getLocale();
     
-
+    
     
     //Sending a confirmation email with the tickets  
     $emailServ = $this->container->get('oc_core.servemail');
     $sendgridKey=$this->container->getParameter('sendgrid_Key');
-    $emailServ -> sendNewConfirmationEmail($booking, $sendgridKey);
+    $emailServ -> sendNewConfirmationEmail($booking, $sendgridKey, $locale, $ticketsNb);
 
     
     //View
     return $this->render('OCCoreBundle:Booking:confirmation.html.twig', array(
         'booking' => $booking,
+        'ticketsNb' => $ticketsNb,
     ));
-    //  return new Response("<body>Je suis une page de test, je n'ai rien à dire</body>");
+    
   }
 
 }

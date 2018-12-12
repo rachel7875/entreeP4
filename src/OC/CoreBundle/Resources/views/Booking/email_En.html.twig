@@ -1,0 +1,87 @@
+
+<section>
+
+    
+    <img src={{ absolute_url(asset('images/jocondebis.png')) }} alt="Logo Louvre Museum Online ticketing"/>
+
+    <h3>{{ 'email.h3'|transchoice(ticketsNb) }}</h3>
+
+    <p>Hello!</p>
+
+    <p>Your order has been completed. Below you will find all the useful information and {{ 'email.yourticket'|transchoice(ticketsNb) }}.</p>
+
+    <p>{{ 'email.Mticket'|transchoice(ticketsNb) }} at the entrance directly on your phone!</p>
+
+    <p>We thank you for your order and wish you a pleasant visit.
+    You will find below links to prepare your visit and to inquire. </p>
+
+    <p>See you soon!</p>
+
+    <p>The Louvre Museum team</p>
+
+</section>
+
+<section>
+    <div class="col-md-12 ">
+        <hr>
+    </div>
+    <div class="col-md-12 ">
+        <p>Your reservation code:{{ booking.bookingCode }}</p>
+        <p><ion-icon  name="calendar"></ion-icon> Date of the visit: {{ booking.visitDay | date('d/m/Y') }}</p>
+        <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duration of the visit: {{ booking.duration.durationName}}</p>
+        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> email for receipt of tickets: {{ booking.email }} </p> 
+    </div>
+
+    <div class="col-md-12" >
+        <div class="row" >
+            <div class="col-md-6 ">
+            <p>Tickets</p>
+            </div>
+            <div class="col-md-2 offset-sm-3 ">
+            <p>Price</p>
+            </div>
+            <div class="col-md-12 ">
+            <hr>
+            </div>
+        </div>
+        <div class="row" >
+            {% for ticket in tickets %}
+            <div class="col-md-6 ">
+                <div class="row" > 
+                <div class="col-md-1 text-right">
+                    <i class="fa fa-ticket "></i>
+                </div>
+                    <div class="col-md-11">
+                    <p> Visitor: {{ ticket.visitor.visitorFirstName|capitalize }} {{ ticket.visitor.visitorName |upper  }}  </p>
+                    <p>Rate: {{ ticket.rate.rateName }}  </p>
+                    <p><ion-icon  name="calendar"></ion-icon> Date of the visit: {{ booking.visitDay | date('d/m/Y') }}</p>
+                    <p><i class="fa fa-clock-o" aria-hidden="true"></i> Duration of the visit: {{ booking.duration.durationName}}</p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-2 offset-sm-3 ">
+                <p>{{ ticket.price  | number_format(2, ',', ' ')}} €</p>
+            </div>
+            <div class="col-md-12 ">
+                <hr>
+            </div>
+            {% endfor %}
+ 
+
+        </div>    
+
+        </div>
+
+</section>
+
+
+<aside class="col-md-12">
+    <h4>To know everything in order to prepare your visit and inquire!</h4>
+    <a class="btn btn-secondary" href="https://www.louvre.fr/departments/antiquit%C3%A9s-orientales" 
+    role="button">Useful information</a>
+    <a class="btn btn-secondary" href="#" role="button">Visits & Activities</a>
+    <a class="btn btn-secondary" href="#" role="button">Exhibitions & News</a>
+    <a class="btn btn-secondary" href="#" role="button">Collection & Louvre Palace</a>
+    <a class="btn btn-secondary" href="#" role="button">Arts & Education</a>
+</aside">
+

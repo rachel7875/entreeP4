@@ -1,16 +1,16 @@
-{# app/Resources/views/Emails/registration.html.twig #}
+
 <section>
 
     
     <img src={{ absolute_url(asset('images/jocondebis.png')) }} alt="Logo Billetterie du musée du Louvre"/>
 
-    <h3>Vos billets sont disponibles !</h3>
+    <h3>{{ 'email.h3'|transchoice(ticketsNb) }}</h3>
 
     <p>Bonjour ! </p>
 
-    <p>Votre commande a bien été effectuée. Vous trouverez ci-dessous toutes les informations utiles et vos billets.</p>
+    <p>Votre commande a bien été effectuée. Vous trouverez ci-dessous toutes les informations utiles et {{ 'email.yourticket'|transchoice(ticketsNb) }}.</p>
 
-    <p>Ce sont des M-billets : présentez vos billets à l'entrée directement sur votre téléphone !</p>
+    <p>{{ 'email.Mticket'|transchoice(ticketsNb) }} à l'entrée directement sur votre téléphone !</p>
 
     <p>Nous vous remercions pour votre commande et vous souhaitons une agréable visite. 
     Vous trouverez ci-dessous des liens pour préparer votre visite et se renseigner. </p>
@@ -29,7 +29,7 @@
         <p>Votre code de réservation :{{ booking.bookingCode }}</p>
         <p><ion-icon  name="calendar"></ion-icon> Date de la visite : {{ booking.visitDay | date('d/m/Y') }}</p>
         <p><i class="fa fa-clock-o" aria-hidden="true"></i> Durée de la visite : {{ booking.duration.durationName}}</p>
-        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> email pour l'envoi des billets : {{ booking.email }} </p> 
+        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> email pour la réception des billets : {{ booking.email }} </p> 
     </div>
 
     <div class="col-md-12" >

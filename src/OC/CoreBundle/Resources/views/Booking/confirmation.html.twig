@@ -85,7 +85,7 @@
               
               <p>{{ 'confirmation.emailToCome'|trans }} {{ booking.email }}</p>
 
-              <p>{{ 'confirmation.emailDescription'|trans }}</p>
+              <p>{{ 'confirmation.emailDescription'|transchoice(ticketsNb) }}</p>
 
               <p><i class="fa fa-mobile fa-lg" aria-hidden="true"></i>
               {{ 'general.pMticket'|trans }}</p>

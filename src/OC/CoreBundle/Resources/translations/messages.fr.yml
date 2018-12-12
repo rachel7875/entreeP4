@@ -76,10 +76,9 @@ label.visitorName: Nom
 label.visitorFirstName: Prénom
 label.birthdayDate: Date d'anniversaire
 label.country: Pays
-
 label.generalTermsAcceptance: "J'accepte les conditions générales de vente"
 
-general.pMticket: 'M-billet : Présentez vos billets à l''entrée directement sur votre téléphone !'
+general.pMticket: 'M-billets : Présentez vos billets à l''entrée directement sur votre téléphone !'
 general.reducedRateConditionp: '*Pour les étudiants, les militaires, les employés du musée ou d''un service du Ministère de la Culture (justificatif demandé à l''entrée)'
 general.openingHours:
         # les éléments de liste sont précédés d'un tiret en YAML
@@ -135,8 +134,14 @@ payment.error: 'Erreur lors du paiement en ligne : '
 
 confirmation.validatedOrder: Votre commande a été validée sous le code de réservation
 confirmation.emailToCome: Vous allez recevoir un email de confirmation à l'adresse
-confirmation.emailDescription: 'Dans cet email, vous trouverez également le code de réservation et les billets à présenter pour entrer 
+confirmation.emailDescription: 'Dans cet email, vous trouverez également le code de réservation et le billet à présenter pour entrer 
+dans le musée. | Dans cet email, vous trouverez également le code de réservation et les billets à présenter pour entrer 
 dans le musée.'
 confirmation.seeYouSoon: A bientôt !
 confirmation.infoh3: Pour tout savoir afin de préparer sa visite et se renseigner !
 
+email.subject: "Billet pour le Musée du Louvre|Billets pour le Musée du Louvre"
+email.sender: 'Billetterie du Musée du Louvre'
+email.h3: 'Votre billet est disponible ! | Vos billets sont disponibles !'
+email.yourticket: 'votre billet | vos billets'
+email.Mticket : "C'est un M-billet : présentez votre billet | Ce sont des M-billets : présentez vos billets "

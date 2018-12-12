@@ -23,7 +23,10 @@ services:
 
     oc_core.servemail:
         class: OC\CoreBundle\ServEmail\OCServEmail
-        arguments:
+        arguments: 
             - '@templating'
+            - '@translator'
+            
+        
 
 

@@ -9,19 +9,29 @@ use Swift_Mailer;
 use Swift_Message;
 use Wilczynski\Mailer\SendGridTransport;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
+use Symfony\Component\Translation\TranslatorInterface;
 
  
 class OCServEmail 
 {
   private $templating;
+  private $translator;
 
-  public function __construct(EngineInterface $templating)
+  public function __construct(EngineInterface $templating,TranslatorInterface $translator )
   {
       $this->templating = $templating;
+      $this->translator = $translator ;
   }
 
-  public function sendNewConfirmationEmail(Booking $booking, $sendgridKey)
+  public function sendNewConfirmationEmail(Booking $booking, $sendgridKey, $locale, $ticketsNb)
   {
+    //Collection of the adequate template 
+    if ($locale =="en") 
+    { $template='OCCoreBundle:Booking:email_En.html.twig';
+    } else 
+    {$template='OCCoreBundle:Booking:email_Fr.html.twig';
+    }
+
     // Create the Transport
     $transport = SendGridTransport::create($sendgridKey);
     // Create the Mailer using SendGrid Transport
@@ -33,16 +43,16 @@ class OCServEmail
 
     // Create a Swift Message
     $message = (new Swift_Message())
-        ->setSubject('Confirmation & Billet(s) pour le Musée du Louvre')
-        ->setFrom(['rachelmabire778@gmail.com' => 'Billetterie du Musée du Louvre'])
+        ->setSubject($this->translator->transChoice('email.subject', $ticketsNb))
+        ->setFrom(['rachelmabire778@gmail.com' =>  $this->translator->trans('email.sender')])
         ->setTo($to = $booking->getEmail() )
         ->setContentType('text/html')
         ->setBody(
-          $this->templating -> render(
-            'OCCoreBundle:Booking:email.html.twig',
+          $this->templating -> render($template,
             array(
               'booking'=>$booking, 
-              'tickets' => $tickets,)
+              'tickets' => $tickets,
+              'ticketsNb' => $ticketsNb,)
             )
         );
 
@@ -50,5 +60,6 @@ class OCServEmail
     $result = $mailer->send($message);
 
   }
+
 }
 
