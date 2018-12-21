@@ -27,6 +27,10 @@ services:
             - '@templating'
             - '@translator'
             
-        
+    oc_core.validator.AntiMaxTicketsNb:                             
+        class: OC\CoreBundle\Validator\AntiMaxTicketsNbValidator     
+        arguments: ["@request_stack", "@doctrine.orm.entity_manager"] 
+        tags:
+            - { name: validator.constraint_validator, alias: oc_core_AntiMaxTicketsNb }  
 
 

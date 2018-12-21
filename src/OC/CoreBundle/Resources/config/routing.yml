@@ -21,3 +21,4 @@ oc_core_payment:
 oc_core_confirmation :
         path:     /confirmation
         defaults: { _controller: OCCoreBundle:Booking:confirmation }
+

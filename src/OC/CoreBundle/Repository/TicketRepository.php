@@ -10,4 +10,17 @@ namespace OC\CoreBundle\Repository;
  */
 class TicketRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getTicketsNbforaDay($testVisitDay) 
+    {
+        $qb = $this->createQueryBuilder('t')
+        ->select('COUNT(t)')
+        ->innerJoin('t.booking', 'b','WITH', 'b.bookingCode IS NOT NULL')
+        ->where('b.visitDay = :visitDay')
+        ->setParameter('visitDay', $testVisitDay);
+
+        return $qb
+        ->getQuery()
+        ->getSingleScalarResult();
+    }
+        
 }

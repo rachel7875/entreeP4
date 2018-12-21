@@ -8,16 +8,18 @@
   {# The general errors of the form#}
   {{ form_errors(form) }}
 
+  {% form_theme form.tickets 'OCCoreBundle:Form:fields.html.twig' %}
   {{ form_row(form.tickets) }}
   
-
-  <button type="button" class="btn btn-default" id="add_ticket">{{ 'button.addTicket'|trans }}</button>
+    
+  
+    <button type="button" class="btn btn-default" id="add_ticket">{{ 'button.addTicket'|trans }}</button>
+  
 
   <div >
     {{ form_rest(form) }}
   </div>
   
-  <p> {{ 'general.reducedRateConditionp'|trans }}</p>
 
   {#Warning  for the tickets required for children under 4 #}
   <p>{{ 'general.ticketsForUnder4'|trans }} </p>

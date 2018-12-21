@@ -29,9 +29,14 @@ class TicketType extends AbstractType
     {
         $this->options = $options;
 
+
         $builder
         ->add('visitor',     VisitorType::class, array('label' => $this->getTranslator()->trans('label.visitor'))) 
-        ->add('reducedRate', CheckboxType::class, array('required' => false, 'label' => $this->getTranslator()->trans('label.reducedRate')));
+        ->add('reducedRate', CheckboxType::class, array(
+            'required' => false, 
+            'label' => $this->getTranslator()->trans('label.reducedRate'),
+            'attr' =>array('data-help'=>'general.reducedRateConditionp'),
+        ));
     }
         
 

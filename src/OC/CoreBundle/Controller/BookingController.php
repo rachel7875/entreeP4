@@ -32,10 +32,12 @@ class BookingController extends Controller
         $em->flush();
   
         $id=$booking->getId();
+        $visitDay=$booking->getVisitDay();
 
         $session = $request->getSession();
         $bookingId=$session->set('bookingId', $id);
-
+        $sessionVisitDay=$session->set('sessionVisitDay', $visitDay);
+      
 
     return $this->redirectToRoute('oc_core_visitors');
     }
@@ -258,5 +260,8 @@ class BookingController extends Controller
     ));
     
   }
+
+
+  
 
 }

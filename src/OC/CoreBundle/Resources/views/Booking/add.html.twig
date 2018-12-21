@@ -4,6 +4,8 @@
   {{ 'date.title'|trans }} - {{ parent() }}
 {% endblock %}
 
+
+
 {% block body %}
 
   <section class="container-fluid" >
@@ -84,5 +86,19 @@
             {{ include("OCCoreBundle:Booking:formDate.html.twig") }}
 
           </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+
+  {{ parent() }} 
+
+  <script>
+    $( "#oc_corebundle_booking_visitDay" ).datepicker();
+  </script>
+
+  </script>
+
 
 {% endblock %}

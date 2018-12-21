@@ -1,0 +1,9 @@
+# OC/CoreBundle/Resources/translations/validators.fr.yml
+
+notBlank: "Ce champ ne peut pas être vide"
+
+booking.visitDay.date: "{{ value }} n'est pas une date valide."
+booking.visitDay.range: "Il n'est pas possible de réserver à une date antérieure à aujourd'hui."
+booking.email.Email : "{{ value }} n'est pas un email valide."
+booking.ticketsNumber.Range : "Il n'est pas possible de réserver plus de 10 billets à la fois. 
+Veuillez nous contacter pour un tarif de groupe de plus de 10 personnes."

@@ -21,13 +21,16 @@ class AntiClosingDaysValidator extends ConstraintValidator
     public function validate($value, Constraint $constraint)
     {
         // A closing day must be in the table of the table closingdays 
-
         $test = $this->em
         ->getRepository('OCCoreBundle:Closingdays')
         ->testVisitDay($value) 
         ;
 
-        if (!empty($test)) {
+
+        $day = date_format($value, 'N');
+        
+    
+        if (!empty($test) OR ($day==2) OR ($day==7)) {
           $this->context->addViolation($constraint->message);
         }
     }

@@ -145,3 +145,6 @@ email.sender: 'Billetterie du Musée du Louvre'
 email.h3: 'Votre billet est disponible ! | Vos billets sont disponibles !'
 email.yourticket: 'votre billet | vos billets'
 email.Mticket : "C'est un M-billet : présentez votre billet | Ce sont des M-billets : présentez vos billets "
+
+footer.cgv : Conditions générales de vente
+footer.legalNotices : Mentions légales 

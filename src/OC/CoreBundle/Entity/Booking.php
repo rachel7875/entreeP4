@@ -5,6 +5,7 @@ namespace OC\CoreBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use OC\CoreBundle\Validator\AntiClosingDays;
+use OC\CoreBundle\Validator\AntiMaxTicketsNb;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -28,11 +29,11 @@ class Booking
      * @var \Date
      *
      * @ORM\Column(name="visitDay", type="date")
-     * @Assert\NotBlank()
-     * @Assert\Date( message = "'{{ value }}' n'est pas une date valide.",)
+     * @Assert\NotBlank( message = "notBlank",)
+     * @Assert\Date( message = "booking.visitDay.date",)
      * @Assert\Range(
      *      min = "today",
-     *      minMessage = "Il n'est pas possible de réserver à une date antérieure à aujourd'hui.",
+     *      minMessage = "booking.visitDay.range",
      * )
      * @AntiClosingDays()
     */
@@ -43,6 +44,11 @@ class Booking
      *
      * @ORM\Column(name="ticketsNumber", type="integer")
      * @Assert\Choice(choices={1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, strict="true")
+     * @Assert\Range(
+     *      max = 10,
+     *      maxMessage = "booking.ticketsNumber.Range"
+     * )
+     * @AntiMaxTicketsNb
      */
     private $ticketsNumber;
 
@@ -50,11 +56,9 @@ class Booking
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255)
-     * @Assert\NotBlank()
-     * @Assert\Length(
-     *      max = 255)
+     * @Assert\NotBlank( message = "notBlank",)
      * @Assert\Email(
-     *      message = "'{{ value }}' n'est pas un email valide.",
+     *      message = "booking.email.Email",
      *      checkMX = true)
      */
     private $email;

@@ -145,3 +145,6 @@ email.sender: 'Louvre Museum Online ticketing'
 email.h3: 'Your ticket is available! | Your tickets are available!'
 email.yourticket: 'your ticket | your tickets'
 email.Mticket : "This is an M-ticket: present your ticket | These are M-tickets: present your tickets "
+
+footer.cgv : General Terms and Conditions of Sale
+footer.legalNotices : Legal Notice
