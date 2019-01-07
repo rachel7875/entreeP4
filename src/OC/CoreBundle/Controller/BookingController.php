@@ -38,6 +38,10 @@ class BookingController extends Controller
         $bookingId=$session->set('bookingId', $id);
         $sessionVisitDay=$session->set('sessionVisitDay', $visitDay);
       
+        //Collection of the number of sold tickets for the desired visitDay 
+        $TicketsNbforaDay = $em->getRepository('OCCoreBundle:Ticket')->getTicketsNbforaDay( $visitDay) ;
+        //Addition of TicketsNbforaDay in session
+        $sessionTicketsNbforaDay=$session->set('sessionTicketsNbforaDay', $TicketsNbforaDay);
 
     return $this->redirectToRoute('oc_core_visitors');
     }
@@ -59,6 +63,7 @@ class BookingController extends Controller
 
     $visitorsNumber= $booking->getTicketsNumber();
 
+  
 
     
     //Creation of the $visitorsNumber tickets 

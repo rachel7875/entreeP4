@@ -83,6 +83,7 @@
 
             {{ include("OCCoreBundle:Booking:formVisitors.html.twig") }}
 
+            <div class="iddata" data-TicketsNbforaDay={{ app.session.get('sessionTicketsNbforaDay') }}></div>
           </div>
 
 {% endblock %}
@@ -92,6 +93,8 @@
   {{ parent() }} 
 
 <script type="text/javascript">
+
+
  $(document).ready(function() {
     // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
     var $container = $('div#oc_corebundle_booking_tickets');
@@ -99,10 +102,17 @@
     // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
     var index = ($container.find(':input').length)/7;
 
-    // Removal of the button add a ticket for an index superior to the  limit  for the tickets number
-      if (index>=10) {
+    //Collection of the number of sold tickets for the visit day and addition with the index
+    var TicketsNbforaDay = $(".iddata").data(TicketsNbforaDay);
+    var TotalTicketsNbforaDay = TicketsNbforaDay.ticketsnbforaday + index;
+
+
+    // Removal of the button add a ticket for an index superior to the  limit  for the tickets number per order 
+    //OR for a number of tickets superior to the max total number tickets for a day
+      if ((index>=10) || (TotalTicketsNbforaDay>= 12)) {
         $('#add_ticket').remove();
       }
+
 
     // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
       $('#add_ticket').click(function(e) {
@@ -110,8 +120,11 @@
   
         e.preventDefault(); // évite qu'un # apparaisse dans l'URL
 
-        // Removal of the button add a ticket for an index superior to the  limit  for the tickets number
-        if (index>=10) {
+        // Removal of the button add a ticket for an index superior to the  limit  for the tickets number per order 
+        //OR for a number of tickets superior to the max total number tickets for a day
+        var TotalTicketsNbforaDay = TicketsNbforaDay.ticketsnbforaday + index;
+        
+        if ((index>=10) || (TotalTicketsNbforaDay>= 12)) {
             $(this).remove();
         }   
         return false;
@@ -176,7 +189,10 @@
 
         e.preventDefault(); // évite qu'un # apparaisse dans l'URL
         return false;
+        
       });
+
+      
     }
   });
 

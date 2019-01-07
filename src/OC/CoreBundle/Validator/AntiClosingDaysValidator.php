@@ -26,10 +26,8 @@ class AntiClosingDaysValidator extends ConstraintValidator
         ->testVisitDay($value) 
         ;
 
-
         $day = date_format($value, 'N');
         
-    
         if (!empty($test) OR ($day==2) OR ($day==7)) {
           $this->context->addViolation($constraint->message);
         }

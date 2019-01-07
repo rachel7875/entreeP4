@@ -42,13 +42,16 @@ class AntiMaxTicketsNbValidator extends ConstraintValidator
           ->getTicketsNbforaDay($testVisitDay) 
           ;
 
-
           
           //Addition of the desired number of tickets to the number of sold tickets for the desired visitDay & Test of the max limit
           $totalTicketsforaDay=$TicketsNbforaDay +$value;
+
+          //Test & addition of a violation
           if ($totalTicketsforaDay > 12)  {
             $this->context->addViolation($constraint->message);
-        }
+          } 
+
+          
       }  
     }
 }
