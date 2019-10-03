@@ -3,6 +3,9 @@ services:
 #        class: OC\CoreBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
 
+    OC\CoreBundle\:
+        resource: OC\CoreBundle\*
+
     OC\CoreBundle\DataFixtures\ORM\LoadRate:
             tags: [doctrine.fixture.orm]
 
@@ -14,7 +17,7 @@ services:
 
     oc_core.validator.AntiClosingDays:                             
         class: OC\CoreBundle\Validator\AntiClosingDaysValidator     
-        arguments: ["@doctrine.orm.entity_manager"] 
+        arguments: ["@doctrine.orm.entity_manager", "@oc_core.servclosingdays"] 
         tags:
             - { name: validator.constraint_validator, alias: oc_core_AntiClosingDays }  
 
@@ -33,4 +36,13 @@ services:
         tags:
             - { name: validator.constraint_validator, alias: oc_core_AntiMaxTicketsNb }  
 
+    oc_core.servclosingdays:
+        class: OC\CoreBundle\ServClosingDays\OCServClosingDays
+        arguments: ["@doctrine.orm.entity_manager"]
+
+    oc_core.validator.AntiDayDurationAfterTwoPM:                             
+        class: OC\CoreBundle\Validator\AntiDayDurationAfterTwoPMValidator     
+        arguments: ["@request_stack", "@doctrine.orm.entity_manager"] 
+        tags:
+            - { name: validator.constraint_validator, alias: oc_core_AntiDayDurationAfterTwoPM }  
 

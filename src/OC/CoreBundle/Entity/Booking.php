@@ -6,7 +6,10 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use OC\CoreBundle\Validator\AntiClosingDays;
 use OC\CoreBundle\Validator\AntiMaxTicketsNb;
+use OC\CoreBundle\Validator\AntiDayDurationAfterTwoPM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Common\Persistence\ObjectManager;
 
 /**
  * Booking
@@ -66,6 +69,7 @@ class Booking
     /**
      * @ORM\ManyToOne(targetEntity="OC\CoreBundle\Entity\Duration")
      * @ORM\JoinColumn(nullable=false)
+     * @AntiDayDurationAfterTwoPM
      */
     private $duration;
 
@@ -180,7 +184,7 @@ class Booking
      *
      * @return Booking
      */
-    public function setDuration($duration)
+    public function setDuration(Duration $duration)
     {
         $this->duration = $duration;
 

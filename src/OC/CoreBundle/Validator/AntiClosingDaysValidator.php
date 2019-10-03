@@ -5,30 +5,25 @@ namespace OC\CoreBundle\Validator;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
+use OC\CoreBundle\ServClosingDays\OCServClosingDays;
 use Doctrine\ORM\EntityManagerInterface;
-
 
 class AntiClosingDaysValidator extends ConstraintValidator
 {
     private $em;
+    private $servClosingDays ;
 
-
-    public function __construct(EntityManagerInterface $em)
+    public function __construct(EntityManagerInterface $em, OCServClosingDays $servClosingDays)
     {
       $this->em = $em;
+      $this->servClosingDays= $servClosingDays;
     }
   
     public function validate($value, Constraint $constraint)
     {
-        // A closing day must be in the table of the table closingdays 
-        $test = $this->em
-        ->getRepository('OCCoreBundle:Closingdays')
-        ->testVisitDay($value) 
-        ;
-
-        $day = date_format($value, 'N');
-        
-        if (!empty($test) OR ($day==2) OR ($day==7)) {
+      
+      $ClosingDayAnswer = $this->servClosingDays->isClosingDay($value);
+        if ($ClosingDayAnswer==true) {
           $this->context->addViolation($constraint->message);
         }
     }

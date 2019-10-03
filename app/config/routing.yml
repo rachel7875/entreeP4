@@ -2,7 +2,22 @@ oc_core:
     resource: "@OCCoreBundle/Resources/config/routing.yml"
     prefix:   /{_locale}
     requirements:
-        _locale: en|fr 
+        _locale: "%locales%"
+    defaults:
+        _locale: '%locale%'
 
 
-
+# app/config/routing.yml
+# Entry point of your application that redirects the user to the main routing
+# using a locale, that means If the user goes to:
+# www.yourapp.com
+# Is redirected automatically to:
+# www.yourapp.com/en/
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /%locale%/
+        permanent: true
+    requirements:
+        _locale: "%locales%"

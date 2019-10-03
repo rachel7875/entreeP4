@@ -47,7 +47,7 @@ class AntiMaxTicketsNbValidator extends ConstraintValidator
           $totalTicketsforaDay=$TicketsNbforaDay +$value;
 
           //Test & addition of a violation
-          if ($totalTicketsforaDay > 12)  {
+          if ($totalTicketsforaDay > 30)  {
             $this->context->addViolation($constraint->message);
           } 
 

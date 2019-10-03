@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use OC\CoreBundle\ServStripe;
 use OC\CoreBundle\ServEmail;
-
+use OC\CoreBundle\ServClosingDays;
 
 class BookingController extends Controller
 {
@@ -22,12 +22,15 @@ class BookingController extends Controller
 
   public function addAction(Request $request)
   {
-    $booking = new Booking();
+    $em = $this->getDoctrine()->getManager();
+   // $servclosingdays = $this->container->get('oc_core.servclosingdays');
+
+    $booking = new Booking($em);
     $form   = $this->get('form.factory')->create(BookingType::class, $booking);
  
 
     if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-        $em = $this->getDoctrine()->getManager();
+       // $em = $this->getDoctrine()->getManager();
         $em->persist($booking);
         $em->flush();
   
@@ -43,7 +46,7 @@ class BookingController extends Controller
         //Addition of TicketsNbforaDay in session
         $sessionTicketsNbforaDay=$session->set('sessionTicketsNbforaDay', $TicketsNbforaDay);
 
-    return $this->redirectToRoute('oc_core_visitors');
+        return $this->redirectToRoute('oc_core_visitors');
     }
 
     return $this->render('OCCoreBundle:Booking:add.html.twig', array(
@@ -126,7 +129,7 @@ class BookingController extends Controller
         }
         $em->persist($booking);
         $em->flush();
-       return $this->redirectToRoute('oc_core_recap'); 
+        return $this->redirectToRoute('oc_core_recap'); 
     }
 
     return $this->render('OCCoreBundle:Booking:visitors.html.twig', array(
