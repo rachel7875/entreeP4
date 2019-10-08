@@ -21,6 +21,10 @@ class BookingType extends AbstractType
         $builder->add('email',  EmailType::class)
         ->add('visitDay',       DateType::class, array(
             'widget'=> 'single_text',
+            // prevents rendering it as type="date", to avoid HTML5 date pickers
+            'html5' => false,
+            // adds a class that can be selected in JavaScript
+            'attr' => ['class' => 'js-datepicker'],
         ) )
         ->add('duration',       EntityType::class, array(
             'class'        => Duration::class,
@@ -52,10 +56,11 @@ class BookingType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'OC\CoreBundle\Entity\Booking',
+        'data_class' => 'OC\CoreBundle\Entity\Booking',
         ));
     }
 
+   
     /**
      * {@inheritdoc}
      */

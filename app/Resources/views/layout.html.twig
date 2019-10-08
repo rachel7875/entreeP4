@@ -6,10 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/png" href={{ absolute_url(asset('images/jocondebis.png')) }}>
-        <title>{% block title %} {{'layout.title'|trans({}, 'messages')  }} {% endblock %}</title>
-        <meta name="description" content="{% block description %}{% endblock %}" />
+        <title>{% block title %}  {% endblock %}</title>
+        <meta name="description" property="og:description" content="{% block description %}{% endblock %}" />
+        
+        <meta property="og:title" content={% block ogtitle %} {{'layout.title'|trans({}, 'messages')  }} {% endblock %} />
+        <meta property="og:image" content={{ absolute_url(asset('images/jocondebis.png')) }} />
+        <meta property="og:url" content={% block ogurl %} {% endblock %} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:site_name" content={{'layout.title'|trans({}, 'messages')  }} />
+        <meta name="twitter:image:alt" content={{'layout.altimage'|trans({}, 'messages')  }}>
+       
 
         {% block stylesheets %}
+            {# 'app' must match the first argument to addEntry() in webpack.config.js #}
+            {{ encore_entry_link_tags('app') }}
+<link href="/louvre/assets/css/app.css" rel="stylesheet">
             {# Boostrap loading #}
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -17,10 +28,15 @@
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
             {#IE10 viewport hack for Surface/desktop Windows 8 bug #}
-            <link href="web/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+            <link href="/louvre/web/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-            {#Custom styles for this template #}
-            <link href="web/css/style.css.twig" rel="stylesheet">
+            {#Custom styles for this template 
+            <link href="/louvre/web/css/style.css" rel="stylesheet">#}
+
+            {#Datepicker#}
+            {#<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css">
+            
+            <link href='https://cdn.bootcss.com/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css' rel='stylesheet' type='text/css'>#}
         {% endblock %}
 
     </head>
@@ -29,10 +45,12 @@
 
         {{ include("OCCoreBundle::header.html.twig") }}
 
-        <div class="main_content">
-            {% block body %}
-            {% endblock %}
+
+        <div class="main_content"  >
+                {% block body %}
+                {% endblock %}  
         </div>
+        
 
         <footer>
             <div class="row">
@@ -45,9 +63,12 @@
 
 
         {% block javascripts %}
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+            {{ encore_entry_script_tags('app') }}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+            <script src='https://cdn.bootcss.com/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js' type='text/javascript'></script>
             <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
         {% endblock %}
 

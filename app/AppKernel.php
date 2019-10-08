@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new OC\CoreBundle\OCCoreBundle(),
+            new \Symfony\WebpackEncoreBundle\WebpackEncoreBundle(), 
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

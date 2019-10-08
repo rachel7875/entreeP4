@@ -4,7 +4,7 @@
 
 
 {% block title %}
-  {{ 'welcome.title'|trans }} {{ parent() }}
+  {{ 'welcome.title'|trans }} 
 {% endblock %}
 
 {% block description %}{{ 'welcome.description'|trans }}{% endblock %}
@@ -12,38 +12,43 @@
 {% block stylesheets %}
   {{ parent() }}
   {#Custom styles for this template #}
-  <link href="welcome.css" rel="stylesheet">
+  
+  
 {% endblock %}
 
 {% block body %}
 
-
-
-  <section class="container-fluid text-center" >
+  
+<div class="container-fluid" id="fond" >
+        
+  <section class="container-fluid text-center " >
     <div class="row">
-      <div class="col-sm-12 " >
-        <h1>{{ 'welcome.h1'|trans }}</h1>
+      <div class="col-xl-12 white intro pageTitle" >
+        <h1>{{ 'welcome.h1.1'|trans }} <br/>
+        {{ 'welcome.h1.2'|trans }}</h1>
 
         <p>{{ 'welcome.pAchat1'|trans }}<br />
         {{ 'welcome.pAchat2'|trans }}</p>
 
-        <a class="btn btn-secondary" href="{{ path('oc_core_add') }}" role="button">{{ 'button.tickets'|trans }}</a>
+        <a class="btn btn-danger btn-lg" href="{{ path('oc_core_add') }}" role="button">{{ 'button.tickets'|trans }}</a>
 
         <p><i class="fa fa-mobile fa-lg" aria-hidden="true"></i>
-        {{ 'general.pMticket'|trans }}</p>
+        <span>{{ 'general.pMticket1'|trans }}</span>{{ 'general.pMticket2'|trans }}</p>
       </div>
 
-      <div class="col-sm-10 offset-sm-1" >
+      <div class="col-xl-10 offset-xl-1  ticketsopenhours" >
         <div class="row">
-          <div class="col-sm-6 offset-sm-1 " >
+          <div class="col-xl-6 offset-xl-1 " >
             <h2> <i class="fa fa-ticket "></i> {{ 'welcome.tickets&ratesh2'|trans }}</h2>
 
             <div class="card-deck">
               <div class="card">
                 <h5 class="card-header">{{ 'welcome.freeTicketh5'|trans }}</h5>
                 <div class="card-body">
-                  <p class="card-text">{{ 'welcome.childUnderp'|trans }} <br />
-                  {{ 'welcome.under4p'|trans }}</p>
+                  <div class="age">
+                    <p class="card-text">{{ 'welcome.childUnderp'|trans }} <br />
+                    {{ 'welcome.under4p'|trans }}</p>
+                  </div>  
                   <p class="card-text"><br />0 €</p>
                 </div>
               </div>
@@ -51,20 +56,24 @@
               <div class="card">
                 <h5  class="card-header">{{ 'welcome.childTicketh5'|trans }}</h5>
                 <div class="card-body">
-                  <p class="card-text">{{ 'welcome.childp'|trans }}<br />
-                  {{ 'welcome.betweenp'|trans }}</p>
-                  <p class="card-text"><br /> {{ rateEnfant.rateValue | number_format(0, ',', ' ') }} € <br />
-                  {{ 'welcome.dayp'|trans }}</p>
-                  <p class="card-text"> {{ (rateEnfant.rateValue * durationforDemiJournee.durationValue) | number_format(0, ',', ' ')  }} € <br />
-                  {{ 'welcome.halfDayp'|trans }}</p>
+                  <div class="age">
+                    <p class="card-text">{{ 'welcome.childp'|trans }}<br />
+                    {{ 'welcome.betweenp'|trans }}</p>
+                  </div>  
+                    <p class="card-text"><br /> {{ rateEnfant.rateValue | number_format(0, ',', ' ') }} € <br />
+                    {{ 'welcome.dayp'|trans }}</p>
+                    <p class="card-text"> {{ (rateEnfant.rateValue * durationforDemiJournee.durationValue) | number_format(0, ',', ' ')  }} € <br />
+                    {{ 'welcome.halfDayp'|trans }}</p>
                 </div>
               </div>
 
               <div class="card">
                 <h5  class="card-header">{{ 'welcome.normalTicketh5'|trans }}</h5>
                 <div class="card-body">
-                  <p class="card-text">{{ 'welcome.agedp'|trans }}<br />
-                  {{ 'welcome.12to59p1'|trans }}</p>
+                  <div class="age">
+                    <p class="card-text">{{ 'welcome.agedp'|trans }}<br />
+                    {{ 'welcome.12to59p1'|trans }}</p>
+                  </div>  
                   <p class="card-text"><br />{{ rateNormal.rateValue  | number_format(0, ',', ' ')}} € <br />
                   {{ 'welcome.dayp'|trans }}</p>
                   <p class="card-text">{{ (rateNormal.rateValue * durationforDemiJournee.durationValue)   | number_format(0, ',', ' ')  }} € <br />
@@ -75,8 +84,10 @@
               <div class="card">
                 <h5  class="card-header">{{ 'welcome.seniorTicketh5'|trans }}</h5>
                 <div class="card-body">
-                  <p class="card-text">{{ 'welcome.fromp'|trans }}<br />
-                  {{ 'welcome.60age'|trans }}</p>
+                  <div class="age">
+                    <p class="card-text">{{ 'welcome.fromp'|trans }}<br />
+                    {{ 'welcome.60age'|trans }}</p>
+                  </div>  
                   <p class="card-text"><br />{{ rateSenior.rateValue | number_format(0, ',', ' ')}} € <br />
                   {{ 'welcome.dayp'|trans }}</p>
                   <p class="card-text">{{ (rateSenior.rateValue * durationforDemiJournee.durationValue) | number_format(0, ',', ' ') }} € <br />
@@ -87,8 +98,10 @@
               <div class="card">
                 <h5  class="card-header">{{ 'welcome.reducedTicketh5'|trans }}</h5>
                 <div class="card-body">
-                  <p class="card-text">{{ 'welcome.underConditionp1'|trans }}<br />
-                  {{ 'welcome.underConditionp2'|trans }}</p>
+                  <div class="age">
+                    <p class="card-text">{{ 'welcome.underConditionp1'|trans }}<br />
+                    <span>{{ 'welcome.underConditionp2'|trans }}</span></p>
+                  </div>  
                   <p class="card-text"><br />{{ rateReduit.rateValue | number_format(0, ',', ' ') }} € <br />
                   {{ 'welcome.dayp'|trans }}</p>
                   <p class="card-text">{{ (rateReduit.rateValue * durationforDemiJournee.durationValue) | number_format(0, ',', ' ') }} € <br />
@@ -97,14 +110,14 @@
               </div>
             </div>
 
-            <p>{{ 'welcome.groupRatep'|trans }} 
+            <p class="grey grouprate">{{ 'welcome.groupRatep'|trans }} 
             <a  href="#"><i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a> </p>
 
-            <p>{{ 'general.reducedRateConditionp'|trans }}</p>
+            <p class="grey reducedRateCondition">{{ 'general.reducedRateConditionp'|trans }}</p>
 
           </div>
 
-          <div class="col-sm-3 offset-sm-1" >
+          <div class="col-xl-3 offset-xl-1  openingHours" >
             <h2> <i class="fa fa-clock-o" aria-hidden="true"></i> {{ 'welcome.openingHoursh2'|trans }}</h2>
             <p>{{ 'welcome.openingHoursMonday'|trans }}</p>
             <p>{{ 'welcome.openingHoursTuesday'|trans }}</p>
@@ -124,6 +137,7 @@
     </div> 
 
   </section>
+</div>
 
      
 

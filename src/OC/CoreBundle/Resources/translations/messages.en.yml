@@ -1,8 +1,10 @@
 layout.title: Online ticketing of the Louvre Museum
+layout.altimage: 'La Joconde picture for Online ticketing of the Louvre Museum'
 
-welcome.title: Home for
+welcome.title: Welcome to the Louvre Museum Ticket Office - Buy tickets online
 welcome.description: Homepage of the Louvre Museum Online ticketing
-welcome.h1: Welcome to the Online ticketing of the Louvre Museum
+welcome.h1.1: Welcome to the Online ticketing 
+welcome.h1.2: of the Louvre Museum
 welcome.pAchat1: Buy your e-tickets
 welcome.pAchat2: and avoid long queues!
 button.tickets: YOUR TICKETS
@@ -78,7 +80,8 @@ label.birthdayDate: Birthday date
 label.country: Country
 label.generalTermsAcceptance: "I accept the general sales conditions"
 
-general.pMticket: "M-tickets: Present your tickets at the entrance directly on your phone!"
+general.pMticket1: "M-tickets: "
+general.pMticket2: "Present your tickets at the entrance directly on your phone!"
 general.reducedRateConditionp: "* For students, military, museum employees or employees of a department of the Ministry of Culture (proof requested at the entrance)"
 general.openingHours:
         # les éléments de liste sont précédés d'un tiret en YAML

@@ -1,8 +1,10 @@
 layout.title: 'Billetterie du musée du Louvre'
+layout.altimage: 'Image de La Joconde pour la Billetterie du musée du Louvre'
 
-welcome.title: 'Accueil de la'
-welcome.description: 'Page d''accueil de la Billetterie du Musée du Louvre'
-welcome.h1: 'Bienvenue sur la Billetterie en ligne du Musée du Louvre'
+welcome.title: 'Accueil de la  Billetterie du musée du Louvre - Achat de billets en ligne'
+welcome.description: 'Sur cette page d''accueil de la Billetterie du Musée du Louvre, vous trouverez toutes les infos utiles : types de billet et tarifs, horaires et jours d''ouverture et un accès pour acheter vos billets en ligne' 
+welcome.h1.1: 'Bienvenue sur la Billetterie en ligne'
+welcome.h1.2: 'du Musée du Louvre'
 welcome.pAchat1: 'Acheter vos billets électroniques'
 welcome.pAchat2: 'et éviter les longues files d''attente !'
 button.tickets: 'VOS BILLETS'
@@ -78,7 +80,8 @@ label.birthdayDate: Date d'anniversaire
 label.country: Pays
 label.generalTermsAcceptance: "J'accepte les conditions générales de vente"
 
-general.pMticket: 'M-billets : Présentez vos billets à l''entrée directement sur votre téléphone !'
+general.pMticket1: 'M-billets : '
+general.pMticket2: 'Présentez vos billets à l''entrée directement sur votre téléphone !'
 general.reducedRateConditionp: '*Pour les étudiants, les militaires, les employés du musée ou d''un service du Ministère de la Culture (justificatif demandé à l''entrée)'
 general.openingHours:
         # les éléments de liste sont précédés d'un tiret en YAML

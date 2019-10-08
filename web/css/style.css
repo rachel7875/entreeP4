@@ -13,14 +13,85 @@ body {
   
 header {
     width:100%;
+    height: 122px; 
 }
-    
+
+header .btn {
+  margin-right: 20px;
+}
+
+.bg-light {
+  background-color: #222222 !important;
+}
+
+#fond {
+  position: absolute;
+  background: url('/louvre/web/images/night_louvre_pxhere.jpg');
+  background-size: cover;
+    background-position: top center;
+    z-index: -1;
+}
+
+.greybackground {
+  background: rgba(159, 161, 106);
+  z-index: 4;
+}
+
+.grey {
+  color:#222222 !important;
+}
+
+h2 {
+  color:#C44244  !important;
+}
+
 /*Margin taking into account the navigation bar*/ 
 .main_content {
-    padding-top: 60px;
-    min-height: 100%;
+  width:100%;
+  min-width: 100%;
+    padding-top: 150px;
     padding-bottom: 150px;
     }
+
+/*STYLE FOR THE HEADERS*/
+
+#navbarSupportedContent {
+  margin-left: 100px;
+}
+a.nav-link  {
+  font-size: 20px;
+  color : #C44244 !important;
+  margin-right: 30px;
+}
+
+a.nav-link:hover, a.nav-link:focus {
+  color :#BFC272 !important;
+}
+
+#brand{
+  color: #9FA16A;
+}
+
+#logo img {
+  height: 90px;
+  margin: 0px 20px 0px 150px;
+  background-color: white;
+}    
+  
+@media all and (max-width: 400px) {
+  #logo img {
+    height: 50px;
+    margin: 0px 20px 0px 20px;
+  }   
+}
+/*Sticky top bar and menu on scroll*/
+
+header {
+	position : fixed !important;
+	width: 100%;
+	z-index: 10;
+}
+
 
 /*STYLE FOR THE FOOTER*/
 .footer{
@@ -28,34 +99,11 @@ header {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-color: #222;
+    background-color: #222222 !important;
     height: 120px;
     padding-top: 20px;
-    color : #DB6E71;
+    color : #C44244;
     font-size: 0.75em;
+    z-index: 100;
 }
 
-/*STYLE FOR THE HEADERS*/
-
-  #navbarPublic a  {
-    color : #DB6E71;
-  }
-
-  #navbarPublic a:hover, #navbarPublic a:focus {
-    color :#BFC272 ;
-  }
-  
-  #brand{
-    color: #9FA16A;
-    position :absolute;
-  }
-
-  #logo {
-    position : absolute;
-  }
-
-  #publicMenu, .navbar-left  {
-    position : relative;
-  }
-
-  
