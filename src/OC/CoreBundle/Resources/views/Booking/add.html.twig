@@ -11,15 +11,14 @@
 
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.css">
 
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <link rel="stylesheet" href="bootstrap-datepicker3.css">
+
 
 {% endblock %}
 
 {% block body %}
 
-  <section  >
-    <div class="container-fluid " >
+  <section class="container-fluid " >
+    <div  >
       <div class="row" >
         <div class="col-xl-12 text-center pageTitle" id="headerFond">
           <h1>{{ 'steps.h1'|trans }}</h1>
@@ -28,12 +27,12 @@
     </div>  
 
 
-    <div class="container-fluid " >
+    <div >
       <div class="row ">
 
-            <div class="col-10 offset-1" >
-              <ul class="row tunnel list-group text-center">
-                <li class="step first  list-group-item active   col-md-2 " >
+            <section class="col-10 offset-1 tunnelSection" >
+              <ul class="row tunnel list-group text-center d-flex  justify-content-center">
+                <li class="step first  list-group-item active d-md-block  col-md-2 " >
                       <div class="row">
                         <div class="col-md-2 ">
                           <ion-icon  name="calendar"></ion-icon>
@@ -89,16 +88,10 @@
                       </div> 
                 </li>
               </ul>
-            </div>
+            </section>
 
-
-
-    
-
-            <div class="col-md-12 greybackground" >
-
+            <div class="col-8 offset-2 greybackground" >
               {{ include("OCCoreBundle:Booking:formDate.html.twig") }}
-
             </div>
 
       </div>

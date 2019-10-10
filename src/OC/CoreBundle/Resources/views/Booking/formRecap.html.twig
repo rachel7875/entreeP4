@@ -22,8 +22,9 @@
   
   {# Buttons at the end  #}
   <button type="button" class="btn btn-default">{{ 'button.cancel'|trans }}</button>
-  <button type="button" class="btn btn-default">{{ 'button.previous'|trans }}</button>
-  <input type="submit" value={{ 'button.next'|trans }} class="pull-right" />
+  
+  <a class="btn btn-outline-danger" href="#" role="button">{{ 'button.previous'|trans }}</a>
+  <input type="submit" value={{ 'button.next'|trans }} class="btn btn-outline-success pull-right" />
 
 
   {{ form_end(form) }}

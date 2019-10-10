@@ -26,10 +26,11 @@
 
 
   {# Buttons at the end  #}
-  <button type="button" class="btn btn-default">{{ 'button.cancel'|trans }}</button>
-  <button type="button" class="btn btn-default">{{ 'button.previous'|trans }}</button>
-  <input type="submit" value={{ 'button.next'|trans }} class="pull-right" />
-
+  <section class="endButtons">
+    <button type="button" class="btn btn-default">{{ 'button.cancel'|trans }}</button>
+    <button type="button" class="btn btn-default">{{ 'button.previous'|trans }}</button>
+    <input type="submit" value={{ 'button.next'|trans }} class="pull-right" />
+  </section>
 
   {{ form_end(form) }}
 

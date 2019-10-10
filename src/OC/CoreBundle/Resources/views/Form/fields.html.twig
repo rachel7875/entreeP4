@@ -4,15 +4,19 @@
 
 {% block form_row %}
     {% spaceless %}
-        <div class="form_row">
-            {{ form_label(form) }}
-            {{ form_widget(form) }}
-            {% for attrname, attrvalue in attr %}
-                {% if attrname == 'data-help' %}
-                    <div class="help-block">{{ attrvalue | trans }}</div>
-                {% endif %}
-            {% endfor %}
-            {{ form_errors(form) }}
+        <div class="form_row  d-inline-flex .d-flex flex-wrap  field ">
+            
+                {{ form_label(form) }}
+            
+            
+                {{ form_widget(form) }}
+                {% for attrname, attrvalue in attr %}
+                    {% if attrname == 'data-help' %}
+                        <div class="help-block">{{ attrvalue | trans }}</div>
+                    {% endif %}
+                {% endfor %}
+                {{ form_errors(form) }}
+            
         </div>
     {% endspaceless %}
 {% endblock form_row %}

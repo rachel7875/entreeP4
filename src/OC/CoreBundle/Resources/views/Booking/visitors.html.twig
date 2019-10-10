@@ -1,91 +1,103 @@
 {% extends "::layout.html.twig" %}
 
 {% block title %}
-  NORMALEMENT PAS REFERENCE CAR 2E ETAPE - {{ parent() }}
+   {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  {#Custom styles for this template #}
+  
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.css">
+
+
+
 {% endblock %}
 
 {% block body %}
 
-  <section class="container-fluid" >
-    <div class="row">
-      <div class="col-sm-12 " >
-        <h1>{{ 'steps.h1'|trans }}</h1>
+  <section class="container-fluid " >
+    <div  >
+      <div class="row" >
+        <div class="col-xl-12 text-center pageTitle" id="headerFond">
+          <h1>{{ 'steps.h1'|trans }}</h1>
+        </div>
       </div>
+    </div>  
 
-      <div class="col-sm-10 offset-sm-1" >
-        <div class="row">
-          <div class="col-md-12 " >
-            <div class="tunnel">
-              <div class="step first   complete hidden-xs"
-                  style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <ion-icon  name="calendar"></ion-icon>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step1'|trans }} <br />
-                        <mark>{{ 'buyingProcess.mark1'|trans }}</mark> </p>
-                      </div>
-                    </div>
-		          </div>
-              <div class="step   active  classic hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-user-plus"  aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step2'|trans }}<br />
-                          <mark>{{ 'buyingProcess.mark2'|trans }}</mark> </p>
-                      </div>
-                    </div>
-              </div>
-              <div class="step     classic hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step3'|trans }}<br />
-                        <mark>{{ 'buyingProcess.mark3'|trans }}</mark> </p>
-                      </div>
-                    </div>  
-              </div>
-              <div class="step     classic hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step4'|trans }}<br />
-                          <mark>{{ 'buyingProcess.mark4'|trans }}</mark> </p>
-                      </div>
-                    </div> 
-              </div>
-              <div class="step  last   classic hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-check" aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step5'|trans }}<br />
-                          <mark>{{ 'buyingProcess.mark5'|trans }}</mark> </p>
-                      </div>
-                    </div> 
-              </div>
-		        </div>
-          </div>
 
-          <div class="col-md-12 " >
+    <div >
+      <div class="row ">
 
+            <section class="col-10 offset-1 tunnelSection" >
+              <ul class="row tunnel list-group text-center d-flex  justify-content-center">
+                <li class="step first  list-group-item d-none d-md-block col-md-2 " >
+                      <div class="row">
+                        <div class="col-md-2 ">
+                          <ion-icon  name="calendar"></ion-icon>
+                        </div>
+                        <div class="col-md-10 ">
+                          <p> {{ 'buyingProcess.step1'|trans }} <br />
+                          <span>{{ 'buyingProcess.mark1'|trans }}</span> </p>
+                        </div>
+                      </div>
+                </li>
+                <li class="step list-group-item d-md-block active   col-md-2">
+                      <div class="row">
+                        <div class="col-md-2 ">
+                          <i class="fa fa-user-plus"  aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-10 ">
+                          <p> {{ 'buyingProcess.step2'|trans }}<br />
+                            <span>{{ 'buyingProcess.mark2'|trans }}</span> </p>
+                        </div>
+                      </div>
+                </li>
+                <li class="step  list-group-item   d-none d-md-block col-md-2 ">
+                      <div class="row">
+                        <div class="col-md-2 ">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-10 ">
+                          <p> {{ 'buyingProcess.step3'|trans }}<br />
+                          <span>{{ 'buyingProcess.mark3'|trans }}</span> </p>
+                        </div>
+                      </div>  
+                </li>
+                <li class="step  list-group-item   d-none d-md-block col-md-2 ">
+                      <div class="row">
+                        <div class="col-md-2 ">
+                          <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-10 ">
+                          <p> {{ 'buyingProcess.step4'|trans }}<br />
+                            <span>{{ 'buyingProcess.mark4'|trans }}</span> </p>
+                        </div>
+                      </div> 
+                </li>
+                <li class="step  last list-group-item  d-none d-md-block col-md-2 ">
+                      <div class="row">
+                        <div class="col-md-2 ">
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-10 ">
+                          <p> {{ 'buyingProcess.step5'|trans }}<br />
+                            <span>{{ 'buyingProcess.mark5'|trans }}</span> </p>
+                        </div>
+                      </div> 
+                </li>
+              </ul>
+            </section>
+
+          <div class="col-sm-8 offset-sm-2 col-10 offset-sm-1 greybackground formSection" >
             {{ include("OCCoreBundle:Booking:formVisitors.html.twig") }}
-
             <div class="iddata" data-TicketsNbforaDay={{ app.session.get('sessionTicketsNbforaDay') }}></div>
           </div>
 
+     </div>
+    </div>
+  </section  >
 {% endblock %}
 
 
@@ -178,7 +190,7 @@
     // La fonction qui ajoute un lien de suppression d'un ticket
     function addDeleteLink($prototype) {
       // Création du lien
-      var $deleteLink = $('<a href="#" class="btn btn-danger">{{ 'button.delete'|trans }}</a>');
+      var $deleteLink = $('<a href="#" class="btn btn-danger suppressionButton">{{ 'button.delete'|trans }}</a>');
 
       // Ajout du lien
       $prototype.append($deleteLink);
