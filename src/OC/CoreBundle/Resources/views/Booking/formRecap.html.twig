@@ -9,7 +9,7 @@
   {{ form_errors(form) }}
 
   {# The generalTermsAcceptance field#}
-  <div class="form-group">
+  <div class="form-group generalTermsAcceptance">
     {{ form_widget(form.generalTermsAcceptance, {'attr': {'class': 'form-control'}}) }}
     <label for="">{{ 'label.generalTermsAcceptance'|trans }}</label>
      <a href="https://www.ticketlouvre.fr/louvre/b2c/index.cfm/CGV">{{ 'formrecap.generalTermsAcceptance'|trans }}</a> </p> 
@@ -21,9 +21,7 @@
   </div>
   
   {# Buttons at the end  #}
-  <button type="button" class="btn btn-default">{{ 'button.cancel'|trans }}</button>
-  
-  <a class="btn btn-outline-danger" href="#" role="button">{{ 'button.previous'|trans }}</a>
+  <a class="btn btn-outline-danger cancelButton" href="{{path('oc_core_homepage') }}" >{{ 'button.cancel'|trans }}</a>
   <input type="submit" value={{ 'button.next'|trans }} class="btn btn-outline-success pull-right" />
 
 

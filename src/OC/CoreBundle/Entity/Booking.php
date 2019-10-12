@@ -7,6 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use OC\CoreBundle\Validator\AntiClosingDays;
 use OC\CoreBundle\Validator\AntiMaxTicketsNb;
 use OC\CoreBundle\Validator\AntiDayDurationAfterTwoPM;
+use OC\CoreBundle\Validator\AntiBookingAfterClosingTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -39,6 +40,7 @@ class Booking
      *      minMessage = "booking.visitDay.range",
      * )
      * @AntiClosingDays()
+     * @AntiBookingAfterClosingTime()
     */
     private $visitDay;
 
@@ -61,8 +63,7 @@ class Booking
      * @ORM\Column(name="email", type="string", length=255)
      * @Assert\NotBlank( message = "notBlank",)
      * @Assert\Email(
-     *      message = "booking.email.Email",
-     *      checkMX = true)
+     *      message = "booking.email.Email")
      */
     private $email;
 

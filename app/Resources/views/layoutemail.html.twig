@@ -8,7 +8,7 @@
         <link rel="icon" type="image/png" href="{{ absolute_url(asset('web/images/jocondebis.png')) }}">
         <title>{% block title %}Billetterie du musée du Louvre{% endblock %}</title>
         <meta name="description" content="{% block description %}{% endblock %}" />
-<img src="{{ absolute_url(asset('bundle/myname/img/image.gif')) }}" alt="Title"/>
+
         {% block stylesheets %}
             {# Boostrap loading #}
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -16,11 +16,10 @@
             {# Upload of Font Awesome icons#}
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-            {#IE10 viewport hack for Surface/desktop Windows 8 bug #}
-            <link href="web/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
 
             {#Custom styles for this template #}
-            <link href="web/css/style.css.twig" rel="stylesheet">
+            <link href="web/css/app.css.twig" rel="stylesheet">
         {% endblock %}
 
     </head>
@@ -45,8 +44,9 @@
 
 
         {% block javascripts %}
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
             <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
         {% endblock %}
 

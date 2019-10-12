@@ -80,6 +80,9 @@ label.birthdayDate: Birthday date
 label.country: Country
 label.generalTermsAcceptance: "I accept the general sales conditions"
 
+NoPurchaseAfterTwo: You cannot buy a day ticket after 2pm.
+
+general.pMticket: "M-tickets: Present your tickets at the entrance directly on your phone!"
 general.pMticket1: "M-tickets: "
 general.pMticket2: "Present your tickets at the entrance directly on your phone!"
 general.reducedRateConditionp: "* For students, military, museum employees or employees of a department of the Ministry of Culture (proof requested at the entrance)"
@@ -112,11 +115,8 @@ button.next: Next
 button.previous: Previous
 button.delete: Delete
 button.addTicket: Add a ticket
-button.info: Useful information
-button.visitsActivities: Visits & Activities
-button.expoActu: Exhibitions & News
-button.oeuvresPalace: Collection & Louvre Palace
-button.artsEdu: Arts & Education
+button.info: Louvre Museum site access
+
 
 recap.check: 'Before making the payment, please check the details of your order (date, duration, email for receipt of tickets,
 visitors)'

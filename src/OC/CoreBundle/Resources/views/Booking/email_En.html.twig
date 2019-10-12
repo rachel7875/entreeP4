@@ -1,5 +1,5 @@
 
-<section>
+<section class="introEmail">
 
     
     <img src={{ absolute_url(asset('images/jocondebis.png')) }} alt="Logo Louvre Museum Online ticketing"/>
@@ -33,20 +33,12 @@
     </div>
 
     <div class="col-md-12" >
-        <div class="row" >
-            <div class="col-md-6 ">
-            <p>Tickets</p>
-            </div>
-            <div class="col-md-2 offset-sm-3 ">
-            <p>Price</p>
-            </div>
-            <div class="col-md-12 ">
+        <div>
             <hr>
-            </div>
-        </div>
+        </div>  
         <div class="row" >
             {% for ticket in tickets %}
-            <div class="col-md-6 ">
+            <div class="col-md-6 ticketsEmail">
                 <div class="row" > 
                 <div class="col-md-1 text-right">
                     <i class="fa fa-ticket "></i>
@@ -77,11 +69,7 @@
 
 <aside class="col-md-12">
     <h4>To know everything in order to prepare your visit and inquire!</h4>
-    <a class="btn btn-secondary" href="https://www.louvre.fr/departments/antiquit%C3%A9s-orientales" 
-    role="button">Useful information</a>
-    <a class="btn btn-secondary" href="#" role="button">Visits & Activities</a>
-    <a class="btn btn-secondary" href="#" role="button">Exhibitions & News</a>
-    <a class="btn btn-secondary" href="#" role="button">Collection & Louvre Palace</a>
-    <a class="btn btn-secondary" href="#" role="button">Arts & Education</a>
+    <a class="btn btn-danger" href="https://www.louvre.fr/" 
+    role="button">{{ 'button.info'|trans }}</a>
 </aside">
 

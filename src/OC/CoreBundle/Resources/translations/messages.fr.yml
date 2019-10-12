@@ -80,6 +80,9 @@ label.birthdayDate: Date d'anniversaire
 label.country: Pays
 label.generalTermsAcceptance: "J'accepte les conditions générales de vente"
 
+noPurchase.afterTwo: "Vous ne pouvez pas acheter de billet journée après 14h."
+
+general.pMticket: "M-billets : Présentez vos billets à l'entrée directement sur votre téléphone !"
 general.pMticket1: 'M-billets : '
 general.pMticket2: 'Présentez vos billets à l''entrée directement sur votre téléphone !'
 general.reducedRateConditionp: '*Pour les étudiants, les militaires, les employés du musée ou d''un service du Ministère de la Culture (justificatif demandé à l''entrée)'
@@ -112,11 +115,7 @@ button.next: Suivant
 button.previous: Précédent
 button.delete: Supprimer
 button.addTicket: Ajouter un billet
-button.info: Informations Pratiques
-button.visitsActivities: Visites & Activités
-button.expoActu: Expositions & Actualités
-button.oeuvresPalace: Oeuvres & Palais
-button.artsEdu: Arts & Education
+button.info: Accès au site du Musée du Louvre
 
 recap.check: Avant de procéder au paiement, veuillez vérifier le détail de votre commande (date, durée, email pour la réception des billets, 
                   visiteurs)

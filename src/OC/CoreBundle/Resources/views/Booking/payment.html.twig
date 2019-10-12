@@ -1,110 +1,108 @@
 {% extends "::layout.html.twig" %}
 
 {% block title %}
-  NORMALEMENT PAS REFERENCE CAR 4E ETAPE - {{ parent() }}
+  {{ parent() }}
 {% endblock %}
 
 {% block body %}
 
-  <section class="container-fluid" >
-    <div class="row">
-      <div class="col-sm-12 " >
-        <h1>{{ 'steps.h1'|trans }}</h1>
+  <section class="container-fluid " >
+    <div  >
+      <div class="row" >
+        <div class="col-xl-12 text-center pageTitle" id="headerFond">
+          <h1>{{ 'steps.h1'|trans }}</h1>
+        </div>
       </div>
+    </div>  
 
-      <div class="col-sm-10 offset-sm-1" >
-        <div class="row">
-          <div class="col-md-12 " >
-            <div class="tunnel">
-              <div class="step first   complete hidden-xs"
-                  style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <ion-icon  name="calendar"></ion-icon>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step1'|trans }} <br />
-                        <mark>{{ 'buyingProcess.mark1'|trans }}</mark> </p>
-                      </div>
-                    </div>
-		          </div>
-              <div class="step     complete hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-user-plus"  aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step2'|trans }}<br />
-                          <mark>{{ 'buyingProcess.mark2'|trans }}</mark> </p>
-                      </div>
-                    </div>
-              </div>
-              <div class="step     complete hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step3'|trans }}<br />
-                        <mark>{{ 'buyingProcess.mark3'|trans }}</mark> </p>
-                      </div>
-                    </div>  
-              </div>
-              <div class="step  active   classic hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step4'|trans }}<br />
-                          <mark>{{ 'buyingProcess.mark4'|trans }}</mark> </p>
-                      </div>
-                    </div> 
-              </div>
-              <div class="step  last   classic hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-check" aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step5'|trans }}<br />
-                          <mark>{{ 'buyingProcess.mark5'|trans }}</mark> </p>
-                      </div>
-                    </div> 
-              </div>
-		        </div>
+    <div class="row ">
+      <section class="col-10 offset-1 tunnelSection" >
+        <ul class="row tunnel list-group text-center d-flex  justify-content-center">
+          <li class="step first  list-group-item d-none d-md-block  col-md-2 " >
+                <div class="row">
+                  <div class="col-md-2 ">
+                    <ion-icon  name="calendar"></ion-icon>
+                  </div>
+                  <div class="col-md-10 ">
+                    <p> {{ 'buyingProcess.step1'|trans }} <br />
+                    <span>{{ 'buyingProcess.mark1'|trans }}</span> </p>
+                  </div>
+                </div>
+          </li>
+          <li class="step list-group-item d-none d-md-block col-md-2">
+                <div class="row">
+                  <div class="col-md-2 ">
+                    <i class="fa fa-user-plus"  aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md-10 ">
+                    <p> {{ 'buyingProcess.step2'|trans }}<br />
+                      <span>{{ 'buyingProcess.mark2'|trans }}</span> </p>
+                  </div>
+                </div>
+          </li>
+          <li class="step  list-group-item  d-none  d-md-block col-md-2 ">
+                <div class="row">
+                  <div class="col-md-2 ">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md-10 ">
+                    <p> {{ 'buyingProcess.step3'|trans }}<br />
+                    <span>{{ 'buyingProcess.mark3'|trans }}</span> </p>
+                  </div>
+                </div>  
+          </li>
+          <li class="step  list-group-item   active d-md-block col-md-2 ">
+                <div class="row">
+                  <div class="col-md-2 ">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md-10 ">
+                    <p> {{ 'buyingProcess.step4'|trans }}<br />
+                      <span>{{ 'buyingProcess.mark4'|trans }}</span> </p>
+                  </div>
+                </div> 
+          </li>
+          <li class="step  last list-group-item  d-none d-md-block col-md-2 ">
+                <div class="row">
+                  <div class="col-md-2 ">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md-10 ">
+                    <p> {{ 'buyingProcess.step5'|trans }}<br />
+                      <span>{{ 'buyingProcess.mark5'|trans }}</span> </p>
+                  </div>
+                </div> 
+          </li>
+        </ul>
+      </section>
+
+      <div class="col-8 offset-2 greybackground flex-column align-items-center">
+        
+          <p>{{ 'payment.infoToGive'|trans }}</p>
+          
+          <form action=""  method="POST">
+            <script
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="{{ publicStripeKey }}"
+              data-amount="{{totalPrice}}"
+              data-name= {% if (app.request.getLocale()) == 'en' %}"Louvre Museum" {% else %} "Musée du Louvre"{% endif %}
+              data-description={{ 'payment.checkoutDescription'|trans }}
+              data-image= {{ absolute_url(asset('images/jocondebis.png')) }}
+              data-email="{{ booking.email }}"
+              data-locale={{app.request.getLocale()}}
+              data-currency="eur"
+              data-zip-code="true"
+              data-allow-remember-me="false"
+              data-label={% if (app.request.getLocale()) == 'en' %}"Payment with credit card" {% else %} "Paiement par carte bancaire"{% endif %}>
+            </script>
+          </form>
+          <div>
+            {% for message in app.session.flashbag.get('info') %}
+              <p>{{ 'payment.error'|trans }} {{ message }}</p>
+            {% endfor %}
           </div>
+      </div> 
 
-          <div class="col-md-12">
-            
-              <p>{{ 'payment.infoToGive'|trans }}</p>
-              
-              <form action=""  method="POST">
-                <script
-                  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                  data-key="{{ publicStripeKey }}"
-                  data-amount="{{totalPrice}}"
-                  data-name= {% if (app.request.getLocale()) == 'en' %}"Louvre Museum" {% else %} "Musée du Louvre"{% endif %}
-                  data-description={{ 'payment.checkoutDescription'|trans }}
-                  data-image= {{ absolute_url(asset('images/jocondebis.png')) }}
-                  data-email="{{ booking.email }}"
-                  data-locale={{app.request.getLocale()}}
-                  data-currency="eur"
-                  data-zip-code="true"
-                  data-allow-remember-me="false"
-                  data-label={% if (app.request.getLocale()) == 'en' %}"Payment with credit card" {% else %} "Paiement par carte bancaire"{% endif %}>
-                </script>
-              </form>
-              <div>
-                {% for message in app.session.flashbag.get('info') %}
-                  <p>{{ 'payment.error'|trans }} {{ message }}</p>
-                {% endfor %}
-              </div>
-          </div>    
     </div>
   </section>
 

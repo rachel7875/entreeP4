@@ -11,15 +11,15 @@
   {# Field email #}
   <div class="form-group">
     <div class="row">
-      <div class="col-md-2 text-right">
+      <div class="col-xl-2 text-xl-right">
         <label for="">{{ 'label.email'|trans }}</label>
         {# {{ form_label(form.email, {'label_attr': {'class': 'control-label'}}) }}#}
       </div>
-      <div class="col-md-4">
+      <div class="col-xl-4">
         {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
         {{ form_errors(form.email) }}
       </div>
-      <div class="col-md-6">
+      <div class="col-xl-6">
         <p>{{ 'formdate.destinationEmail'|trans }}</p>
       </div>
     </div>
@@ -28,14 +28,14 @@
   {# Field Date de la visite #}
   <div class="form-group">
     <div class="row">
-      <div class="col-md-2 text-right">
+      <div class="col-xl-2 text-xl-right">
         <label for="oc_corebundle_booking_visitDay">{{ 'label.visitDay'|trans }}</label>
       </div>
-      <div class="col-md-4">
-        {{ form_widget(form.visitDay, {'attr': {'class': 'form-control'}}) }}
+      <div class="col-xl-4">
+        {{ form_widget(form.visitDay, {'attr': {'class': 'form-control js-datepicker'}}) }}
         {{ form_errors(form.visitDay) }}
       </div>
-      <div class="col-md-6">
+      <div class="col-xl-6">
         <p>{{ 'formdate.noSelectionDays'|trans }}</p>
         <p>{{ 'formdate.openingHoursIntro'|trans }}</p>
         {% for i in 0..7 %}
@@ -48,14 +48,14 @@
   {# Field Durée #}
   <div class="form-group">
     <div class="row">
-      <div class="col-md-2 text-right">
+      <div class="col-xl-2 text-xl-right">
         <label for="">{{ 'label.duration'|trans }}</label>
       </div>
-      <div class="col-md-4">
+      <div class="col-xl-4">
         {{ form_widget(form.duration, {'attr': {'class': 'form-control'}}) }}
         {{ form_errors(form.duration) }}
       </div>
-      <div class="col-md-6">
+      <div class="col-xl-6">
         <p>{{ 'formdate.hoursForHalfday'|trans }}</p>
       </div>
     </div>
@@ -64,14 +64,14 @@
   {# Field Nombre de billets #}
   <div class="form-group">
     <div class="row">
-      <div class="col-md-2 text-right">
+      <div class="col-xl-2 text-xl-right">
         <label for="">{{ 'label.ticketsNumber'|trans }}</label>
       </div>
-      <div class="col-md-4">
+      <div class="col-xl-4">
         {{ form_widget(form.ticketsNumber, {'attr': {'class': 'form-control'}}) }}
         {{ form_errors(form.ticketsNumber) }}
       </div>
-      <div class="col-md-6">
+      <div class="col-xl-6">
         <p>{{ 'formdate.freetickets'|trans }} <br />
           {{ 'formdate.more10Tickets'|trans }}<a  href="#"><i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a>
         </p>
@@ -82,8 +82,8 @@
 
   {# Buttons at the end  #}
   <section class="endButtons">
-    <button type="button" class="btn btn-default">{{ 'button.cancel'|trans }}</button>
-    <input type="submit" value={{ 'button.next'|trans }} class="pull-right" />
+    <a class="btn btn-outline-danger cancelButton" href="{{path('oc_core_homepage') }}" >{{ 'button.cancel'|trans }}</a>
+    <button type="submit" class="btn btn-outline-success pull-right nextButton">{{ 'button.next'|trans }}  </button>
   </section>
 
 

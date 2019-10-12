@@ -1,92 +1,96 @@
 {% extends "::layout.html.twig" %}
 
 {% block title %}
-  NORMALEMENT PAS REFERENCE CAR 3E ETAPE - {{ parent() }}
+   {{ parent() }}
+{% endblock %}
+
+
+{% block stylesheets %}
+  {{ parent() }}
 {% endblock %}
 
 {% block body %}
 
-  <section class="container-fluid" >
-    <div class="row">
-      <div class="col-sm-12 " >
-        <h1>{{ 'steps.h1'|trans }}</h1>
+  <section class="container-fluid " >
+    <div  >
+      <div class="row" >
+        <div class="col-xl-12 text-center pageTitle" id="headerFond">
+          <h1>{{ 'steps.h1'|trans }}</h1>
+        </div>
       </div>
+    </div>  
 
-      <div class="col-sm-10 offset-sm-1" >
-        <div class="row">
-          <div class="col-md-12 " >
-            <div class="tunnel">
-              <div class="step first   complete hidden-xs"
-                  style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <ion-icon  name="calendar"></ion-icon>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step1'|trans }} <br />
-                        <mark>{{ 'buyingProcess.mark1'|trans }}</mark> </p>
-                      </div>
-                    </div>
-		          </div>
-              <div class="step     complete hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-user-plus"  aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step2'|trans }}<br />
-                          <mark>{{ 'buyingProcess.mark2'|trans }}</mark> </p>
-                      </div>
-                    </div>
-              </div>
-              <div class="step  active   classic hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step3'|trans }}<br />
-                        <mark>{{ 'buyingProcess.mark3'|trans }}</mark> </p>
-                      </div>
-                    </div>  
-              </div>
-              <div class="step     classic hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step4'|trans }}<br />
-                          <mark>{{ 'buyingProcess.mark4'|trans }}</mark> </p>
-                      </div>
-                    </div> 
-              </div>
-              <div class="step  last   classic hidden-xs "
-                 style="width: 20%;">
-                    <div class="row">
-                      <div class="col-md-2 ">
-                        <i class="fa fa-check" aria-hidden="true"></i>
-                      </div>
-                      <div class="col-md-10 ">
-                        <p> {{ 'buyingProcess.step5'|trans }}<br />
-                          <mark>{{ 'buyingProcess.mark5'|trans }}</mark> </p>
-                      </div>
-                    </div> 
-              </div>
-		        </div>
-          </div>
+      <div >
+      <div class="row ">
 
-          <div class="col-md-12">
+            <section class="col-10 offset-1 tunnelSection" >
+              <ul class="row tunnel list-group text-center d-flex  justify-content-center">
+                <li class="step first  list-group-item d-none d-md-block  col-md-2 " >
+                      <div class="row">
+                        <div class="col-md-2 ">
+                          <ion-icon  name="calendar"></ion-icon>
+                        </div>
+                        <div class="col-md-10 ">
+                          <p> {{ 'buyingProcess.step1'|trans }} <br />
+                          <span>{{ 'buyingProcess.mark1'|trans }}</span> </p>
+                        </div>
+                      </div>
+                </li>
+                <li class="step list-group-item d-none d-md-block col-md-2">
+                      <div class="row">
+                        <div class="col-md-2 ">
+                          <i class="fa fa-user-plus"  aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-10 ">
+                          <p> {{ 'buyingProcess.step2'|trans }}<br />
+                            <span>{{ 'buyingProcess.mark2'|trans }}</span> </p>
+                        </div>
+                      </div>
+                </li>
+                <li class="step  list-group-item   active d-md-block col-md-2 ">
+                      <div class="row">
+                        <div class="col-md-2 ">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-10 ">
+                          <p> {{ 'buyingProcess.step3'|trans }}<br />
+                          <span>{{ 'buyingProcess.mark3'|trans }}</span> </p>
+                        </div>
+                      </div>  
+                </li>
+                <li class="step  list-group-item   d-none d-md-block col-md-2 ">
+                      <div class="row">
+                        <div class="col-md-2 ">
+                          <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-10 ">
+                          <p> {{ 'buyingProcess.step4'|trans }}<br />
+                            <span>{{ 'buyingProcess.mark4'|trans }}</span> </p>
+                        </div>
+                      </div> 
+                </li>
+                <li class="step  last list-group-item  d-none d-md-block col-md-2 ">
+                      <div class="row">
+                        <div class="col-md-2 ">
+                          <i class="fa fa-check" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-10 ">
+                          <p> {{ 'buyingProcess.step5'|trans }}<br />
+                            <span>{{ 'buyingProcess.mark5'|trans }}</span> </p>
+                        </div>
+                      </div> 
+                </li>
+              </ul>
+            </section>
+
+          <div class="col-8 offset-2 greybackground">
             <div class="row" >
               <div class="col-md-12 text-center" >
                   <p>{{ 'recap.check'|trans }}</p>
                   <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>{{ 'general.ticketsForUnder4'|trans }}</p>
               </div>
 
-              <div class="col-md-4 offset-sm-5" >
+              <div class="col-md-4 offset-md-5" >
                   <p><ion-icon  name="calendar"></ion-icon> {{ 'recap.visitDay'|trans }}{{ booking.visitDay | date('d/m/Y') }}</p>
                   <p><i class="fa fa-clock-o" aria-hidden="true"></i> {{ 'recap.duration'|trans }}{{ durationName}}</p>
                   <p><i class="fa fa-envelope-o" aria-hidden="true"></i> {{ 'recap.email'|trans }} {{ booking.email }} </p> 
@@ -97,7 +101,7 @@
                   <div class="col-md-6 ">
                     <p>{{ 'recap.tickets'|trans }}</p>
                   </div>
-                  <div class="col-md-2 offset-sm-3 ">
+                  <div class="col-md-2 offset-md-3 ">
                     <p>{{ 'recap.price'|trans }}</p>
                   </div>
                   <div class="col-md-12 ">
@@ -118,7 +122,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-2 offset-sm-3 ">
+                    <div class="col-md-2 offset-md-3 ">
                       <p>{{ ticket.price  | number_format(2, ',', ' ')}} €</p>
                       {% set somme = somme+ ticket.price %}
                     </div>
@@ -126,13 +130,13 @@
                       <hr>
                     </div>
                   {% endfor %}
-                    <div class="col-md-2 offset-sm-9 ">
+                    <div class="col-md-2 offset-md-9 ">
                         <p>{{somme | number_format(2, ',', ' ')}} €</p>
                     </div>
                     <div class="col-md-1">
                         <p>{{ 'recap.total'|trans }}</p>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 ">
                       {{ include("OCCoreBundle:Booking:formRecap.html.twig") }}
                   </div>
                 </div>    

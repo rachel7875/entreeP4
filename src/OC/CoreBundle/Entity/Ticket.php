@@ -46,7 +46,7 @@ class Ticket
 
 
     /**
-     * @ORM\Column(name="reducedRate", type="binary")
+     * @ORM\Column(name="reducedRate", type="boolean")
      */
     private $reducedRate;
 

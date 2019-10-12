@@ -46,3 +46,8 @@ services:
         tags:
             - { name: validator.constraint_validator, alias: oc_core_AntiDayDurationAfterTwoPM }  
 
+    oc_core.validator.AntiBookingAfterClosingTime:                             
+            class: OC\CoreBundle\Validator\AntiBookingAfterClosingTimeValidator     
+            arguments: ["@request_stack", "@doctrine.orm.entity_manager"] 
+            tags:
+                - { name: validator.constraint_validator, alias: oc_core_AntiBookingAfterClosingTime }
