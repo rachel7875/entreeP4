@@ -1,8 +1,10 @@
+  
 layout.title: 'Billetterie du musée du Louvre'
 layout.altimage: 'Image de La Joconde pour la Billetterie du musée du Louvre'
 
 welcome.title: 'Accueil de la  Billetterie du musée du Louvre - Achat de billets en ligne'
 welcome.description: 'Sur cette page d''accueil de la Billetterie du Musée du Louvre, vous trouverez toutes les infos utiles : types de billet et tarifs, horaires et jours d''ouverture et un accès pour acheter vos billets en ligne' 
+welcome.ogtitle: 'Accueil de la  Billetterie du musée du Louvre - Achat de billets en ligne'
 welcome.h1.1: 'Bienvenue sur la Billetterie en ligne'
 welcome.h1.2: 'du Musée du Louvre'
 welcome.pAchat1: 'Acheter vos billets électroniques'
@@ -49,7 +51,9 @@ navbar.contact: Contact
 navbar.accessMuseumSite: 'Accès site du Musée'
 navbar.language: Langue
 
-date.title: 'Accueil de la'
+date.title: 'Commencez sur la'
+date.description: 'Achetez rapidement vos billets sur la billetterie en ligne du Musée du Louvre'
+date.ogtitle: 'Commencez sur la'
 steps.h1: Vos Billets
 
 buyingProcess.step1: Etape 1
@@ -80,9 +84,6 @@ label.birthdayDate: Date d'anniversaire
 label.country: Pays
 label.generalTermsAcceptance: "J'accepte les conditions générales de vente"
 
-noPurchase.afterTwo: "Vous ne pouvez pas acheter de billet journée après 14h."
-
-general.pMticket: "M-billets : Présentez vos billets à l'entrée directement sur votre téléphone !"
 general.pMticket1: 'M-billets : '
 general.pMticket2: 'Présentez vos billets à l''entrée directement sur votre téléphone !'
 general.reducedRateConditionp: '*Pour les étudiants, les militaires, les employés du musée ou d''un service du Ministère de la Culture (justificatif demandé à l''entrée)'
@@ -115,7 +116,11 @@ button.next: Suivant
 button.previous: Précédent
 button.delete: Supprimer
 button.addTicket: Ajouter un billet
-button.info: Accès au site du Musée du Louvre
+button.info: Informations Pratiques
+button.visitsActivities: Visites & Activités
+button.expoActu: Expositions & Actualités
+button.oeuvresPalace: Oeuvres & Palais
+button.artsEdu: Arts & Education
 
 recap.check: Avant de procéder au paiement, veuillez vérifier le détail de votre commande (date, durée, email pour la réception des billets, 
                   visiteurs)

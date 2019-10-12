@@ -2,7 +2,8 @@ layout.title: Online ticketing of the Louvre Museum
 layout.altimage: 'La Joconde picture for Online ticketing of the Louvre Museum'
 
 welcome.title: Welcome to the Louvre Museum Ticket Office - Buy tickets online
-welcome.description: Homepage of the Louvre Museum Online ticketing
+welcome.description: 'On this homepage of the Louvre Museum Ticket Office, you will find all the useful information you need: ticket types and fares, opening times and days and access to buy your tickets online'
+welcome.ogtitle: Welcome to the Louvre Museum Ticket Office - Buy tickets online
 welcome.h1.1: Welcome to the Online ticketing 
 welcome.h1.2: of the Louvre Museum
 welcome.pAchat1: Buy your e-tickets
@@ -49,7 +50,9 @@ navbar.contact: Contact
 navbar.accessMuseumSite: Museum site access
 navbar.language: Language
 
-date.title: 'Home for'
+date.title: 'Start on the'
+date.description: 'Buy your tickets quickly on the Louvre Museum Online ticketing'
+date.ogtitle: 'Start on the'
 steps.h1: Your tickets
 
 buyingProcess.step1: Step 1
@@ -151,3 +154,4 @@ email.Mticket : "This is an M-ticket: present your ticket | These are M-tickets:
 
 footer.cgv : General Terms and Conditions of Sale
 footer.legalNotices : Legal Notice
+

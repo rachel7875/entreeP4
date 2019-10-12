@@ -1,13 +1,19 @@
 
 {% extends "::layout.html.twig" %}
 
-
-
 {% block title %}
   {{ 'welcome.title'|trans }} 
 {% endblock %}
 
 {% block description %}{{ 'welcome.description'|trans }}{% endblock %}
+
+{% block ogurl %} {{ path('oc_core_homepage') }} {% endblock %}
+{% block ogtitle %} {{ 'welcome.ogtitle'|trans }}{{ parent() }} {% endblock %}
+
+
+
+
+
 
 {% block stylesheets %}
   {{ parent() }}
@@ -113,7 +119,7 @@
             </div>
 
             <p class="grey grouprate">{{ 'welcome.groupRatep'|trans }} 
-            <a  href="#"><i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a> </p>
+            <a  href="https://www.ticketlouvre.fr/louvre/b2c/index.cfm/contacts"><i class="fa fa-chevron-right fa-sm" aria-hidden="true"></i></a> </p>
 
             <p class="grey reducedRateCondition">{{ 'general.reducedRateConditionp'|trans }}</p>
 

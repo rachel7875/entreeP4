@@ -1,8 +1,13 @@
 {% extends "::layout.html.twig" %}
 
 {% block title %}
-  {{ 'date.title'|trans }} - {{ parent() }}
+  {{ 'date.title'|trans }} {{ parent() }}
 {% endblock %}
+{% block description %}{{ 'date.description'|trans }}  {% endblock %}
+{% block ogurl %} {{ path('oc_core_add') }} {% endblock %}
+{% block ogtitle %} {{ 'date.ogtitle'|trans }}{{ parent() }} {% endblock %}
+
+
 
 {% block stylesheets %}
   {{ parent() }}
