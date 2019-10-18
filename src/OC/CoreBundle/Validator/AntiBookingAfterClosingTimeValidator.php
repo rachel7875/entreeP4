@@ -12,16 +12,6 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class AntiBookingAfterClosingTimeValidator extends ConstraintValidator
 {
- 
-  private $em;
-  protected $requestStack;
-
-
-    public function __construct(RequestStack $requestStack, EntityManagerInterface $em)
-    {
-      $this->requestStack = $requestStack;
-      $this->em           = $em;
-    }
 
     public function validate($value, Constraint $constraint)
     {
