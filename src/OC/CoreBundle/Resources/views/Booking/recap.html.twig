@@ -20,7 +20,7 @@
       </div>
     </div>  
 
-      <div >
+      
       <div class="row ">
 
             <section class="col-10 offset-1 tunnelSection" >
@@ -28,7 +28,7 @@
                 <li class="step first  list-group-item d-none d-md-block  col-md-2 " >
                       <div class="row">
                         <div class="col-md-2 ">
-                          <ion-icon  name="calendar"></ion-icon>
+                          <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
                         </div>
                         <div class="col-md-10 ">
                           <p> {{ 'buyingProcess.step1'|trans }} <br />
@@ -83,25 +83,25 @@
               </ul>
             </section>
 
-          <div class="col-8 offset-2 greybackground">
+          <div class="col-8 offset-2 greybackground recapContent">
             <div class="row" >
               <div class="col-md-12 text-center" >
                   <p>{{ 'recap.check'|trans }}</p>
                   <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>{{ 'general.ticketsForUnder4'|trans }}</p>
               </div>
 
-              <div class="col-md-4 offset-md-5" >
+              <div class="col-md-6 offset-md-4" >
                   <p><ion-icon  name="calendar"></ion-icon> {{ 'recap.visitDay'|trans }}{{ booking.visitDay | date('d/m/Y') }}</p>
                   <p><i class="fa fa-clock-o" aria-hidden="true"></i> {{ 'recap.duration'|trans }}{{ durationName}}</p>
                   <p><i class="fa fa-envelope-o" aria-hidden="true"></i> {{ 'recap.email'|trans }} {{ booking.email }} </p> 
               </div>
 
-              <div class="col-md-12" >
+              <div class="col-md-12 ticketsDetails" >
                 <div class="row" >
                   <div class="col-md-6 ">
                     <p>{{ 'recap.tickets'|trans }}</p>
                   </div>
-                  <div class="col-md-2 offset-md-3 ">
+                  <div class="col-md-2 offset-md-3 recapPrice">
                     <p>{{ 'recap.price'|trans }}</p>
                   </div>
                   <div class="col-md-12 ">
@@ -138,10 +138,15 @@
                     </div>
                     <div class="col-md-12 ">
                       {{ include("OCCoreBundle:Booking:formRecap.html.twig") }}
-                  </div>
-                </div>    
+                    </div>
+                  </div>    
 
-              </div>
+                </div>
+              </div>    
+
+            </div>
+          </div>
+  </section>
 
 {% endblock %}
 

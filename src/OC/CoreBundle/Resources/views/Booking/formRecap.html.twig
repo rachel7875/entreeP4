@@ -21,10 +21,11 @@
   </div>
   
   {# Buttons at the end  #}
-  <a class="btn btn-outline-danger cancelButton" href="{{path('oc_core_homepage') }}" >{{ 'button.cancel'|trans }}</a>
-  <input type="submit" value={{ 'button.next'|trans }} class="btn btn-outline-success pull-right" />
 
-
+ <section class="endButtons">
+    <a class="btn btn-outline-danger cancelButton" href="{{path('oc_core_homepage') }}" >{{ 'button.cancel'|trans }}</a>
+    <button type="submit" class="btn btn-outline-success pull-right nextButton">{{ 'button.next'|trans }}  </button>
+  </section>
   {{ form_end(form) }}
 </div>
         

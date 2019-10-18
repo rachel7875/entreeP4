@@ -35,7 +35,7 @@
                 <li class="step first  list-group-item d-none d-md-block col-md-2 " >
                       <div class="row">
                         <div class="col-md-2 ">
-                          <ion-icon  name="calendar"></ion-icon>
+                          <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
                         </div>
                         <div class="col-md-10 ">
                           <p> {{ 'buyingProcess.step1'|trans }} <br />
@@ -90,7 +90,7 @@
               </ul>
             </section>
 
-          <div class="col-sm-8 offset-sm-2 col-10 offset-1 greybackground formSection" >
+          <div class="col-sm-8 offset-sm-2 col-10 offset-1 greybackground visitorsContent" >
             {{ include("OCCoreBundle:Booking:formVisitors.html.twig") }}
             <div class="iddata" data-TicketsNbforaDay={{ app.session.get('sessionTicketsNbforaDay') }}></div>
           </div>

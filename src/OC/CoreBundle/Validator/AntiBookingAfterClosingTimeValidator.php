@@ -13,6 +13,15 @@ use Symfony\Component\HttpFoundation\RequestStack;
 class AntiBookingAfterClosingTimeValidator extends ConstraintValidator
 {
 
+  private $em;
+  protected $requestStack;
+
+    public function __construct(RequestStack $requestStack, EntityManagerInterface $em)
+    {
+      $this->requestStack = $requestStack;
+      $this->em           = $em;
+    }
+
     public function validate($value, Constraint $constraint)
     {
       $request = $this->requestStack->getCurrentRequest();
@@ -30,10 +39,12 @@ class AntiBookingAfterClosingTimeValidator extends ConstraintValidator
         $weekDay=(new \DateTime())->format('N');
      
         if($weekDay==1){$closingHour=\DateTime::createFromFormat('H:i:s', '18:00:00');}
+        if($weekDay==2){$closingHour=\DateTime::createFromFormat('H:i:s', '00:00:01');}
         if($weekDay==3){$closingHour=\DateTime::createFromFormat('H:i:s', '21:45:00');}
         if($weekDay==4){$closingHour=\DateTime::createFromFormat('H:i:s', '18:00:00');}
         if($weekDay==5){$closingHour=\DateTime::createFromFormat('H:i:s', '14:00:00');}
         if($weekDay==6){$closingHour=\DateTime::createFromFormat('H:i:s', '18:00:00');}
+        if($weekDay==7){$closingHour=\DateTime::createFromFormat('H:i:s', '00:00:01');}
       
         
         if ($time > $closingHour->sub(new \DateInterval('PT1H'))->format('H:i:s'))   {
