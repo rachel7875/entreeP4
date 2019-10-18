@@ -1,0 +1,60 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+    <head>
+    <title> Confirmation tickets for the Louvre Museum </title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block stylesheets %}
+        <style type="text/css">
+            .ticketsEmail {
+                margin: 60px 0px 60px 0px;
+            }
+
+            .introEmail p {
+                margin-bottom: 20px;
+            }
+        </style>
+
+        <style type="text/css">
+            @media only screen and (max-width:480px) {
+            @-ms-viewport {
+                width: 320px;
+            }
+            @viewport {
+                width: 320px;
+            }
+            }
+        </style>
+
+        <link rel="icon" type="image/png" href="{{ absolute_url(asset('web/images/jocondebis.png')) }}">
+        {# Boostrap loading #}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        {% endblock %}
+    </head>
+    
+    <body>
+        <div class="main_content"  >
+            {% block body %}
+            {% endblock %}  
+        </div>
+
+        <footer>
+            <p><a href="https://www.ticketlouvre.fr/louvre/b2c/index.cfm/CGV"> {{'footer.cgv'|trans}}     </a>  </p>
+        </footer>
+
+        {% block javascripts %}   
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        {% endblock %}
+    </body>
+
+</html>
+

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for D:\wamp64\www\louvre\src\OC\CoreBundle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/style.css" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">D:\wamp64\www\louvre\src\OC\CoreBundle</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/BookingController.php.html#19">OC\CoreBundle\Controller\BookingController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/TicketType.php.html#12">OC\CoreBundle\Form\TicketType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiMaxTicketsNb.php.html#11">OC\CoreBundle\Validator\AntiMaxTicketsNb</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiDayDurationAfterTwoPMValidator.php.html#12">OC\CoreBundle\Validator\AntiDayDurationAfterTwoPMValidator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiDayDurationAfterTwoPM.php.html#11">OC\CoreBundle\Validator\AntiDayDurationAfterTwoPM</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiClosingDaysValidator.php.html#11">OC\CoreBundle\Validator\AntiClosingDaysValidator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiClosingDays.php.html#11">OC\CoreBundle\Validator\AntiClosingDays</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiBookingAfterClosingTimeValidator.php.html#13">OC\CoreBundle\Validator\AntiBookingAfterClosingTimeValidator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiBookingAfterClosingTime.php.html#11">OC\CoreBundle\Validator\AntiBookingAfterClosingTime</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Tests/Controller/DefaultControllerTest.php.html#7">OC\CoreBundle\Tests\Controller\DefaultControllerTest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ServStripe/OCServStripe.php.html#6">OC\CoreBundle\ServStripe\OCServStripe</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ServEmail/OCServEmail.php.html#15">OC\CoreBundle\ServEmail\OCServEmail</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ServClosingDays/OCServClosingDays.php.html#8">OC\CoreBundle\ServClosingDays\OCServClosingDays</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/TicketRepository.php.html#11">OC\CoreBundle\Repository\TicketRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ClosingdaysRepository.php.html#11">OC\CoreBundle\Repository\ClosingdaysRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/VisitorType.php.html#14">OC\CoreBundle\Form\VisitorType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingType.php.html#14">OC\CoreBundle\Form\BookingType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DefaultController.php.html#7">OC\CoreBundle\Controller\DefaultController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#21">OC\CoreBundle\Entity\Booking</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/WelcomeController.php.html#10">OC\CoreBundle\Controller\WelcomeController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadClosingdays.php.html#10">OC\CoreBundle\DataFixtures\ORM\LoadClosingdays</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadDuration.php.html#11">OC\CoreBundle\DataFixtures\ORM\LoadDuration</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadRate.php.html#10">OC\CoreBundle\DataFixtures\ORM\LoadRate</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DependencyInjection/Configuration.php.html#13">OC\CoreBundle\DependencyInjection\Configuration</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DependencyInjection/OCCoreExtension.php.html#15">OC\CoreBundle\DependencyInjection\OCCoreExtension</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Closingdays.php.html#13">OC\CoreBundle\Entity\Closingdays</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingThirdStepType.php.html#10">OC\CoreBundle\Form\BookingThirdStepType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Duration.php.html#15">OC\CoreBundle\Entity\Duration</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Nationality.php.html#13">OC\CoreBundle\Entity\Nationality</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Rate.php.html#11">OC\CoreBundle\Entity\Rate</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#14">OC\CoreBundle\Entity\Ticket</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#12">OC\CoreBundle\Entity\Visitor</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingBisType.php.html#10">OC\CoreBundle\Form\BookingBisType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiMaxTicketsNbValidator.php.html#11">OC\CoreBundle\Validator\AntiMaxTicketsNbValidator</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/BookingController.php.html#19">OC\CoreBundle\Controller\BookingController</a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="Validator/AntiBookingAfterClosingTimeValidator.php.html#13">OC\CoreBundle\Validator\AntiBookingAfterClosingTimeValidator</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Validator/AntiDayDurationAfterTwoPMValidator.php.html#12">OC\CoreBundle\Validator\AntiDayDurationAfterTwoPMValidator</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Form/TicketType.php.html#12">OC\CoreBundle\Form\TicketType</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Form/VisitorType.php.html#14">OC\CoreBundle\Form\VisitorType</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="ServClosingDays/OCServClosingDays.php.html#8">OC\CoreBundle\ServClosingDays\OCServClosingDays</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Validator/AntiMaxTicketsNbValidator.php.html#11">OC\CoreBundle\Validator\AntiMaxTicketsNbValidator</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="ServEmail/OCServEmail.php.html#15">OC\CoreBundle\ServEmail\OCServEmail</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Validator/AntiClosingDaysValidator.php.html#11">OC\CoreBundle\Validator\AntiClosingDaysValidator</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="ServStripe/OCServStripe.php.html#6">OC\CoreBundle\ServStripe\OCServStripe</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/BookingController.php.html#23"><abbr title="OC\CoreBundle\Controller\BookingController::addAction">addAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#159"><abbr title="OC\CoreBundle\Entity\Visitor::getCountry">getCountry</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/TicketType.php.html#16"><abbr title="OC\CoreBundle\Form\TicketType::getTranslator">getTranslator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingType.php.html#67"><abbr title="OC\CoreBundle\Form\BookingType::getBlockPrefix">getBlockPrefix</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingType.php.html#56"><abbr title="OC\CoreBundle\Form\BookingType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingType.php.html#19"><abbr title="OC\CoreBundle\Form\BookingType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingThirdStepType.php.html#15"><abbr title="OC\CoreBundle\Form\BookingThirdStepType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingBisType.php.html#38"><abbr title="OC\CoreBundle\Form\BookingBisType::getBlockPrefix">getBlockPrefix</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingBisType.php.html#28"><abbr title="OC\CoreBundle\Form\BookingBisType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/BookingBisType.php.html#15"><abbr title="OC\CoreBundle\Form\BookingBisType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#169"><abbr title="OC\CoreBundle\Entity\Visitor::setCountry">setCountry</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#151"><abbr title="OC\CoreBundle\Entity\Visitor::getNationality">getNationality</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/TicketType.php.html#47"><abbr title="OC\CoreBundle\Form\TicketType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#139"><abbr title="OC\CoreBundle\Entity\Visitor::setNationality">setNationality</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#127"><abbr title="OC\CoreBundle\Entity\Visitor::getBirthday">getBirthday</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#115"><abbr title="OC\CoreBundle\Entity\Visitor::setBirthday">setBirthday</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#101"><abbr title="OC\CoreBundle\Entity\Visitor::setVisitorFirstName">setVisitorFirstName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#91"><abbr title="OC\CoreBundle\Entity\Visitor::getVisitorFirstName">getVisitorFirstName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#81"><abbr title="OC\CoreBundle\Entity\Visitor::setVisitorName">setVisitorName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#71"><abbr title="OC\CoreBundle\Entity\Visitor::getVisitorName">getVisitorName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Visitor.php.html#63"><abbr title="OC\CoreBundle\Entity\Visitor::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#157"><abbr title="OC\CoreBundle\Entity\Ticket::setReducedRate">setReducedRate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#147"><abbr title="OC\CoreBundle\Entity\Ticket::getReducedRate">getReducedRate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/TicketType.php.html#28"><abbr title="OC\CoreBundle\Form\TicketType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/TicketType.php.html#58"><abbr title="OC\CoreBundle\Form\TicketType::getBlockPrefix">getBlockPrefix</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#127"><abbr title="OC\CoreBundle\Entity\Ticket::getPrice">getPrice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiBookingAfterClosingTime.php.html#20"><abbr title="OC\CoreBundle\Validator\AntiBookingAfterClosingTime::validatedBy">validatedBy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiMaxTicketsNbValidator.php.html#17"><abbr title="OC\CoreBundle\Validator\AntiMaxTicketsNbValidator::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiMaxTicketsNb.php.html#15"><abbr title="OC\CoreBundle\Validator\AntiMaxTicketsNb::validatedBy">validatedBy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiDayDurationAfterTwoPMValidator.php.html#25"><abbr title="OC\CoreBundle\Validator\AntiDayDurationAfterTwoPMValidator::validate">validate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiDayDurationAfterTwoPMValidator.php.html#19"><abbr title="OC\CoreBundle\Validator\AntiDayDurationAfterTwoPMValidator::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiDayDurationAfterTwoPM.php.html#23"><abbr title="OC\CoreBundle\Validator\AntiDayDurationAfterTwoPM::validatedBy">validatedBy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiClosingDaysValidator.php.html#22"><abbr title="OC\CoreBundle\Validator\AntiClosingDaysValidator::validate">validate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiClosingDaysValidator.php.html#16"><abbr title="OC\CoreBundle\Validator\AntiClosingDaysValidator::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiClosingDays.php.html#15"><abbr title="OC\CoreBundle\Validator\AntiClosingDays::validatedBy">validatedBy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiBookingAfterClosingTimeValidator.php.html#26"><abbr title="OC\CoreBundle\Validator\AntiBookingAfterClosingTimeValidator::validate">validate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiBookingAfterClosingTimeValidator.php.html#20"><abbr title="OC\CoreBundle\Validator\AntiBookingAfterClosingTimeValidator::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Tests/Controller/DefaultControllerTest.php.html#9"><abbr title="OC\CoreBundle\Tests\Controller\DefaultControllerTest::testIndex">testIndex</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/VisitorType.php.html#18"><abbr title="OC\CoreBundle\Form\VisitorType::getTranslator">getTranslator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ServStripe/OCServStripe.php.html#8"><abbr title="OC\CoreBundle\ServStripe\OCServStripe::chargeCreation">chargeCreation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ServEmail/OCServEmail.php.html#26"><abbr title="OC\CoreBundle\ServEmail\OCServEmail::sendNewConfirmationEmail">sendNewConfirmationEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ServEmail/OCServEmail.php.html#20"><abbr title="OC\CoreBundle\ServEmail\OCServEmail::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ServClosingDays/OCServClosingDays.php.html#18"><abbr title="OC\CoreBundle\ServClosingDays\OCServClosingDays::isClosingDay">isClosingDay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ServClosingDays/OCServClosingDays.php.html#13"><abbr title="OC\CoreBundle\ServClosingDays\OCServClosingDays::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/TicketRepository.php.html#13"><abbr title="OC\CoreBundle\Repository\TicketRepository::getTicketsNbforaDay">getTicketsNbforaDay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ClosingdaysRepository.php.html#13"><abbr title="OC\CoreBundle\Repository\ClosingdaysRepository::testVisitDay">testVisitDay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/VisitorType.php.html#62"><abbr title="OC\CoreBundle\Form\VisitorType::getBlockPrefix">getBlockPrefix</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/VisitorType.php.html#51"><abbr title="OC\CoreBundle\Form\VisitorType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/VisitorType.php.html#30"><abbr title="OC\CoreBundle\Form\VisitorType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#137"><abbr title="OC\CoreBundle\Entity\Ticket::setPrice">setPrice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#119"><abbr title="OC\CoreBundle\Entity\Ticket::getVisitor">getVisitor</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#58"><abbr title="OC\CoreBundle\Controller\BookingController::visitorsAction">visitorsAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#104"><abbr title="OC\CoreBundle\Entity\Booking::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#212"><abbr title="OC\CoreBundle\Entity\Booking::setBookingCode">setBookingCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#200"><abbr title="OC\CoreBundle\Entity\Booking::getDuration">getDuration</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#188"><abbr title="OC\CoreBundle\Entity\Booking::setDuration">setDuration</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#176"><abbr title="OC\CoreBundle\Entity\Booking::getEmail">getEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#164"><abbr title="OC\CoreBundle\Entity\Booking::setEmail">setEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#152"><abbr title="OC\CoreBundle\Entity\Booking::getTicketsNumber">getTicketsNumber</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#140"><abbr title="OC\CoreBundle\Entity\Booking::setTicketsNumber">setTicketsNumber</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#128"><abbr title="OC\CoreBundle\Entity\Booking::getVisitDay">getVisitDay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#116"><abbr title="OC\CoreBundle\Entity\Booking::setVisitDay">setVisitDay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#91"><abbr title="OC\CoreBundle\Entity\Booking::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#231"><abbr title="OC\CoreBundle\Entity\Booking::addTicket">addTicket</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DependencyInjection/OCCoreExtension.php.html#20"><abbr title="OC\CoreBundle\DependencyInjection\OCCoreExtension::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DependencyInjection/Configuration.php.html#18"><abbr title="OC\CoreBundle\DependencyInjection\Configuration::getConfigTreeBuilder">getConfigTreeBuilder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadRate.php.html#13"><abbr title="OC\CoreBundle\DataFixtures\ORM\LoadRate::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadDuration.php.html#14"><abbr title="OC\CoreBundle\DataFixtures\ORM\LoadDuration::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/ORM/LoadClosingdays.php.html#13"><abbr title="OC\CoreBundle\DataFixtures\ORM\LoadClosingdays::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/WelcomeController.php.html#12"><abbr title="OC\CoreBundle\Controller\WelcomeController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DefaultController.php.html#9"><abbr title="OC\CoreBundle\Controller\DefaultController::indexAction">indexAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#240"><abbr title="OC\CoreBundle\Controller\BookingController::confirmationAction">confirmationAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#176"><abbr title="OC\CoreBundle\Controller\BookingController::paymentAction">paymentAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#144"><abbr title="OC\CoreBundle\Controller\BookingController::recapAction">recapAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#224"><abbr title="OC\CoreBundle\Entity\Booking::getBookingCode">getBookingCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#239"><abbr title="OC\CoreBundle\Entity\Booking::removeTicket">removeTicket</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#109"><abbr title="OC\CoreBundle\Entity\Ticket::setVisitor">setVisitor</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Nationality.php.html#42"><abbr title="OC\CoreBundle\Entity\Nationality::getNationalityName">getNationalityName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#101"><abbr title="OC\CoreBundle\Entity\Ticket::getBooking">getBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#91"><abbr title="OC\CoreBundle\Entity\Ticket::setBooking">setBooking</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#83"><abbr title="OC\CoreBundle\Entity\Ticket::getRate">getRate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#73"><abbr title="OC\CoreBundle\Entity\Ticket::setRate">setRate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ticket.php.html#65"><abbr title="OC\CoreBundle\Entity\Ticket::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Rate.php.html#86"><abbr title="OC\CoreBundle\Entity\Rate::getRateValue">getRateValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Rate.php.html#74"><abbr title="OC\CoreBundle\Entity\Rate::setRateValue">setRateValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Rate.php.html#62"><abbr title="OC\CoreBundle\Entity\Rate::getRateName">getRateName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Rate.php.html#50"><abbr title="OC\CoreBundle\Entity\Rate::setRateName">setRateName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Rate.php.html#38"><abbr title="OC\CoreBundle\Entity\Rate::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Nationality.php.html#35"><abbr title="OC\CoreBundle\Entity\Nationality::setNationalityName">setNationalityName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Booking.php.html#248"><abbr title="OC\CoreBundle\Entity\Booking::getTickets">getTickets</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Nationality.php.html#30"><abbr title="OC\CoreBundle\Entity\Nationality::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Duration.php.html#73"><abbr title="OC\CoreBundle\Entity\Duration::setTranslatableLocale">setTranslatableLocale</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Duration.php.html#68"><abbr title="OC\CoreBundle\Entity\Duration::getDurationValue">getDurationValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Duration.php.html#61"><abbr title="OC\CoreBundle\Entity\Duration::setDurationValue">setDurationValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Duration.php.html#56"><abbr title="OC\CoreBundle\Entity\Duration::getDurationName">getDurationName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Duration.php.html#49"><abbr title="OC\CoreBundle\Entity\Duration::setDurationName">setDurationName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Duration.php.html#44"><abbr title="OC\CoreBundle\Entity\Duration::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Closingdays.php.html#61"><abbr title="OC\CoreBundle\Entity\Closingdays::getClosingDay">getClosingDay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Closingdays.php.html#49"><abbr title="OC\CoreBundle\Entity\Closingdays::setClosingDay">setClosingDay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Closingdays.php.html#37"><abbr title="OC\CoreBundle\Entity\Closingdays::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Validator/AntiMaxTicketsNbValidator.php.html#23"><abbr title="OC\CoreBundle\Validator\AntiMaxTicketsNbValidator::validate">validate</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/BookingController.php.html#58"><abbr title="OC\CoreBundle\Controller\BookingController::visitorsAction">visitorsAction</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Validator/AntiBookingAfterClosingTimeValidator.php.html#26"><abbr title="OC\CoreBundle\Validator\AntiBookingAfterClosingTimeValidator::validate">validate</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Validator/AntiDayDurationAfterTwoPMValidator.php.html#25"><abbr title="OC\CoreBundle\Validator\AntiDayDurationAfterTwoPMValidator::validate">validate</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#176"><abbr title="OC\CoreBundle\Controller\BookingController::paymentAction">paymentAction</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="ServClosingDays/OCServClosingDays.php.html#18"><abbr title="OC\CoreBundle\ServClosingDays\OCServClosingDays::isClosingDay">isClosingDay</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Validator/AntiMaxTicketsNbValidator.php.html#23"><abbr title="OC\CoreBundle\Validator\AntiMaxTicketsNbValidator::validate">validate</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#23"><abbr title="OC\CoreBundle\Controller\BookingController::addAction">addAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#144"><abbr title="OC\CoreBundle\Controller\BookingController::recapAction">recapAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/BookingController.php.html#240"><abbr title="OC\CoreBundle\Controller\BookingController::confirmationAction">confirmationAction</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Form/TicketType.php.html#16"><abbr title="OC\CoreBundle\Form\TicketType::getTranslator">getTranslator</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Form/VisitorType.php.html#18"><abbr title="OC\CoreBundle\Form\VisitorType::getTranslator">getTranslator</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="ServEmail/OCServEmail.php.html#26"><abbr title="OC\CoreBundle\ServEmail\OCServEmail::sendNewConfirmationEmail">sendNewConfirmationEmail</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="ServStripe/OCServStripe.php.html#8"><abbr title="OC\CoreBundle\ServStripe\OCServStripe::chargeCreation">chargeCreation</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Validator/AntiClosingDaysValidator.php.html#22"><abbr title="OC\CoreBundle\Validator\AntiClosingDaysValidator::validate">validate</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.8</a> using <a href="https://secure.php.net/" target="_top">PHP 7.2.9</a> with <a href="https://xdebug.org/">Xdebug 2.7.2</a> and <a href="https://phpunit.de/">PHPUnit 8.4.1</a> at Fri Oct 18 9:25:48 UTC 2019.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js" type="text/javascript"></script>
+  <script src="_js/d3.min.js" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([34,0,0,0,0,0,0,0,0,0,0,6], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([101,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,22,"<a href=\"Controller\/BookingController.php.html#19\">OC\\CoreBundle\\Controller\\BookingController<\/a>"],[0,1,"<a href=\"Controller\/DefaultController.php.html#7\">OC\\CoreBundle\\Controller\\DefaultController<\/a>"],[0,1,"<a href=\"Controller\/WelcomeController.php.html#10\">OC\\CoreBundle\\Controller\\WelcomeController<\/a>"],[0,1,"<a href=\"DataFixtures\/ORM\/LoadClosingdays.php.html#10\">OC\\CoreBundle\\DataFixtures\\ORM\\LoadClosingdays<\/a>"],[0,1,"<a href=\"DataFixtures\/ORM\/LoadDuration.php.html#11\">OC\\CoreBundle\\DataFixtures\\ORM\\LoadDuration<\/a>"],[0,1,"<a href=\"DataFixtures\/ORM\/LoadRate.php.html#10\">OC\\CoreBundle\\DataFixtures\\ORM\\LoadRate<\/a>"],[0,1,"<a href=\"DependencyInjection\/Configuration.php.html#13\">OC\\CoreBundle\\DependencyInjection\\Configuration<\/a>"],[0,1,"<a href=\"DependencyInjection\/OCCoreExtension.php.html#15\">OC\\CoreBundle\\DependencyInjection\\OCCoreExtension<\/a>"],[0,15,"<a href=\"Entity\/Booking.php.html#21\">OC\\CoreBundle\\Entity\\Booking<\/a>"],[0,3,"<a href=\"Entity\/Closingdays.php.html#13\">OC\\CoreBundle\\Entity\\Closingdays<\/a>"],[0,6,"<a href=\"Entity\/Duration.php.html#15\">OC\\CoreBundle\\Entity\\Duration<\/a>"],[0,3,"<a href=\"Entity\/Nationality.php.html#13\">OC\\CoreBundle\\Entity\\Nationality<\/a>"],[0,5,"<a href=\"Entity\/Rate.php.html#11\">OC\\CoreBundle\\Entity\\Rate<\/a>"],[0,11,"<a href=\"Entity\/Ticket.php.html#14\">OC\\CoreBundle\\Entity\\Ticket<\/a>"],[0,11,"<a href=\"Entity\/Visitor.php.html#12\">OC\\CoreBundle\\Entity\\Visitor<\/a>"],[0,3,"<a href=\"Form\/BookingBisType.php.html#10\">OC\\CoreBundle\\Form\\BookingBisType<\/a>"],[0,1,"<a href=\"Form\/BookingThirdStepType.php.html#10\">OC\\CoreBundle\\Form\\BookingThirdStepType<\/a>"],[0,3,"<a href=\"Form\/BookingType.php.html#14\">OC\\CoreBundle\\Form\\BookingType<\/a>"],[0,5,"<a href=\"Form\/TicketType.php.html#12\">OC\\CoreBundle\\Form\\TicketType<\/a>"],[0,5,"<a href=\"Form\/VisitorType.php.html#14\">OC\\CoreBundle\\Form\\VisitorType<\/a>"],[100,0,"<a href=\"OCCoreBundle.php.html#7\">OC\\CoreBundle\\OCCoreBundle<\/a>"],[100,0,"<a href=\"Repository\/BookingRepository.php.html#11\">OC\\CoreBundle\\Repository\\BookingRepository<\/a>"],[0,1,"<a href=\"Repository\/ClosingdaysRepository.php.html#11\">OC\\CoreBundle\\Repository\\ClosingdaysRepository<\/a>"],[100,0,"<a href=\"Repository\/DurationRepository.php.html#11\">OC\\CoreBundle\\Repository\\DurationRepository<\/a>"],[100,0,"<a href=\"Repository\/NationalityRepository.php.html#11\">OC\\CoreBundle\\Repository\\NationalityRepository<\/a>"],[100,0,"<a href=\"Repository\/RateRepository.php.html#11\">OC\\CoreBundle\\Repository\\RateRepository<\/a>"],[0,1,"<a href=\"Repository\/TicketRepository.php.html#11\">OC\\CoreBundle\\Repository\\TicketRepository<\/a>"],[100,0,"<a href=\"Repository\/VisitorRepository.php.html#11\">OC\\CoreBundle\\Repository\\VisitorRepository<\/a>"],[0,5,"<a href=\"ServClosingDays\/OCServClosingDays.php.html#8\">OC\\CoreBundle\\ServClosingDays\\OCServClosingDays<\/a>"],[0,3,"<a href=\"ServEmail\/OCServEmail.php.html#15\">OC\\CoreBundle\\ServEmail\\OCServEmail<\/a>"],[0,2,"<a href=\"ServStripe\/OCServStripe.php.html#6\">OC\\CoreBundle\\ServStripe\\OCServStripe<\/a>"],[0,1,"<a href=\"Tests\/Controller\/DefaultControllerTest.php.html#7\">OC\\CoreBundle\\Tests\\Controller\\DefaultControllerTest<\/a>"],[0,1,"<a href=\"Validator\/AntiBookingAfterClosingTime.php.html#11\">OC\\CoreBundle\\Validator\\AntiBookingAfterClosingTime<\/a>"],[0,9,"<a href=\"Validator\/AntiBookingAfterClosingTimeValidator.php.html#13\">OC\\CoreBundle\\Validator\\AntiBookingAfterClosingTimeValidator<\/a>"],[0,1,"<a href=\"Validator\/AntiClosingDays.php.html#11\">OC\\CoreBundle\\Validator\\AntiClosingDays<\/a>"],[0,3,"<a href=\"Validator\/AntiClosingDaysValidator.php.html#11\">OC\\CoreBundle\\Validator\\AntiClosingDaysValidator<\/a>"],[0,1,"<a href=\"Validator\/AntiDayDurationAfterTwoPM.php.html#11\">OC\\CoreBundle\\Validator\\AntiDayDurationAfterTwoPM<\/a>"],[0,7,"<a href=\"Validator\/AntiDayDurationAfterTwoPMValidator.php.html#12\">OC\\CoreBundle\\Validator\\AntiDayDurationAfterTwoPMValidator<\/a>"],[0,1,"<a href=\"Validator\/AntiMaxTicketsNb.php.html#11\">OC\\CoreBundle\\Validator\\AntiMaxTicketsNb<\/a>"],[0,5,"<a href=\"Validator\/AntiMaxTicketsNbValidator.php.html#11\">OC\\CoreBundle\\Validator\\AntiMaxTicketsNbValidator<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,3,"<a href=\"Controller\/BookingController.php.html#23\">OC\\CoreBundle\\Controller\\BookingController::addAction<\/a>"],[0,10,"<a href=\"Controller\/BookingController.php.html#58\">OC\\CoreBundle\\Controller\\BookingController::visitorsAction<\/a>"],[0,3,"<a href=\"Controller\/BookingController.php.html#144\">OC\\CoreBundle\\Controller\\BookingController::recapAction<\/a>"],[0,4,"<a href=\"Controller\/BookingController.php.html#176\">OC\\CoreBundle\\Controller\\BookingController::paymentAction<\/a>"],[0,2,"<a href=\"Controller\/BookingController.php.html#240\">OC\\CoreBundle\\Controller\\BookingController::confirmationAction<\/a>"],[0,1,"<a href=\"Controller\/DefaultController.php.html#9\">OC\\CoreBundle\\Controller\\DefaultController::indexAction<\/a>"],[0,1,"<a href=\"Controller\/WelcomeController.php.html#12\">OC\\CoreBundle\\Controller\\WelcomeController::indexAction<\/a>"],[0,1,"<a href=\"DataFixtures\/ORM\/LoadClosingdays.php.html#13\">OC\\CoreBundle\\DataFixtures\\ORM\\LoadClosingdays::load<\/a>"],[0,1,"<a href=\"DataFixtures\/ORM\/LoadDuration.php.html#14\">OC\\CoreBundle\\DataFixtures\\ORM\\LoadDuration::load<\/a>"],[0,1,"<a href=\"DataFixtures\/ORM\/LoadRate.php.html#13\">OC\\CoreBundle\\DataFixtures\\ORM\\LoadRate::load<\/a>"],[0,1,"<a href=\"DependencyInjection\/Configuration.php.html#18\">OC\\CoreBundle\\DependencyInjection\\Configuration::getConfigTreeBuilder<\/a>"],[0,1,"<a href=\"DependencyInjection\/OCCoreExtension.php.html#20\">OC\\CoreBundle\\DependencyInjection\\OCCoreExtension::load<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#91\">OC\\CoreBundle\\Entity\\Booking::__construct<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#104\">OC\\CoreBundle\\Entity\\Booking::getId<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#116\">OC\\CoreBundle\\Entity\\Booking::setVisitDay<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#128\">OC\\CoreBundle\\Entity\\Booking::getVisitDay<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#140\">OC\\CoreBundle\\Entity\\Booking::setTicketsNumber<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#152\">OC\\CoreBundle\\Entity\\Booking::getTicketsNumber<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#164\">OC\\CoreBundle\\Entity\\Booking::setEmail<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#176\">OC\\CoreBundle\\Entity\\Booking::getEmail<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#188\">OC\\CoreBundle\\Entity\\Booking::setDuration<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#200\">OC\\CoreBundle\\Entity\\Booking::getDuration<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#212\">OC\\CoreBundle\\Entity\\Booking::setBookingCode<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#224\">OC\\CoreBundle\\Entity\\Booking::getBookingCode<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#231\">OC\\CoreBundle\\Entity\\Booking::addTicket<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#239\">OC\\CoreBundle\\Entity\\Booking::removeTicket<\/a>"],[0,1,"<a href=\"Entity\/Booking.php.html#248\">OC\\CoreBundle\\Entity\\Booking::getTickets<\/a>"],[0,1,"<a href=\"Entity\/Closingdays.php.html#37\">OC\\CoreBundle\\Entity\\Closingdays::getId<\/a>"],[0,1,"<a href=\"Entity\/Closingdays.php.html#49\">OC\\CoreBundle\\Entity\\Closingdays::setClosingDay<\/a>"],[0,1,"<a href=\"Entity\/Closingdays.php.html#61\">OC\\CoreBundle\\Entity\\Closingdays::getClosingDay<\/a>"],[0,1,"<a href=\"Entity\/Duration.php.html#44\">OC\\CoreBundle\\Entity\\Duration::getId<\/a>"],[0,1,"<a href=\"Entity\/Duration.php.html#49\">OC\\CoreBundle\\Entity\\Duration::setDurationName<\/a>"],[0,1,"<a href=\"Entity\/Duration.php.html#56\">OC\\CoreBundle\\Entity\\Duration::getDurationName<\/a>"],[0,1,"<a href=\"Entity\/Duration.php.html#61\">OC\\CoreBundle\\Entity\\Duration::setDurationValue<\/a>"],[0,1,"<a href=\"Entity\/Duration.php.html#68\">OC\\CoreBundle\\Entity\\Duration::getDurationValue<\/a>"],[0,1,"<a href=\"Entity\/Duration.php.html#73\">OC\\CoreBundle\\Entity\\Duration::setTranslatableLocale<\/a>"],[0,1,"<a href=\"Entity\/Nationality.php.html#30\">OC\\CoreBundle\\Entity\\Nationality::getId<\/a>"],[0,1,"<a href=\"Entity\/Nationality.php.html#35\">OC\\CoreBundle\\Entity\\Nationality::setNationalityName<\/a>"],[0,1,"<a href=\"Entity\/Nationality.php.html#42\">OC\\CoreBundle\\Entity\\Nationality::getNationalityName<\/a>"],[0,1,"<a href=\"Entity\/Rate.php.html#38\">OC\\CoreBundle\\Entity\\Rate::getId<\/a>"],[0,1,"<a href=\"Entity\/Rate.php.html#50\">OC\\CoreBundle\\Entity\\Rate::setRateName<\/a>"],[0,1,"<a href=\"Entity\/Rate.php.html#62\">OC\\CoreBundle\\Entity\\Rate::getRateName<\/a>"],[0,1,"<a href=\"Entity\/Rate.php.html#74\">OC\\CoreBundle\\Entity\\Rate::setRateValue<\/a>"],[0,1,"<a href=\"Entity\/Rate.php.html#86\">OC\\CoreBundle\\Entity\\Rate::getRateValue<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#65\">OC\\CoreBundle\\Entity\\Ticket::getId<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#73\">OC\\CoreBundle\\Entity\\Ticket::setRate<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#83\">OC\\CoreBundle\\Entity\\Ticket::getRate<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#91\">OC\\CoreBundle\\Entity\\Ticket::setBooking<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#101\">OC\\CoreBundle\\Entity\\Ticket::getBooking<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#109\">OC\\CoreBundle\\Entity\\Ticket::setVisitor<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#119\">OC\\CoreBundle\\Entity\\Ticket::getVisitor<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#127\">OC\\CoreBundle\\Entity\\Ticket::getPrice<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#137\">OC\\CoreBundle\\Entity\\Ticket::setPrice<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#147\">OC\\CoreBundle\\Entity\\Ticket::getReducedRate<\/a>"],[0,1,"<a href=\"Entity\/Ticket.php.html#157\">OC\\CoreBundle\\Entity\\Ticket::setReducedRate<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#63\">OC\\CoreBundle\\Entity\\Visitor::getId<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#71\">OC\\CoreBundle\\Entity\\Visitor::getVisitorName<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#81\">OC\\CoreBundle\\Entity\\Visitor::setVisitorName<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#91\">OC\\CoreBundle\\Entity\\Visitor::getVisitorFirstName<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#101\">OC\\CoreBundle\\Entity\\Visitor::setVisitorFirstName<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#115\">OC\\CoreBundle\\Entity\\Visitor::setBirthday<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#127\">OC\\CoreBundle\\Entity\\Visitor::getBirthday<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#139\">OC\\CoreBundle\\Entity\\Visitor::setNationality<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#151\">OC\\CoreBundle\\Entity\\Visitor::getNationality<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#159\">OC\\CoreBundle\\Entity\\Visitor::getCountry<\/a>"],[0,1,"<a href=\"Entity\/Visitor.php.html#169\">OC\\CoreBundle\\Entity\\Visitor::setCountry<\/a>"],[0,1,"<a href=\"Form\/BookingBisType.php.html#15\">OC\\CoreBundle\\Form\\BookingBisType::buildForm<\/a>"],[0,1,"<a href=\"Form\/BookingBisType.php.html#28\">OC\\CoreBundle\\Form\\BookingBisType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/BookingBisType.php.html#38\">OC\\CoreBundle\\Form\\BookingBisType::getBlockPrefix<\/a>"],[0,1,"<a href=\"Form\/BookingThirdStepType.php.html#15\">OC\\CoreBundle\\Form\\BookingThirdStepType::buildForm<\/a>"],[0,1,"<a href=\"Form\/BookingType.php.html#19\">OC\\CoreBundle\\Form\\BookingType::buildForm<\/a>"],[0,1,"<a href=\"Form\/BookingType.php.html#56\">OC\\CoreBundle\\Form\\BookingType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/BookingType.php.html#67\">OC\\CoreBundle\\Form\\BookingType::getBlockPrefix<\/a>"],[0,2,"<a href=\"Form\/TicketType.php.html#16\">OC\\CoreBundle\\Form\\TicketType::getTranslator<\/a>"],[0,1,"<a href=\"Form\/TicketType.php.html#28\">OC\\CoreBundle\\Form\\TicketType::buildForm<\/a>"],[0,1,"<a href=\"Form\/TicketType.php.html#47\">OC\\CoreBundle\\Form\\TicketType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/TicketType.php.html#58\">OC\\CoreBundle\\Form\\TicketType::getBlockPrefix<\/a>"],[0,2,"<a href=\"Form\/VisitorType.php.html#18\">OC\\CoreBundle\\Form\\VisitorType::getTranslator<\/a>"],[0,1,"<a href=\"Form\/VisitorType.php.html#30\">OC\\CoreBundle\\Form\\VisitorType::buildForm<\/a>"],[0,1,"<a href=\"Form\/VisitorType.php.html#51\">OC\\CoreBundle\\Form\\VisitorType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/VisitorType.php.html#62\">OC\\CoreBundle\\Form\\VisitorType::getBlockPrefix<\/a>"],[0,1,"<a href=\"Repository\/ClosingdaysRepository.php.html#13\">OC\\CoreBundle\\Repository\\ClosingdaysRepository::testVisitDay<\/a>"],[0,1,"<a href=\"Repository\/TicketRepository.php.html#13\">OC\\CoreBundle\\Repository\\TicketRepository::getTicketsNbforaDay<\/a>"],[0,1,"<a href=\"ServClosingDays\/OCServClosingDays.php.html#13\">OC\\CoreBundle\\ServClosingDays\\OCServClosingDays::__construct<\/a>"],[0,4,"<a href=\"ServClosingDays\/OCServClosingDays.php.html#18\">OC\\CoreBundle\\ServClosingDays\\OCServClosingDays::isClosingDay<\/a>"],[0,1,"<a href=\"ServEmail\/OCServEmail.php.html#20\">OC\\CoreBundle\\ServEmail\\OCServEmail::__construct<\/a>"],[0,2,"<a href=\"ServEmail\/OCServEmail.php.html#26\">OC\\CoreBundle\\ServEmail\\OCServEmail::sendNewConfirmationEmail<\/a>"],[0,2,"<a href=\"ServStripe\/OCServStripe.php.html#8\">OC\\CoreBundle\\ServStripe\\OCServStripe::chargeCreation<\/a>"],[0,1,"<a href=\"Tests\/Controller\/DefaultControllerTest.php.html#9\">OC\\CoreBundle\\Tests\\Controller\\DefaultControllerTest::testIndex<\/a>"],[0,1,"<a href=\"Validator\/AntiBookingAfterClosingTime.php.html#20\">OC\\CoreBundle\\Validator\\AntiBookingAfterClosingTime::validatedBy<\/a>"],[0,1,"<a href=\"Validator\/AntiBookingAfterClosingTimeValidator.php.html#20\">OC\\CoreBundle\\Validator\\AntiBookingAfterClosingTimeValidator::__construct<\/a>"],[0,8,"<a href=\"Validator\/AntiBookingAfterClosingTimeValidator.php.html#26\">OC\\CoreBundle\\Validator\\AntiBookingAfterClosingTimeValidator::validate<\/a>"],[0,1,"<a href=\"Validator\/AntiClosingDays.php.html#15\">OC\\CoreBundle\\Validator\\AntiClosingDays::validatedBy<\/a>"],[0,1,"<a href=\"Validator\/AntiClosingDaysValidator.php.html#16\">OC\\CoreBundle\\Validator\\AntiClosingDaysValidator::__construct<\/a>"],[0,2,"<a href=\"Validator\/AntiClosingDaysValidator.php.html#22\">OC\\CoreBundle\\Validator\\AntiClosingDaysValidator::validate<\/a>"],[0,1,"<a href=\"Validator\/AntiDayDurationAfterTwoPM.php.html#23\">OC\\CoreBundle\\Validator\\AntiDayDurationAfterTwoPM::validatedBy<\/a>"],[0,1,"<a href=\"Validator\/AntiDayDurationAfterTwoPMValidator.php.html#19\">OC\\CoreBundle\\Validator\\AntiDayDurationAfterTwoPMValidator::__construct<\/a>"],[0,6,"<a href=\"Validator\/AntiDayDurationAfterTwoPMValidator.php.html#25\">OC\\CoreBundle\\Validator\\AntiDayDurationAfterTwoPMValidator::validate<\/a>"],[0,1,"<a href=\"Validator\/AntiMaxTicketsNb.php.html#15\">OC\\CoreBundle\\Validator\\AntiMaxTicketsNb::validatedBy<\/a>"],[0,1,"<a href=\"Validator\/AntiMaxTicketsNbValidator.php.html#17\">OC\\CoreBundle\\Validator\\AntiMaxTicketsNbValidator::__construct<\/a>"],[0,4,"<a href=\"Validator\/AntiMaxTicketsNbValidator.php.html#23\">OC\\CoreBundle\\Validator\\AntiMaxTicketsNbValidator::validate<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
