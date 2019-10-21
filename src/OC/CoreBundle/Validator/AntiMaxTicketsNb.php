@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraint;
  */
 class AntiMaxTicketsNb extends Constraint
 {
-  public $message = "Le nombre maximal de billets a été atteint pour le jour choisi. Merci de sélectionner un autre jour. ";
+  public $message = "maxTicketsNb.msg"; 
 
   public function validatedBy()
   {

@@ -12,7 +12,7 @@ class AntiBookingAfterClosingTime extends Constraint
 {
   
   
-  public $message = "Vous ne pouvez pas acheter de billet 1h avant l'heure de fermeture.";
+  public $message = "afterClosingTime.msg"; 
 
 
 

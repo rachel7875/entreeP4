@@ -13,36 +13,24 @@ use Symfony\Component\HttpFoundation\RequestStack;
 class AntiBookingAfterClosingTimeValidator extends ConstraintValidator
 {
 
-  private $em;
-  protected $requestStack;
-
-    public function __construct(RequestStack $requestStack, EntityManagerInterface $em)
-    {
-      $this->requestStack = $requestStack;
-      $this->em           = $em;
-    }
 
     public function validate($value, Constraint $constraint)
     {
-      $request = $this->requestStack->getCurrentRequest();
-
-      $session = $request->getSession();
-          
 
      date_default_timezone_set('Europe/Paris');
      
-     $today = date('Y-m-d');
+     $today = $this->getCurrentDate()->format('Y-m-d');
      $value= $value->format('Y-m-d');
     
       if($value==$today){
-        $time = (new \DateTime())->format('H:i:s');
-        $weekDay=(new \DateTime())->format('N');
+        $time =  $this->getCurrentDate()->format('H:i:s');
+        $weekDay= $this->getCurrentDate()->format('N');
      
         if($weekDay==1){$closingHour=\DateTime::createFromFormat('H:i:s', '18:00:00');}
         if($weekDay==2){$closingHour=\DateTime::createFromFormat('H:i:s', '00:00:01');}
         if($weekDay==3){$closingHour=\DateTime::createFromFormat('H:i:s', '21:45:00');}
         if($weekDay==4){$closingHour=\DateTime::createFromFormat('H:i:s', '18:00:00');}
-        if($weekDay==5){$closingHour=\DateTime::createFromFormat('H:i:s', '14:00:00');}
+        if($weekDay==5){$closingHour=\DateTime::createFromFormat('H:i:s', '21:45:00');}
         if($weekDay==6){$closingHour=\DateTime::createFromFormat('H:i:s', '18:00:00');}
         if($weekDay==7){$closingHour=\DateTime::createFromFormat('H:i:s', '00:00:01');}
       
@@ -52,12 +40,11 @@ class AntiBookingAfterClosingTimeValidator extends ConstraintValidator
         }
 
       }
-      
+ 
+    }
 
-
-        
-
-
-        
+    public function getCurrentDate()
+    {
+        return (new \DateTime());
     }
 }

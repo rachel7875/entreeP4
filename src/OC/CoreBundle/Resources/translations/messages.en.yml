@@ -154,3 +154,7 @@ email.Mticket : "This is an M-ticket: present your ticket | These are M-tickets:
 footer.cgv : General Terms and Conditions of Sale
 footer.legalNotices : Legal Notice
 
+error404.h1 : Page not found
+error404.text : "The requested page couldn't be located. Checkout for any URL misspelling or please" 
+error404.returnHomepage : "return to the homepage"
+

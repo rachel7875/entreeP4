@@ -12,7 +12,7 @@ class AntiDayDurationAfterTwoPM extends Constraint
 {
   
   
-  public $message = "Vous ne pouvez pas acheter de billet journée après 14h.";
+  public $message = "afterTwoPM.msg";
 
   /**
    * @Const int

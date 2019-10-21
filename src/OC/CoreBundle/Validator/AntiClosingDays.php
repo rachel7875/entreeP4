@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraint;
  */
 class AntiClosingDays extends Constraint
 {
-  public $message = "Jour fermé, merci de choisir un jour disponible.";
+  public $message = "closingDays.msg";
 
   public function validatedBy()
   {

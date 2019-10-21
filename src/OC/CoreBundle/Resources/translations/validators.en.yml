@@ -7,3 +7,8 @@ booking.visitDay.range: "It is not possible to book at a date earlier than today
 booking.email.Email : "{{ value }} is not a valid email. "
 booking.ticketsNumber.Range : "It is not possible to book more than 10 tickets at a time.
 Please contact us for a group rate of more than 10 people. "
+
+afterTwoPM.msg : You can not buy a ticket for all the day after 2 pm.
+afterClosingTime.msg : "You can not buy a ticket 1h before the closingtime."
+closingDays.msg: "Closed day, please choose an available day."
+maxTicketsNb.msg: "The maximum number of tickets has been reached for the chosen day. Please select another day."

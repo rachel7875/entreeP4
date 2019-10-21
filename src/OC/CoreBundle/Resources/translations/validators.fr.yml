@@ -7,3 +7,8 @@ booking.visitDay.range: "Il n'est pas possible de réserver à une date antérie
 booking.email.Email : "{{ value }} n'est pas un email valide."
 booking.ticketsNumber.Range : "Il n'est pas possible de réserver plus de 10 billets à la fois. 
 Veuillez nous contacter pour un tarif de groupe de plus de 10 personnes."
+
+afterTwoPM.msg : Vous ne pouvez pas acheter de billet journée après 14h.
+afterClosingTime.msg : "Vous ne pouvez pas acheter de billet 1h avant l'heure de fermeture."
+closingDays.msg: "Jour fermé, merci de choisir un jour disponible."
+maxTicketsNb.msg: "Le nombre maximal de billets a été atteint pour le jour choisi. Merci de sélectionner un autre jour. "
