@@ -25,10 +25,11 @@ class WelcomeControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/fr/');
         $this->assertSame(1, $crawler->filter('html:contains("16 €")')->count());
-
+        $this->assertSame(1, $crawler->filter('html:contains("Billet normal")')->count());
 
         $crawler = $client->request('GET', '/en/');
         $this->assertSame(1, $crawler->filter('html:contains("16 €")')->count());
+        $this->assertSame(1, $crawler->filter('html:contains("Normal ticket")')->count());
     }
 
 }

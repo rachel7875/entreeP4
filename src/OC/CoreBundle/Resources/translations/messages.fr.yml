@@ -154,6 +154,6 @@ email.Mticket : "C'est un M-billet : présentez votre billet | Ce sont des M-bil
 footer.cgv : Conditions générales de vente
 footer.legalNotices : Mentions légales 
 
-error404.h1 : Page introuvable
-error404.text : "La page demandée n'a pu être trouvée. Vérifiez l'absence d'erreur dans l'adresse URL ou veuillez" 
-error404.returnHomepage : "retourner à la page d'accueil"
+
+
+ 

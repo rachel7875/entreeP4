@@ -14,7 +14,7 @@ welcome.tickets&ratesh2: Tickets and rates
 welcome.freeTicketh5: Free ticket
 welcome.childUnderp: Children under
 welcome.under4p: 4 years old
-welcome.childTicketh5.1: Child ticket
+welcome.childTicketh5: Child ticket
 welcome.childp: Children aged
 welcome.betweenp: 4 to 11 
 welcome.dayp: for the full day
@@ -154,7 +154,6 @@ email.Mticket : "This is an M-ticket: present your ticket | These are M-tickets:
 footer.cgv : General Terms and Conditions of Sale
 footer.legalNotices : Legal Notice
 
-error404.h1 : Page not found
-error404.text : "The requested page couldn't be located. Checkout for any URL misspelling or please" 
-error404.returnHomepage : "return to the homepage"
 
+
+ 

@@ -86,7 +86,7 @@ a.nav-link:hover, a.nav-link:focus {
 }
 
 #brand{
-  color: #9FA16A !important;
+  color: yellow !important;
 }
 
 .ticketsAccess {
@@ -698,4 +698,13 @@ div[id="oc_corebundle_booking_tickets"] > .field {
 
 .introEmail p {
     margin-bottom: 20px;
+}
+
+
+/*STYLE FOR THE ERROR PAGES 
+--------------------------------------------------------*/
+
+.errorBloc {
+    margin-top: 40px !important;
+    
 }
